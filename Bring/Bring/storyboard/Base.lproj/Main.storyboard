@@ -71,11 +71,11 @@
             </objects>
             <point key="canvasLocation" x="98" y="619"/>
         </scene>
-        <!--마이-->
+        <!--main-->
         <scene sceneID="xtm-gR-EAC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dEx-0u-wLK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이" id="TB2-Vq-buI"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dEx-0u-wLK" userLabel="main" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Main" id="TB2-Vq-buI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Vu-JW-2lD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
