@@ -13,11 +13,11 @@
         <!--View Controller-->
         <scene sceneID="UtG-Ob-Y71">
             <objects>
-                <viewController id="nFx-o7-Ga0" customClass="ViewController" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nFx-o7-Ga0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gps-Oz-NR0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="WQa-MO-wor"/>
                     </view>
                 </viewController>

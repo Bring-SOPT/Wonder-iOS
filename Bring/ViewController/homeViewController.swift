@@ -11,7 +11,7 @@ import GoogleMaps
 import CoreLocation
 import AddressBookUI
 
-class ViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate{
+class homeViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate{
   
     var mapView: GMSMapView!
     var myMarker = GMSMarker()
@@ -49,7 +49,7 @@ class ViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDel
     
 }
 
-extension ViewController {
+extension homeViewController {
     func move(at coordinate: CLLocationCoordinate2D?) {
         guard let coordinate = coordinate else {
             return
