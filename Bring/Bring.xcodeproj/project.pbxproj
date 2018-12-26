@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA521D3B11100D0FA51 /* LoginVC.swift */; };
+		08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */; };
+		08CB0FAA21D3B87B00D0FA51 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */; };
 		AE8B8225FEE20F85CA995DD8 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C508EA446D859BB2940D88 /* Pods_Bring.framework */; };
 		DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AC621D3B33A00AD4F94 /* UIImage+imageFromURL.swift */; };
 		DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AC821D3B35C00AD4F94 /* UIViewController+extensions.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08CB0FA521D3B11100D0FA51 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		0F66E97A6EA26D92B219FBD1 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 		13C508EA446D859BB2940D88 /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,7 +180,13 @@
 			isa = PBXGroup;
 			children = (
 				DCD4279821D1292B003F2D48 /* homeViewController.swift */,
+<<<<<<< HEAD
 				DC1F4AD921D3B98100AD4F94 /* searchVC.swift */,
+=======
+				08CB0FA521D3B11100D0FA51 /* LoginVC.swift */,
+				08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */,
+				08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */,
+>>>>>>> 4189da3d2d16b2ee1acb4820f16076ec73daa27e
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -334,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				DC1F4ACE21D3B3FB00AD4F94 /* APIManager.swift in Sources */,
 				DC1F4AD721D3B5A100AD4F94 /* Token.swift in Sources */,
 				DC1F4AD521D3B59C00AD4F94 /* ResponseArray.swift in Sources */,
@@ -341,10 +354,15 @@
 				DC1F4AD021D3B40800AD4F94 /* Requestable.swift in Sources */,
 				DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */,
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
+=======
+				08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */,
+>>>>>>> 4189da3d2d16b2ee1acb4820f16076ec73daa27e
 				DCD4279921D1292B003F2D48 /* homeViewController.swift in Sources */,
 				DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */,
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
+				08CB0FAA21D3B87B00D0FA51 /* FirstVC.swift in Sources */,
+				08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
