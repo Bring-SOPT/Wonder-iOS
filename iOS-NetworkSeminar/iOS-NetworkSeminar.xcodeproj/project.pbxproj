@@ -30,6 +30,7 @@
 		B34A91F121A45575005A99C5 /* BoardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A91F021A45575005A99C5 /* BoardService.swift */; };
 		B3C72C3521A59BC200CB1D6E /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C72C3421A59BC200CB1D6E /* UIImage+imageFromURL.swift */; };
 		BC38CF2E8F408E61CE6A033B /* Pods_iOS_NetworkSeminar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF97733EB7F9E9F6991B9821 /* Pods_iOS_NetworkSeminar.framework */; };
+		DCDA19DE21D3733C0035BE23 /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA19DD21D3733C0035BE23 /* testVC.swift */; };
 		DCF25E4B21B598EA00AB8BF3 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF25E4A21B598EA00AB8BF3 /* UIViewController+extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		B34A91F021A45575005A99C5 /* BoardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardService.swift; sourceTree = "<group>"; };
 		B3C72C3421A59BC200CB1D6E /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		BF97733EB7F9E9F6991B9821 /* Pods_iOS_NetworkSeminar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_NetworkSeminar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCDA19DD21D3733C0035BE23 /* testVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
 		DCF25E4A21B598EA00AB8BF3 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				B34A91D221A43749005A99C5 /* BoardVC.swift */,
 				B34A91D421A4375E005A99C5 /* DetailBoardVC.swift */,
 				B34A91D621A4376F005A99C5 /* WriteBoardVC.swift */,
+				DCDA19DD21D3733C0035BE23 /* testVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				B34A91EB21A452CB005A99C5 /* LoginService.swift in Sources */,
 				B34A91B621A435C5005A99C5 /* AppDelegate.swift in Sources */,
 				B34A91D521A4375E005A99C5 /* DetailBoardVC.swift in Sources */,
+				DCDA19DE21D3733C0035BE23 /* testVC.swift in Sources */,
 				B34A91E521A437E8005A99C5 /* Requestable.swift in Sources */,
 				B34A91DB21A4379A005A99C5 /* Board.swift in Sources */,
 				B34A91ED21A45447005A99C5 /* UserService.swift in Sources */,
