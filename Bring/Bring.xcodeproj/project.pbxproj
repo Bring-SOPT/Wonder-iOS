@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA521D3B11100D0FA51 /* LoginVC.swift */; };
+		08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */; };
+		08CB0FAA21D3B87B00D0FA51 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */; };
 		AE8B8225FEE20F85CA995DD8 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C508EA446D859BB2940D88 /* Pods_Bring.framework */; };
 		DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4279621D1292B003F2D48 /* AppDelegate.swift */; };
 		DCD4279921D1292B003F2D48 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4279821D1292B003F2D48 /* homeViewController.swift */; };
@@ -14,7 +17,6 @@
 		DCD4279E21D1292B003F2D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD4279D21D1292B003F2D48 /* Assets.xcassets */; };
 		DCD427A121D1292B003F2D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD4279F21D1292B003F2D48 /* LaunchScreen.storyboard */; };
 		DCD427AE21D13D6C003F2D48 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD427AD21D13D6C003F2D48 /* CoreLocation.framework */; };
-		DCDA19E021D377680035BE23 /* first.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDA19DF21D377680035BE23 /* first.storyboard */; };
 		DCDA19E221D3779C0035BE23 /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDA19E121D3779C0035BE23 /* home.storyboard */; };
 		DCDA19E421D377A80035BE23 /* mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDA19E321D377A80035BE23 /* mypage.storyboard */; };
 		DCDA19E621D377B30035BE23 /* cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDA19E521D377B30035BE23 /* cart.storyboard */; };
@@ -22,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08CB0FA521D3B11100D0FA51 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		0F66E97A6EA26D92B219FBD1 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 		13C508EA446D859BB2940D88 /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
@@ -33,7 +38,6 @@
 		DCD427A021D1292B003F2D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCD427A221D1292B003F2D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD427AD21D13D6C003F2D48 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		DCDA19DF21D377680035BE23 /* first.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = first.storyboard; sourceTree = "<group>"; };
 		DCDA19E121D3779C0035BE23 /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
 		DCDA19E321D377A80035BE23 /* mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mypage.storyboard; sourceTree = "<group>"; };
 		DCDA19E521D377B30035BE23 /* cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cart.storyboard; sourceTree = "<group>"; };
@@ -105,7 +109,6 @@
 		DCD427AF21D15404003F2D48 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				DCDA19DF21D377680035BE23 /* first.storyboard */,
 				DCD4279A21D1292B003F2D48 /* Main.storyboard */,
 				DCDA19E121D3779C0035BE23 /* home.storyboard */,
 				DCDA19E321D377A80035BE23 /* mypage.storyboard */,
@@ -119,6 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				DCD4279821D1292B003F2D48 /* homeViewController.swift */,
+				08CB0FA521D3B11100D0FA51 /* LoginVC.swift */,
+				08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */,
+				08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -191,7 +197,6 @@
 				DCD4279E21D1292B003F2D48 /* Assets.xcassets in Resources */,
 				DCD4279C21D1292B003F2D48 /* Main.storyboard in Resources */,
 				DCDA19E621D377B30035BE23 /* cart.storyboard in Resources */,
-				DCDA19E021D377680035BE23 /* first.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */,
 				DCD4279921D1292B003F2D48 /* homeViewController.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
+				08CB0FAA21D3B87B00D0FA51 /* FirstVC.swift in Sources */,
+				08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
