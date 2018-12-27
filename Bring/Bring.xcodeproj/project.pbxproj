@@ -126,17 +126,13 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Views;
+			name = Views;
+			path = ../Views;
 			sourceTree = "<group>";
 		};
 		DCD4278A21D1292B003F2D48 = {
 			isa = PBXGroup;
 			children = (
-				DC1F4AD821D3B5DB00AD4F94 /* Views */,
-				DC1F4AD121D3B57900AD4F94 /* Models */,
-				DC1F4ACA21D3B38000AD4F94 /* APIServices */,
-				DC1F4AC521D3B17700AD4F94 /* Extensions */,
-				DCDA19E921D377FF0035BE23 /* ViewController */,
 				DCD4279521D1292B003F2D48 /* Bring */,
 				DCD4279421D1292B003F2D48 /* Products */,
 				68211FC09FF4C672027319D2 /* Pods */,
@@ -155,6 +151,11 @@
 		DCD4279521D1292B003F2D48 /* Bring */ = {
 			isa = PBXGroup;
 			children = (
+				DC1F4AD821D3B5DB00AD4F94 /* Views */,
+				DC1F4AD121D3B57900AD4F94 /* Models */,
+				DC1F4ACA21D3B38000AD4F94 /* APIServices */,
+				DC1F4AC521D3B17700AD4F94 /* Extensions */,
+				DCDA19E921D377FF0035BE23 /* ViewController */,
 				DCD4279621D1292B003F2D48 /* AppDelegate.swift */,
 				DCD427AF21D15404003F2D48 /* storyboard */,
 				DCD4279D21D1292B003F2D48 /* Assets.xcassets */,
