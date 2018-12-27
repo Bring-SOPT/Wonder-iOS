@@ -13,6 +13,7 @@ import AddressBookUI
 
 class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 
+    @IBOutlet var infoView: UIView!
     @IBOutlet var mapView: GMSMapView!
     var myMarker = GMSMarker()
     let locationManager = CLLocationManager()
@@ -20,7 +21,10 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapSettings()
+        cafeMarker()
+         mapView.delegate = self
         self.view.addSubview(mapView!)
+        self.view.addSubview(infoView)
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +49,8 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         mapView.settings.myLocationButton = true;
     }
     
+
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let firstLocation = locations.first else {
             return
@@ -53,6 +59,28 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 //        move(at: firstLocation.coordinate)
     }
     
+    func cafeMarker() {
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 37.501852, longitude: 127.037243)
+        let markerimg = UIImage(named: "tab_cart")
+        marker.icon = markerimg
+        marker.title = "뿌잉뿌잉"
+        marker.snippet = "뿡뿡"
+        marker.map = mapView
+        
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
+        print("마커클릭...")
+        if marker.title == "뿌잉뿌잉"{
+            print("뿌잉뿌잉을 클릭함")
+            infoView.isHidden = false
+        }
+        return false
+    }
+    
+
 
 }
 
@@ -69,10 +97,10 @@ extension homeVC {
         
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 14.0)
         mapView.camera = camera
-        
-        myMarker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        myMarker.title = "My Position"
-        myMarker.snippet = "Known"
-        myMarker.map = mapView
+//
+//        myMarker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//        myMarker.title = "My Position"
+//        myMarker.snippet = "Known"
+//        myMarker.map = mapView
     }
 }
