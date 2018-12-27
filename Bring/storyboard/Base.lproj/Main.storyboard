@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ukX-od-h7o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dEx-0u-wLK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,6 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="MNv-dF-LiH" kind="relationship" relationship="viewControllers" id="Uvo-oF-Fm6"/>
@@ -127,23 +128,35 @@
             </objects>
             <point key="canvasLocation" x="-1143" y="-1590"/>
         </scene>
-        <!--home-->
+        <!--HomeVC-->
         <scene sceneID="dnH-qg-7iR">
             <objects>
-                <viewController id="MNv-dF-LiH" customClass="homeViewController" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MNv-dF-LiH" customClass="homeVC" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vxF-cp-Zue">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oRl-6J-q98" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="181" width="375" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rdk-R2-uhY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="home" id="YWw-kd-A3k"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_home" id="YWw-kd-A3k">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="mapView" destination="oRl-6J-q98" id="pyc-BA-v8A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDK-F9-nnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="-540"/>
+            <point key="canvasLocation" x="352.80000000000001" y="-540.17991004497753"/>
         </scene>
-        <!--mypage-->
+        <!--View Controller-->
         <scene sceneID="dks-RM-vna">
             <objects>
                 <viewController id="JE1-Lv-9LX" sceneMemberID="viewController">
@@ -163,7 +176,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ft1-2e-v22"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="mypage" id="vVl-Vf-otz"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_mypage" id="vVl-Vf-otz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77q-wM-RZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,23 +190,30 @@
             </objects>
             <point key="canvasLocation" x="990" y="175"/>
         </scene>
-        <!--cart-->
+        <!--장바구니-->
         <scene sceneID="bgE-dY-HdU">
             <objects>
-                <viewController id="TMQ-Lb-FWD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cartVC" title="장바구니" id="TMQ-Lb-FWD" customClass="cartVC" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7BO-av-5hL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-5d-T1Z">
+                                <rect key="frame" x="0.0" y="110" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vWa-jD-GcM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="cart" id="vax-VO-rdG"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_cart" id="vax-VO-rdG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCl-dG-eP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="894"/>
+            <point key="canvasLocation" x="352.80000000000001" y="893.70314842578716"/>
         </scene>
-        <!--history-->
+        <!--View Controller-->
         <scene sceneID="2d4-EF-brs">
             <objects>
                 <viewController id="R2T-Uj-z1I" sceneMemberID="viewController">
@@ -203,7 +223,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nzO-ja-dCK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="history" id="wKV-sG-oIc"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_oroderlist" id="wKV-sG-oIc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4M-4O-nFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,4 +325,11 @@
             <point key="canvasLocation" x="-1633" y="-93"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_cart" width="25" height="25"/>
+        <image name="tab_home" width="25" height="25"/>
+        <image name="tab_mypage" width="25" height="25"/>
+        <image name="tab_oroderlist" width="25" height="25"/>
+    </resources>
+    <color key="tintColor" red="0.93725490199999995" green="0.59215686270000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

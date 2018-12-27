@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  homeVC.swift
 //  Bring
 //
-//  Created by 박소현 on 24/12/2018.
+//  Created by 박소현 on 27/12/2018.
 //  Copyright © 2018 sohyeon. All rights reserved.
 //
 
@@ -11,24 +11,18 @@ import GoogleMaps
 import CoreLocation
 import AddressBookUI
 
-class homeViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate{
-  
+class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 
-
-    
-    
-    var mapView: GMSMapView!
+    @IBOutlet var mapView: GMSMapView!
     var myMarker = GMSMarker()
     let locationManager = CLLocationManager()
     
-    override func loadView() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        mapView = GMSMapView()
-        view = mapView
+        mapSettings()
+        self.view.addSubview(mapView!)
 
-    
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -46,17 +40,23 @@ class homeViewController: UIViewController, GMSMapViewDelegate, CLLocationManage
         move(at: locationManager.location?.coordinate)
     }
     
+    func mapSettings() {
+        mapView.isMyLocationEnabled = true;
+        mapView.settings.myLocationButton = true;
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let firstLocation = locations.first else {
             return
         }
         
-        move(at: firstLocation.coordinate)
+//        move(at: firstLocation.coordinate)
     }
     
+
 }
 
-extension homeViewController {
+extension homeVC {
     func move(at coordinate: CLLocationCoordinate2D?) {
         guard let coordinate = coordinate else {
             return
@@ -76,5 +76,3 @@ extension homeViewController {
         myMarker.map = mapView
     }
 }
-
-

@@ -30,6 +30,8 @@
 		DCDA19E421D377A80035BE23 /* mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDA19E321D377A80035BE23 /* mypage.storyboard */; };
 		DCDA19E621D377B30035BE23 /* cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDA19E521D377B30035BE23 /* cart.storyboard */; };
 		DCDA19E821D377E00035BE23 /* history.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDA19E721D377E00035BE23 /* history.storyboard */; };
+		DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFBF1721D4EEA3002D72FE /* cartVC.swift */; };
+		DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFBF1921D4F67C002D72FE /* homeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		DCDA19E321D377A80035BE23 /* mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mypage.storyboard; sourceTree = "<group>"; };
 		DCDA19E521D377B30035BE23 /* cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cart.storyboard; sourceTree = "<group>"; };
 		DCDA19E721D377E00035BE23 /* history.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = history.storyboard; sourceTree = "<group>"; };
+		DCDFBF1721D4EEA3002D72FE /* cartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartVC.swift; sourceTree = "<group>"; };
+		DCDFBF1921D4F67C002D72FE /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,12 +155,12 @@
 		DCD4279521D1292B003F2D48 /* Bring */ = {
 			isa = PBXGroup;
 			children = (
+				DCD4279621D1292B003F2D48 /* AppDelegate.swift */,
 				DC1F4AD821D3B5DB00AD4F94 /* Views */,
 				DC1F4AD121D3B57900AD4F94 /* Models */,
 				DC1F4ACA21D3B38000AD4F94 /* APIServices */,
 				DC1F4AC521D3B17700AD4F94 /* Extensions */,
 				DCDA19E921D377FF0035BE23 /* ViewController */,
-				DCD4279621D1292B003F2D48 /* AppDelegate.swift */,
 				DCD427AF21D15404003F2D48 /* storyboard */,
 				DCD4279D21D1292B003F2D48 /* Assets.xcassets */,
 				DCD4279F21D1292B003F2D48 /* LaunchScreen.storyboard */,
@@ -185,6 +189,8 @@
 				08CB0FA521D3B11100D0FA51 /* LoginVC.swift */,
 				08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */,
 				08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */,
+				DCDFBF1721D4EEA3002D72FE /* cartVC.swift */,
+				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -353,6 +359,8 @@
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
 				08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */,
 				DCD4279921D1292B003F2D48 /* homeViewController.swift in Sources */,
+				DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */,
+				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
 				DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */,
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
