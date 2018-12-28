@@ -24,8 +24,10 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         cafeMarker()
          mapView.delegate = self
         self.view.addSubview(mapView!)
+        
+ 
         self.view.addSubview(infoView)
-
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -63,7 +65,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: 37.501852, longitude: 127.037243)
-        let markerimg = UIImage(named: "tab_cart")
+        let markerimg = UIImage(named: "homePinCafe")
         marker.icon = markerimg
         marker.title = "뿌잉뿌잉"
         marker.snippet = "뿡뿡"
@@ -80,7 +82,22 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         return false
     }
     
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        
+        if infoView.isHidden == false {
+            infoView.isHidden = true
+        }
+    }
+    
 
+    @IBAction func menudetailAction(_ sender: Any) {
+        
+         self.performSegue(withIdentifier: "menudetailSegue", sender: self)
+    }
+    
+    
+
+    
 
 }
 
