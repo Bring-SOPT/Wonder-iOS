@@ -10,8 +10,10 @@ import UIKit
 
 class menudetailVC: UIViewController {
 
-    @IBOutlet weak var collectionView1: UICollectionView!
-    @IBOutlet weak var collectionView2: UICollectionView!
+    @IBOutlet weak var menuTable: UITableView!
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var menuBtn: UIButton!
+    @IBOutlet weak var infoBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,24 +21,24 @@ class menudetailVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func menuAction(_ sender: Any) {
-        collectionView2.isHidden = true
-        collectionView1.isHidden = false
+    @IBAction func menuAction(_ sender: UIButton) {
+        menuTable.isHidden = false
+        infoView.isHidden = true
+        
+        sender.setImage(UIImage(named: "menuButtonClick.png"), for: UIControl.State.normal)
+        infoBtn.setImage(UIImage(named: "infoButton.png"), for: UIControl.State.normal)
     }
     
-    @IBAction func infoAction(_ sender: Any) {
-        collectionView1.isHidden = true
-        collectionView2.isHidden = false
+    
+    @IBAction func infoAction(_ sender: UIButton) {
+        infoView.isHidden = false
+        menuTable.isHidden = true
+        
+        sender.setImage(UIImage(named: "infoButtonClick.png"), for: UIControl.State.normal)
+        menuBtn.setImage(UIImage(named: "menuButton.png"), for: UIControl.State.normal)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }
