@@ -92,11 +92,17 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
 
     @IBAction func menudetailAction(_ sender: Any) {
+
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "menudetailVC") as? menudetailVC else { return }
+//
+        navigationController?.pushViewController(dvc, animated: true)
         
-         self.performSegue(withIdentifier: "menudetailSegue", sender: self)
+//        self.performSegue(withIdentifier: "menudetailSegue", sender: self)
+        
+        
     }
     
-    
+
 
     
 
