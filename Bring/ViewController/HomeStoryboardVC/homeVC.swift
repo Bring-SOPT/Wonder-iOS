@@ -18,13 +18,18 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     var myMarker = GMSMarker()
     let locationManager = CLLocationManager()
     
+    @IBOutlet var infoLabel: UILabel!
+    @IBOutlet var infoImg1: UIImageView!
+    @IBOutlet var infoImg2: UIImageView!
+    @IBOutlet var infoImg3: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapSettings()
         cafeMarker()
          mapView.delegate = self
         self.view.addSubview(mapView!)
-        
  
         self.view.addSubview(infoView)
         
@@ -61,17 +66,17 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 //        move(at: firstLocation.coordinate)
     }
     
-    func cafeMarker() {
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 37.501852, longitude: 127.037243)
-        let markerimg = UIImage(named: "homePinCafe")
-        marker.icon = markerimg
-        marker.title = "뿌잉뿌잉"
-        marker.snippet = "뿡뿡"
-        marker.map = mapView
-        
-    }
+//    func cafeMarker() {
+//
+//        let marker = GMSMarker()
+//        marker.position = CLLocationCoordinate2D(latitude: 37.501852, longitude: 127.037243)
+//        let markerimg = UIImage(named: "homePinCafe")
+//        marker.icon = markerimg
+//        marker.title = "뿌잉뿌잉"
+//        marker.snippet = "뿡뿡"
+//        marker.map = mapView
+//
+//    }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
         print("마커클릭...")
@@ -127,4 +132,19 @@ extension homeVC {
 //        myMarker.snippet = "Known"
 //        myMarker.map = mapView
     }
+    
+    func cafeMarker() {
+        
+        let cafemarker = GMSMarker()
+        cafemarker.position = CLLocationCoordinate2D(latitude: 37.501852, longitude: 127.037243)
+        let markerimg = UIImage(named: "homePinCafe")
+        cafemarker.icon = markerimg
+        cafemarker.title = "뿌잉뿌잉"
+        cafemarker.snippet = "뿡뿡"
+        cafemarker.map = mapView
+        
+        infoLabel.text = cafemarker.title
+        
+    }
+    
 }

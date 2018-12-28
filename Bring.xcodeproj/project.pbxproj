@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0175421D509C200CD5E1E /* menudetailVC.swift */; };
 		08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA521D3B11100D0FA51 /* LoginVC.swift */; };
-		08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */; };
-		08CB0FAA21D3B87B00D0FA51 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */; };
+		08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */; };
 		AE8B8225FEE20F85CA995DD8 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C508EA446D859BB2940D88 /* Pods_Bring.framework */; };
+		DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */; };
+		DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08720021D6B18500508A7A /* SignupLastVC.swift */; };
 		DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AC621D3B33A00AD4F94 /* UIImage+imageFromURL.swift */; };
 		DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AC821D3B35C00AD4F94 /* UIViewController+extensions.swift */; };
 		DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4ACB21D3B3E400AD4F94 /* NetworkResult.swift */; };
@@ -37,11 +38,12 @@
 /* Begin PBXFileReference section */
 		08C0175421D509C200CD5E1E /* menudetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menudetailVC.swift; sourceTree = "<group>"; };
 		08CB0FA521D3B11100D0FA51 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
-		08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFirstVC.swift; sourceTree = "<group>"; };
 		0F66E97A6EA26D92B219FBD1 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 		13C508EA446D859BB2940D88 /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
+		DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSecondVC.swift; sourceTree = "<group>"; };
+		DC08720021D6B18500508A7A /* SignupLastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupLastVC.swift; sourceTree = "<group>"; };
 		DC1F4AC621D3B33A00AD4F94 /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		DC1F4AC821D3B35C00AD4F94 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		DC1F4ACB21D3B3E400AD4F94 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -95,6 +97,49 @@
 				13C508EA446D859BB2940D88 /* Pods_Bring.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC08720221D6B40E00508A7A /* MainStoryboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				08CB0FA521D3B11100D0FA51 /* LoginVC.swift */,
+				08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */,
+				DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */,
+				DC08720021D6B18500508A7A /* SignupLastVC.swift */,
+			);
+			path = MainStoryboardVC;
+			sourceTree = "<group>";
+		};
+		DC08720321D6B43000508A7A /* HomeStoryboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				08C0175421D509C200CD5E1E /* menudetailVC.swift */,
+				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
+			);
+			path = HomeStoryboardVC;
+			sourceTree = "<group>";
+		};
+		DC08720421D6B44100508A7A /* MypageStoryboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEC0E121D6037600310B35 /* mypageVC.swift */,
+			);
+			path = MypageStoryboardVC;
+			sourceTree = "<group>";
+		};
+		DC08720521D6B44C00508A7A /* CartStoryboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				DCDFBF1721D4EEA3002D72FE /* cartVC.swift */,
+			);
+			path = CartStoryboardVC;
+			sourceTree = "<group>";
+		};
+		DC08720621D6B45A00508A7A /* HistoryStoryboardVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HistoryStoryboardVC;
 			sourceTree = "<group>";
 		};
 		DC1F4AC521D3B17700AD4F94 /* Extensions */ = {
@@ -184,13 +229,11 @@
 		DCDA19E921D377FF0035BE23 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				08CB0FA521D3B11100D0FA51 /* LoginVC.swift */,
-				08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */,
-				08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */,
-				DCDFBF1721D4EEA3002D72FE /* cartVC.swift */,
-				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
-				08C0175421D509C200CD5E1E /* menudetailVC.swift */,
-				DCDEC0E121D6037600310B35 /* mypageVC.swift */,
+				DC08720221D6B40E00508A7A /* MainStoryboardVC */,
+				DC08720321D6B43000508A7A /* HomeStoryboardVC */,
+				DC08720421D6B44100508A7A /* MypageStoryboardVC */,
+				DC08720521D6B44C00508A7A /* CartStoryboardVC */,
+				DC08720621D6B45A00508A7A /* HistoryStoryboardVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -357,14 +400,15 @@
 				DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */,
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
 				08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */,
-				08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */,
+				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
 				DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */,
 				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
+				DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */,
+				DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */,
 				DCDEC0E221D6037600310B35 /* mypageVC.swift in Sources */,
 				DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */,
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
-				08CB0FAA21D3B87B00D0FA51 /* FirstVC.swift in Sources */,
 				08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
