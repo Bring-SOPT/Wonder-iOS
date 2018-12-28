@@ -13,6 +13,7 @@
 		AE8B8225FEE20F85CA995DD8 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C508EA446D859BB2940D88 /* Pods_Bring.framework */; };
 		DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */; };
 		DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08720021D6B18500508A7A /* SignupLastVC.swift */; };
+		DC08720921D6BA9300508A7A /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08720821D6BA9300508A7A /* Cafe.swift */; };
 		DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AC621D3B33A00AD4F94 /* UIImage+imageFromURL.swift */; };
 		DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AC821D3B35C00AD4F94 /* UIViewController+extensions.swift */; };
 		DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4ACB21D3B3E400AD4F94 /* NetworkResult.swift */; };
@@ -44,6 +45,7 @@
 		A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
 		DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSecondVC.swift; sourceTree = "<group>"; };
 		DC08720021D6B18500508A7A /* SignupLastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupLastVC.swift; sourceTree = "<group>"; };
+		DC08720821D6BA9300508A7A /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		DC1F4AC621D3B33A00AD4F94 /* UIImage+imageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromURL.swift"; sourceTree = "<group>"; };
 		DC1F4AC821D3B35C00AD4F94 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 		DC1F4ACB21D3B3E400AD4F94 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = HistoryStoryboardVC;
 			sourceTree = "<group>";
 		};
+		DC08720721D6BA8100508A7A /* setData */ = {
+			isa = PBXGroup;
+			children = (
+				DC08720821D6BA9300508A7A /* Cafe.swift */,
+			);
+			path = setData;
+			sourceTree = "<group>";
+		};
 		DC1F4AC521D3B17700AD4F94 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +210,7 @@
 		DCD4279521D1292B003F2D48 /* Bring */ = {
 			isa = PBXGroup;
 			children = (
+				DC08720721D6BA8100508A7A /* setData */,
 				DCD4279621D1292B003F2D48 /* AppDelegate.swift */,
 				DC1F4AD821D3B5DB00AD4F94 /* Views */,
 				DC1F4AD121D3B57900AD4F94 /* Models */,
@@ -401,6 +412,7 @@
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
 				08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */,
 				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
+				DC08720921D6BA9300508A7A /* Cafe.swift in Sources */,
 				DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */,
 				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
 				DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */,

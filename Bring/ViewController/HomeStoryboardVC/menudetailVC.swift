@@ -10,15 +10,23 @@ import UIKit
 
 class menudetailVC: UIViewController {
 
-    @IBOutlet weak var menuTable: UITableView!
-    @IBOutlet weak var infoView: UIView!
-    @IBOutlet weak var menuBtn: UIButton!
-    @IBOutlet weak var infoBtn: UIButton!
+    @IBOutlet var menuTable: UITableView!
+    @IBOutlet var infoView: UIView!
+    @IBOutlet var menuBtn: UIButton!
+    @IBOutlet var infoBtn: UIButton!
+    
+    @IBOutlet var cafeNameLabel: UILabel!
+    var cafenameData: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        dataSetup()
+    }
+    
+    func dataSetup() {
+        if let transData = cafenameData {
+            cafeNameLabel.text = transData
+        }
     }
     
     @IBAction func menuAction(_ sender: UIButton) {

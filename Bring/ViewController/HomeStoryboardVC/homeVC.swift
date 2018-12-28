@@ -23,11 +23,13 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var infoImg2: UIImageView!
     @IBOutlet var infoImg3: UIImageView!
     
+    var cafeList: [Cafe] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapSettings()
         cafeMarker()
+        setCafeData()
          mapView.delegate = self
         self.view.addSubview(mapView!)
  
@@ -100,6 +102,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "menudetailVC") as? menudetailVC else { return }
 //
+        dvc.cafenameData = infoLabel.text
         navigationController?.pushViewController(dvc, animated: true)
         
 //        self.performSegue(withIdentifier: "menudetailSegue", sender: self)
@@ -142,9 +145,14 @@ extension homeVC {
         cafemarker.title = "뿌잉뿌잉"
         cafemarker.snippet = "뿡뿡"
         cafemarker.map = mapView
-        
         infoLabel.text = cafemarker.title
+    }
+    
+    func setCafeData() {
         
+        let cafe0 = Cafe(name: "카페토니", latitude: 37.497718, longitude: 127.037186, Img: "tab_home")
+        let cafe1 = Cafe(name: "투썸플레이스 역삼역점", latitude: 37.502401, longitude: 127.038016, Img: "tab_home")
+        cafeList = [cafe0, cafe1]
     }
     
 }
