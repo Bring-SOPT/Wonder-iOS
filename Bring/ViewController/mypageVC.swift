@@ -16,11 +16,5 @@ class mypageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func nextVC(_ sender: Any) {
-        
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "testVC") as? testVC else { return }
-        //
-        navigationController?.pushViewController(dvc, animated: true)
-    }
-    
+
 }

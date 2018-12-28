@@ -22,9 +22,6 @@
                                 <rect key="frame" x="164" y="272" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextVC:" destination="ndY-yu-X5v" eventType="touchUpInside" id="vXu-rP-zG6"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84313725490000002" green="0.53333333329999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
