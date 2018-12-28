@@ -181,6 +181,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Lch-Re-DKI"/>
                     </view>
                     <connections>
                         <outlet property="collectionView1" destination="NoJ-pz-u0r" id="QwZ-KV-M8H"/>
