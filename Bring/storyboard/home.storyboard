@@ -54,7 +54,7 @@
         <!--MenudetailVC-->
         <scene sceneID="jMg-2B-D9K">
             <objects>
-                <viewController id="tEM-Tn-iIg" customClass="menudetailVC" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menudetailVC" id="tEM-Tn-iIg" customClass="menudetailVC" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Em-ha-0py">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="853"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +181,11 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<<<<<<< HEAD
                         <viewLayoutGuide key="safeArea" id="Lch-Re-DKI"/>
+=======
+                        <viewLayoutGuide key="safeArea" id="IKp-N0-PcJ"/>
+>>>>>>> b9c1e12ac2a4fd30b6b9b886372a554f6d6a0f0a
                     </view>
                     <connections>
                         <outlet property="collectionView1" destination="NoJ-pz-u0r" id="QwZ-KV-M8H"/>
