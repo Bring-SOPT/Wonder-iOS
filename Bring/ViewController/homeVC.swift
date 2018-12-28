@@ -75,6 +75,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
         print("마커클릭...")
+        print("설탕공주")
         if marker.title == "뿌잉뿌잉"{
             print("뿌잉뿌잉을 클릭함")
             infoView.isHidden = false
