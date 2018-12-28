@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0175421D509C200CD5E1E /* menudetailVC.swift */; };
 		08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA521D3B11100D0FA51 /* LoginVC.swift */; };
 		08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */; };
 		08CB0FAA21D3B87B00D0FA51 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08C0175421D509C200CD5E1E /* menudetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menudetailVC.swift; sourceTree = "<group>"; };
 		08CB0FA521D3B11100D0FA51 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		08CB0FA721D3B13A00D0FA51 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				08CB0FA921D3B87B00D0FA51 /* FirstVC.swift */,
 				DCDFBF1721D4EEA3002D72FE /* cartVC.swift */,
 				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
+				08C0175421D509C200CD5E1E /* menudetailVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				DC1F4AD021D3B40800AD4F94 /* Requestable.swift in Sources */,
 				DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */,
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
+				08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */,
 				08CB0FA821D3B13A00D0FA51 /* SignupVC.swift in Sources */,
 				DCD4279921D1292B003F2D48 /* homeViewController.swift in Sources */,
 				DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */,
@@ -512,8 +516,9 @@
 			baseConfigurationReference = 0F66E97A6EA26D92B219FBD1 /* Pods-Bring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 356TMGTX7W;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,6 +526,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BringiOS.Bring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -531,8 +537,9 @@
 			baseConfigurationReference = A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 356TMGTX7W;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BringiOS.Bring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
