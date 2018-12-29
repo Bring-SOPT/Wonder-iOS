@@ -508,16 +508,25 @@
                                 <rect key="frame" x="116" y="295" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="checkBox"/>
+                                <connections>
+                                    <action selector="allServiceAction:" destination="Xky-o6-tdi" eventType="touchUpInside" id="RV2-Uh-lar"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-Iy-2Ri">
                                 <rect key="frame" x="116" y="322" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="checkBox"/>
+                                <connections>
+                                    <action selector="serviceAction:" destination="Xky-o6-tdi" eventType="touchUpInside" id="gSA-gi-5lM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-It-l7e">
                                 <rect key="frame" x="116" y="348" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="checkBox"/>
+                                <connections>
+                                    <action selector="privateAction:" destination="Xky-o6-tdi" eventType="touchUpInside" id="VH7-GG-oeP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회원가입이 완료됩니다!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsZ-OU-gg3">
                                 <rect key="frame" x="112" y="229" width="168" height="18"/>
@@ -537,6 +546,9 @@
                         <viewLayoutGuide key="safeArea" id="f5F-Dk-QP5"/>
                     </view>
                     <connections>
+                        <outlet property="allServiceCheckbtn" destination="sVj-uP-0gj" id="prP-Lz-l8Q"/>
+                        <outlet property="privateCheckbtn" destination="c2m-It-l7e" id="eD5-N8-D12"/>
+                        <outlet property="serviceCheckbtn" destination="5N8-Iy-2Ri" id="1IY-cz-phq"/>
                         <segue destination="dEx-0u-wLK" kind="show" identifier="naviSegue" id="FeU-Hj-J0k"/>
                     </connections>
                 </viewController>
