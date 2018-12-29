@@ -30,6 +30,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         mapSettings()
         cafeMarker()
         setCafeData()
+        testMarker()
          mapView.delegate = self
         self.view.addSubview(mapView!)
  
@@ -83,10 +84,11 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
         print("마커클릭...")
         print("설탕공주")
-        if marker.title == "뿌잉뿌잉"{
-            print("뿌잉뿌잉을 클릭함")
-            infoView.isHidden = false
-        }
+//        if marker.title == "뿌잉뿌잉"{
+//            print("뿌잉뿌잉을 클릭함")
+//            infoView.isHidden = false
+//        }
+        infoView.isHidden = false
         return false
     }
     
@@ -153,6 +155,20 @@ extension homeVC {
         let cafe0 = Cafe(name: "카페토니", latitude: 37.497718, longitude: 127.037186, Img: "tab_home")
         let cafe1 = Cafe(name: "투썸플레이스 역삼역점", latitude: 37.502401, longitude: 127.038016, Img: "tab_home")
         cafeList = [cafe0, cafe1]
+    }
+    
+    func testMarker() {
+        
+//        37.784358, -122.406893
+        let testmarker = GMSMarker()
+        testmarker.position = CLLocationCoordinate2D(latitude: 37.784358, longitude: -122.406893)
+        let markerimg = UIImage(named: "homePinCafe")
+        testmarker.icon = markerimg
+        testmarker.title = "설탕공주"
+        testmarker.snippet = "김하늘"
+        testmarker.map = mapView
+        infoLabel.text = testmarker.title
+        
     }
     
 }

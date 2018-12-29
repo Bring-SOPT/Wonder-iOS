@@ -34,6 +34,8 @@
 		DCDEC0E221D6037600310B35 /* mypageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEC0E121D6037600310B35 /* mypageVC.swift */; };
 		DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFBF1721D4EEA3002D72FE /* cartVC.swift */; };
 		DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFBF1921D4F67C002D72FE /* homeVC.swift */; };
+		DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */; };
+		DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		DCDEC0E121D6037600310B35 /* mypageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mypageVC.swift; sourceTree = "<group>"; };
 		DCDFBF1721D4EEA3002D72FE /* cartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartVC.swift; sourceTree = "<group>"; };
 		DCDFBF1921D4F67C002D72FE /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
+		DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
+		DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuSelectVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			children = (
 				08C0175421D509C200CD5E1E /* menudetailVC.swift */,
 				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
+				DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */,
 			);
 			path = HomeStoryboardVC;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 		DC1F4AD821D3B5DB00AD4F94 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */,
 			);
 			name = Views;
 			path = ../Views;
@@ -409,7 +415,9 @@
 				DC1F4AD521D3B59C00AD4F94 /* ResponseArray.swift in Sources */,
 				DC1F4AD021D3B40800AD4F94 /* Requestable.swift in Sources */,
 				DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */,
+				DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */,
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
+				DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */,
 				08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */,
 				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
 				DC08720921D6BA9300508A7A /* Cafe.swift in Sources */,

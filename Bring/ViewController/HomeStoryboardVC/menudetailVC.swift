@@ -10,12 +10,17 @@ import UIKit
 
 class menudetailVC: UIViewController {
 
+    
+    @IBOutlet var backgroundImg: UIImageView!
+    @IBOutlet var cafeImg: UIImageView!
+    
     @IBOutlet var menuTable: UITableView!
     @IBOutlet var infoView: UIView!
     @IBOutlet var menuBtn: UIButton!
     @IBOutlet var infoBtn: UIButton!
     
     @IBOutlet var cafeNameLabel: UILabel!
+    @IBOutlet var cafeAddressLabel: UILabel!
     var cafenameData: String?
     
     override func viewDidLoad() {
@@ -50,3 +55,41 @@ class menudetailVC: UIViewController {
     
 
 }
+
+
+extension menudetailVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return boardList.count
+        return 0
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuTableViewCell", for: indexPath) as! menuTableViewCell
+//        let board = boardList[indexPath.item]
+        
+
+//        cell.menuName.text
+//        cell.menuPrice.text = "\(gino())원"
+//        cell.menuImg.imageFromUrl(gsno(board.boardPhoto), defaultImgPath: "")
+//
+        
+        return cell
+    }
+    
+}
+
+extension menudetailVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "menuSelectVC") as! menuSelectVC
+//        let board = boardList[indexPath.row]
+//        nextVC.boardtitle = board.boardTitle
+//        nextVC.contents = board.boardContents
+//        nextVC.like = board.boardLike
+        
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+}
+
+
