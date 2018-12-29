@@ -36,6 +36,7 @@
 		DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDFBF1921D4F67C002D72FE /* homeVC.swift */; };
 		DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */; };
 		DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */; };
+		DCE1AB7421D76076000E3BE1 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7321D76076000E3BE1 /* orderVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		DCDFBF1921D4F67C002D72FE /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
 		DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuSelectVC.swift; sourceTree = "<group>"; };
+		DCE1AB7321D76076000E3BE1 /* orderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				08C0175421D509C200CD5E1E /* menudetailVC.swift */,
 				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
 				DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */,
+				DCE1AB7321D76076000E3BE1 /* orderVC.swift */,
 			);
 			path = HomeStoryboardVC;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
 				DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */,
 				DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */,
+				DCE1AB7421D76076000E3BE1 /* orderVC.swift in Sources */,
 				DCDEC0E221D6037600310B35 /* mypageVC.swift in Sources */,
 				DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */,
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,

@@ -10,21 +10,44 @@ import UIKit
 
 class menuSelectVC: UIViewController {
 
+    
+    @IBOutlet var menuImg: UIImageView!
+    @IBOutlet var menuName: UILabel!
+    @IBOutlet var menuPrice: UILabel!
+    
+    @IBOutlet var countLabel: UILabel!
+    
+    
+    @IBOutlet var sizeSelectView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        self.view.addSubview(sizeSelectView)
+    }
+    
+    @IBAction func sizeSelectAction(_ sender: Any) {
+      
+        if sizeSelectView.isHidden == true {
+        sizeSelectView.isHidden = false
+        }
+        else  { sizeSelectView.isHidden = true }
+        
+    }
+    
+    @IBAction func addCartAction(_ sender: Any) {
+    }
+    
+    @IBAction func orderNowAction(_ sender: Any) {
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "orderVC") as? orderVC else { return }
+        navigationController?.pushViewController(dvc, animated: true)
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func countDownAction(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func countupAction(_ sender: Any) {
+    }
 }
