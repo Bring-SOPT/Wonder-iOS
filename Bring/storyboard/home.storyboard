@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTo-8o-Knd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="924-e9-Z77">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -352,17 +352,26 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-bQ-DfD">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="tall"/>
+                                        <connections>
+                                            <action selector="sizeTallAction:" destination="gTo-8o-Knd" eventType="touchUpInside" id="DAv-TQ-1Tx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOh-9s-b9q">
                                         <rect key="frame" x="0.0" y="45" width="150" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="grande"/>
+                                        <connections>
+                                            <action selector="sizeGrandeAction:" destination="gTo-8o-Knd" eventType="touchUpInside" id="UQP-nt-tO9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-h0-LwV">
                                         <rect key="frame" x="0.0" y="89" width="150" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="venti"/>
+                                        <connections>
+                                            <action selector="sizeVentiAction:" destination="gTo-8o-Knd" eventType="touchUpInside" id="ZZt-fi-bxa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -375,8 +384,8 @@
                                     <action selector="sizeSelectAction:" destination="gTo-8o-Knd" eventType="touchUpInside" id="6ir-gG-lfU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJe-qx-Jdv">
-                                <rect key="frame" x="247" y="274" width="31" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJe-qx-Jdv">
+                                <rect key="frame" x="223" y="274" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -433,13 +442,14 @@
                         <outlet property="menuImg" destination="fwd-fi-2fF" id="Cia-Gf-mnZ"/>
                         <outlet property="menuName" destination="BBy-cE-hft" id="rQQ-7u-Pcg"/>
                         <outlet property="menuPrice" destination="PBX-NH-X33" id="ryy-MB-pEk"/>
+                        <outlet property="sizeLabel" destination="KJe-qx-Jdv" id="Esu-hz-8Bc"/>
                         <outlet property="sizeSelectView" destination="mvO-nx-FkK" id="hDG-TC-MGj"/>
                         <outlet property="totalPriceLabel" destination="e9r-XF-Ehc" id="bke-72-nze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXE-mq-kJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="-672"/>
+            <point key="canvasLocation" x="1864.8" y="-672.41379310344837"/>
         </scene>
         <!--OrderVC-->
         <scene sceneID="qN9-v8-XwG">
