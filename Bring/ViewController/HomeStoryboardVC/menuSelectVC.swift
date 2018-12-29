@@ -22,6 +22,9 @@ class menuSelectVC: UIViewController {
     
     @IBOutlet var totalPriceLabel: UILabel!
     @IBOutlet var sizeSelectView: UIView!
+    
+    @IBOutlet var sizeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +44,19 @@ class menuSelectVC: UIViewController {
     }
     
     @IBAction func addCartAction(_ sender: Any) {
+        
+        if count != 0 {
+            
+            let alert = UIAlertView()
+            alert.title = "장바구니에 저장되었습니다."
+            alert.message = "뿌잉."
+            alert.addButton(withTitle: "ㅇㅋ")
+            alert.show()
+            
+        
+            
+        }
+        
     }
     
     @IBAction func orderNowAction(_ sender: Any) {
@@ -75,6 +91,22 @@ class menuSelectVC: UIViewController {
         countLabel.text = "\(gino(count))"
         totalPrice = Price * count
         totalPriceLabel.text = "\(gino(totalPrice))"
+        
+    }
+    
+    @IBAction func sizeTallAction(_ sender: Any) {
+        sizeLabel.text = "tall"
+        
+    }
+    
+    @IBAction func sizeGrandeAction(_ sender: Any) {
+         sizeLabel.text = "grande"
+ 
+        
+    }
+    @IBAction func sizeVentiAction(_ sender: Any) {
+         sizeLabel.text = "venti"
+        
         
     }
 }
