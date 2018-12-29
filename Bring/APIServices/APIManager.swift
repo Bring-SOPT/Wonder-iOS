@@ -11,6 +11,6 @@ protocol APIManager {}
 
 extension APIManager {
     static func url(_ path: String) -> String {
-        return "http://bghgu.tk:8080" + path
+        return "http://bomi.gq:8080" + path
     }
 }
