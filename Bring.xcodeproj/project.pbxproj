@@ -38,6 +38,9 @@
 		DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */; };
 		DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */; };
 		DCE1AB7421D76076000E3BE1 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7321D76076000E3BE1 /* orderVC.swift */; };
+		DCE6EB5821D8DDBE0003ADDB /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5721D8DDBE0003ADDB /* testVC.swift */; };
+		DCE6EB5A21D92D500003ADDB /* homeNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5921D92D500003ADDB /* homeNC.swift */; };
+		DCE6EB5C21D948F70003ADDB /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5B21D948F70003ADDB /* menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
 		DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuSelectVC.swift; sourceTree = "<group>"; };
 		DCE1AB7321D76076000E3BE1 /* orderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderVC.swift; sourceTree = "<group>"; };
+		DCE6EB5721D8DDBE0003ADDB /* testVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
+		DCE6EB5921D92D500003ADDB /* homeNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeNC.swift; sourceTree = "<group>"; };
+		DCE6EB5B21D948F70003ADDB /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
 				DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */,
 				DCE1AB7321D76076000E3BE1 /* orderVC.swift */,
+				DCE6EB5921D92D500003ADDB /* homeNC.swift */,
 			);
 			path = HomeStoryboardVC;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				DCDEC0E121D6037600310B35 /* mypageVC.swift */,
+				DCE6EB5721D8DDBE0003ADDB /* testVC.swift */,
 			);
 			path = MypageStoryboardVC;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				DC08720821D6BA9300508A7A /* Cafe.swift */,
+				DCE6EB5B21D948F70003ADDB /* menu.swift */,
 			);
 			path = setData;
 			sourceTree = "<group>";
@@ -417,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC1F4ACE21D3B3FB00AD4F94 /* APIManager.swift in Sources */,
+				DCE6EB5821D8DDBE0003ADDB /* testVC.swift in Sources */,
 				DC1F4AD721D3B5A100AD4F94 /* Token.swift in Sources */,
 				DC1F4AD521D3B59C00AD4F94 /* ResponseArray.swift in Sources */,
 				DC1F4AD021D3B40800AD4F94 /* Requestable.swift in Sources */,
@@ -424,6 +434,8 @@
 				DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */,
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
 				DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */,
+				DCE6EB5A21D92D500003ADDB /* homeNC.swift in Sources */,
+				DCE6EB5C21D948F70003ADDB /* menu.swift in Sources */,
 				08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */,
 				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
 				DC08720921D6BA9300508A7A /* Cafe.swift in Sources */,
@@ -585,8 +597,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356TMGTX7W;
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,8 +618,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356TMGTX7W;
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

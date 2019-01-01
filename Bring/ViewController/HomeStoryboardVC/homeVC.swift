@@ -100,23 +100,19 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     }
     
 
-    @IBAction func menudetailAction(_ sender: Any) {
-
+    @IBAction func menuDetailAction(_ sender: Any) {
+        
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "menudetailVC") as? menudetailVC else { return }
-//
         dvc.cafenameData = infoLabel.text
-        navigationController?.pushViewController(dvc, animated: true)
+          self.performSegue(withIdentifier: "naviSegue", sender: self)
+//        navigationController?.pushViewController(dvc, animated: true)
+        print("왜안되는거지")
         
-//        self.performSegue(withIdentifier: "menudetailSegue", sender: self)
-        
+//        메뉴상세뷰에서 네브바가 추가되면서 데이터전달이 안됨
+//        승수찡한테 질문할부분 ...
+        }
         
     }
-    
-
-
-    
-
-}
 
 extension homeVC {
     func move(at coordinate: CLLocationCoordinate2D?) {
@@ -159,7 +155,6 @@ extension homeVC {
     
     func testMarker() {
         
-//        37.784358, -122.406893
         let testmarker = GMSMarker()
         testmarker.position = CLLocationCoordinate2D(latitude: 37.784358, longitude: -122.406893)
         let markerimg = UIImage(named: "homePinCafe")

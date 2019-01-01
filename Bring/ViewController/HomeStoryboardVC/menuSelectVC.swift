@@ -19,7 +19,7 @@ class menuSelectVC: UIViewController {
     var count:Int = 0
     var Price: Int = 5000
     var totalPrice: Int = 0
-    
+    var name: String = ""
     @IBOutlet var totalPriceLabel: UILabel!
     @IBOutlet var sizeSelectView: UIView!
     
@@ -31,6 +31,7 @@ class menuSelectVC: UIViewController {
         countLabel.text = "\(gino(count))"
         menuPrice.text = "\(gino(Price))"
         totalPriceLabel.text = "\(gino(totalPrice))"
+        menuName.text = name
         self.view.addSubview(sizeSelectView)
     }
     
