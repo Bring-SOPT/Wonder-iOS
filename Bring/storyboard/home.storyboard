@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="924-e9-Z77">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTo-8o-Knd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,12 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="AYn-ZK-B25">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LR4-2B-3bS" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOR-Nv-4xF">
@@ -92,14 +88,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LR4-2B-3bS" firstAttribute="leading" secondItem="l6V-Dg-ibm" secondAttribute="leading" id="1Mw-p7-qh5"/>
-                            <constraint firstItem="AYn-ZK-B25" firstAttribute="top" secondItem="l6V-Dg-ibm" secondAttribute="top" id="3Bp-Em-8BL"/>
-                            <constraint firstItem="LR4-2B-3bS" firstAttribute="top" secondItem="AYn-ZK-B25" secondAttribute="bottom" id="BfQ-6A-TB4"/>
                             <constraint firstItem="NOR-Nv-4xF" firstAttribute="bottom" secondItem="l6V-Dg-ibm" secondAttribute="bottom" id="Ed1-j6-L91"/>
                             <constraint firstItem="NOR-Nv-4xF" firstAttribute="trailing" secondItem="l6V-Dg-ibm" secondAttribute="trailing" id="Iic-pX-D6b"/>
-                            <constraint firstItem="AYn-ZK-B25" firstAttribute="leading" secondItem="l6V-Dg-ibm" secondAttribute="leading" id="Mxm-wA-kUZ"/>
+                            <constraint firstItem="LR4-2B-3bS" firstAttribute="top" secondItem="l6V-Dg-ibm" secondAttribute="top" id="OAj-4C-bGd"/>
                             <constraint firstItem="l6V-Dg-ibm" firstAttribute="bottom" secondItem="LR4-2B-3bS" secondAttribute="bottom" id="Wvw-WB-qgo"/>
                             <constraint firstItem="NOR-Nv-4xF" firstAttribute="leading" secondItem="l6V-Dg-ibm" secondAttribute="leading" id="jbS-HT-QnB"/>
-                            <constraint firstItem="l6V-Dg-ibm" firstAttribute="trailing" secondItem="AYn-ZK-B25" secondAttribute="trailing" id="nV5-Zq-cXk"/>
                             <constraint firstItem="LR4-2B-3bS" firstAttribute="trailing" secondItem="l6V-Dg-ibm" secondAttribute="trailing" id="ny9-7H-3iV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l6V-Dg-ibm"/>
@@ -543,6 +536,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6X-ma-njS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="558" y="-672"/>
+        </scene>
+        <!--Search TestVC-->
+        <scene sceneID="1kW-0W-uC8">
+            <objects>
+                <viewController id="Kd3-ZK-OKo" customClass="searchTestVC" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bFv-MT-aJ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2X-cr-VCm" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="218" width="375" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lEL-5c-C6a"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Q2X-cr-VCm" id="JEe-hI-Tbg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGO-Dv-IuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="70.614692653673174"/>
         </scene>
     </scenes>
     <resources>

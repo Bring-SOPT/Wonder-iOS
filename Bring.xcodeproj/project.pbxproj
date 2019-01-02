@@ -22,6 +22,9 @@
 		DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AD221D3B58600AD4F94 /* ResponseObject.swift */; };
 		DC1F4AD521D3B59C00AD4F94 /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AD421D3B59C00AD4F94 /* ResponseArray.swift */; };
 		DC1F4AD721D3B5A100AD4F94 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F4AD621D3B5A100AD4F94 /* Token.swift */; };
+		DC74AB9821DBC73500CF7872 /* searchTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74AB9721DBC73500CF7872 /* searchTestVC.swift */; };
+		DCA5894621DBB65500D59A78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5894521DBB65500D59A78 /* User.swift */; };
+		DCA5894821DBBD9B00D59A78 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5894721DBBD9B00D59A78 /* UserService.swift */; };
 		DCC3F0D521D7843400D16B18 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3F0D421D7843400D16B18 /* LoginService.swift */; };
 		DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4279621D1292B003F2D48 /* AppDelegate.swift */; };
 		DCD4279C21D1292B003F2D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD4279A21D1292B003F2D48 /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		DC1F4AD221D3B58600AD4F94 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		DC1F4AD421D3B59C00AD4F94 /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 		DC1F4AD621D3B5A100AD4F94 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		DC74AB9721DBC73500CF7872 /* searchTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTestVC.swift; sourceTree = "<group>"; };
+		DCA5894521DBB65500D59A78 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DCA5894721DBBD9B00D59A78 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DCC3F0D421D7843400D16B18 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		DCD4279321D1292B003F2D48 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD4279621D1292B003F2D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 				DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */,
 				DCE1AB7321D76076000E3BE1 /* orderVC.swift */,
 				DCE6EB5921D92D500003ADDB /* homeNC.swift */,
+				DC74AB9721DBC73500CF7872 /* searchTestVC.swift */,
 			);
 			path = HomeStoryboardVC;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 				DC1F4ACD21D3B3FB00AD4F94 /* APIManager.swift */,
 				DC1F4ACF21D3B40800AD4F94 /* Requestable.swift */,
 				DCC3F0D421D7843400D16B18 /* LoginService.swift */,
+				DCA5894721DBBD9B00D59A78 /* UserService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1F4AD221D3B58600AD4F94 /* ResponseObject.swift */,
+				DCA5894521DBB65500D59A78 /* User.swift */,
 				DC1F4AD421D3B59C00AD4F94 /* ResponseArray.swift */,
 				DC1F4AD621D3B5A100AD4F94 /* Token.swift */,
 			);
@@ -425,7 +434,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC74AB9821DBC73500CF7872 /* searchTestVC.swift in Sources */,
+				DCA5894621DBB65500D59A78 /* User.swift in Sources */,
 				DC1F4ACE21D3B3FB00AD4F94 /* APIManager.swift in Sources */,
+				DCA5894821DBBD9B00D59A78 /* UserService.swift in Sources */,
 				DCE6EB5821D8DDBE0003ADDB /* testVC.swift in Sources */,
 				DC1F4AD721D3B5A100AD4F94 /* Token.swift in Sources */,
 				DC1F4AD521D3B59C00AD4F94 /* ResponseArray.swift in Sources */,
