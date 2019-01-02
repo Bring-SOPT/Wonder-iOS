@@ -50,7 +50,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
         
-        let subView = UIView(frame: CGRect(x: 0, y: 0, width: 350.0, height: 45.0))
+        let subView = UIView(frame: CGRect(x: 0, y: 0, width: 350, height: 45.0))
         
         subView.addSubview((searchController?.searchBar)!)
         view.addSubview(subView)
