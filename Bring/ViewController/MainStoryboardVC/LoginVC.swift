@@ -12,6 +12,7 @@ class LoginVC: UIViewController {
     
     @IBOutlet var EmailField: UITextField!
     @IBOutlet var PasswordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,8 +31,10 @@ class LoginVC: UIViewController {
         LoginService.shared.login(id: id, password: password) {
             [weak self] (data) in
             guard let `self` = self else {return}
+            
+            
             self.performSegue(withIdentifier: "naviSegue", sender: self)
-            print("머지")
+            
         }
     }
     

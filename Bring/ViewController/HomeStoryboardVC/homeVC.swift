@@ -10,9 +10,15 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 import AddressBookUI
+import GooglePlaces
 
 class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
-
+//검색때매 새로추가함
+    var resultsViewController: GMSAutocompleteResultsViewController?
+    var searchController: UISearchController?
+    var resultView: UITextView?
+    
+    
     @IBOutlet var infoView: UIView!
     @IBOutlet var mapView: GMSMapView!
     var myMarker = GMSMarker()
@@ -36,6 +42,24 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         self.view.addSubview(mapView!)
  
         self.view.addSubview(infoView)
+        
+        //검색때매 새로추가함
+        resultsViewController = GMSAutocompleteResultsViewController()
+        resultsViewController?.delegate = self
+        
+        searchController = UISearchController(searchResultsController: resultsViewController)
+        searchController?.searchResultsUpdater = resultsViewController
+        
+        let subView = UIView(frame: CGRect(x: 0, y: 0, width: 350.0, height: 45.0))
+        
+        subView.addSubview((searchController?.searchBar)!)
+        view.addSubview(subView)
+        searchController?.searchBar.sizeToFit()
+        searchController?.hidesNavigationBarDuringPresentation = false
+        
+        // When UISearchController presents the results view, present it in
+        // this view controller, not one further up the chain.
+        definesPresentationContext = true
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -114,6 +138,35 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         }
         
     }
+
+//검색때매새로추가함
+extension homeVC: GMSAutocompleteResultsViewControllerDelegate {
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
+                           didAutocompleteWith place: GMSPlace) {
+        searchController?.isActive = false
+        // Do something with the selected place.
+        //        print("Place name: \(place.name)")
+        //        print("Place address: \(place.formattedAddress)")
+        //        print("Place attributions: \(place.attributions)")
+        print(place.coordinate)
+        move(at: place.coordinate)
+    }
+    
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
+                           didFailAutocompleteWithError error: Error){
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(forResultsController resultsController: GMSAutocompleteResultsViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
 
 extension homeVC {
     func move(at coordinate: CLLocationCoordinate2D?) {
