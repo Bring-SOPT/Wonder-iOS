@@ -104,7 +104,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="OaE-m5-DS2" eventType="touchUpInside" id="L55-kj-E3X"/>
-                                    <segue destination="w2W-39-I1k" kind="show" identifier="naviSegue" id="E7W-i2-Yy9"/>
+                                    <segue destination="w2W-39-I1k" kind="showDetail" identifier="naviSegue" id="E7W-i2-Yy9"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoNoTypo" translatesAutoresizingMaskIntoConstraints="NO" id="7K8-me-0H8">
@@ -588,6 +588,6 @@
         <image name="tab_oroderlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BSf-JO-KXE"/>
+        <segue reference="E7W-i2-Yy9"/>
     </inferredMetricsTieBreakers>
 </document>
