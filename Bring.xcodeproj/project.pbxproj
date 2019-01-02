@@ -41,6 +41,8 @@
 		DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */; };
 		DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */; };
 		DCE1AB7421D76076000E3BE1 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7321D76076000E3BE1 /* orderVC.swift */; };
+		DCE1AE2E21DCE301009B006B /* cartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AE2D21DCE301009B006B /* cartCollectionViewCell.swift */; };
+		DCE1AE3021DCE8C3009B006B /* cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AE2F21DCE8C3009B006B /* cart.swift */; };
 		DCE6EB5821D8DDBE0003ADDB /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5721D8DDBE0003ADDB /* testVC.swift */; };
 		DCE6EB5C21D948F70003ADDB /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5B21D948F70003ADDB /* menu.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
 		DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuSelectVC.swift; sourceTree = "<group>"; };
 		DCE1AB7321D76076000E3BE1 /* orderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderVC.swift; sourceTree = "<group>"; };
+		DCE1AE2D21DCE301009B006B /* cartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCE1AE2F21DCE8C3009B006B /* cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cart.swift; sourceTree = "<group>"; };
 		DCE6EB5721D8DDBE0003ADDB /* testVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
 		DCE6EB5B21D948F70003ADDB /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +175,7 @@
 			children = (
 				DC08720821D6BA9300508A7A /* Cafe.swift */,
 				DCE6EB5B21D948F70003ADDB /* menu.swift */,
+				DCE1AE2F21DCE8C3009B006B /* cart.swift */,
 			);
 			path = setData;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */,
+				DCE1AE2D21DCE301009B006B /* cartCollectionViewCell.swift */,
 			);
 			name = Views;
 			path = ../Views;
@@ -431,7 +437,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE1AE2E21DCE301009B006B /* cartCollectionViewCell.swift in Sources */,
 				DC74AB9821DBC73500CF7872 /* searchTestVC.swift in Sources */,
+				DCE1AE3021DCE8C3009B006B /* cart.swift in Sources */,
 				DCA5894621DBB65500D59A78 /* User.swift in Sources */,
 				DC1F4ACE21D3B3FB00AD4F94 /* APIManager.swift in Sources */,
 				DCA5894821DBBD9B00D59A78 /* UserService.swift in Sources */,
@@ -605,8 +613,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356TMGTX7W;
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,8 +634,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356TMGTX7W;
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
