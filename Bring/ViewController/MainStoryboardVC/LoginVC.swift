@@ -10,6 +10,7 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    
     @IBOutlet var EmailField: UITextField!
     @IBOutlet var PasswordField: UITextField!
     
@@ -17,6 +18,11 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     
     @IBAction func signupAction(_ sender: Any) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupFirstVC") as? SignupFirstVC else { return }

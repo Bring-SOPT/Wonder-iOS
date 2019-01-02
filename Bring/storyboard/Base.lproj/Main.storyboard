@@ -444,11 +444,6 @@
                                     <action selector="nextAction:" destination="I7c-Yr-vPR" eventType="touchUpInside" id="uu1-Yp-58L"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwJ-uO-YNu">
-                                <rect key="frame" x="140" y="68" width="95" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="defaultProfileCamera"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="프로필 이미지" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMi-Mt-wgJ">
                                 <rect key="frame" x="97" y="178" width="181" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -475,6 +470,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="confirmRepetitionButton"/>
                             </button>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultProfileCamera" translatesAutoresizingMaskIntoConstraints="NO" id="Dj0-PA-dxp">
+                                <rect key="frame" x="140" y="60" width="94" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -485,6 +484,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aRO-vI-lrk"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImage" destination="Dj0-PA-dxp" id="YF1-TZ-Wr9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4u-Jt-b22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
