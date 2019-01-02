@@ -68,6 +68,19 @@ class menudetailVC: UIViewController {
     
     
     
+    @IBAction func cartAction(_ sender: Any) {
+        
+//        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "menudetailVC") as? menudetailVC else { return }
+//        dvc.cafenameData = infoLabel.text
+//        self.performSegue(withIdentifier: "naviSegue", sender: self)
+//        
+        
+        //        navigationController?.pushViewController(dvc, animated: true)
+        
+        
+    }
+    
+    
 
 }
 
