@@ -8,10 +8,14 @@
 
 import UIKit
 
-class SignupSecondVC: UIViewController {
-
+class SignupSecondVC: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var nickTF: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
     }
     

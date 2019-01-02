@@ -440,6 +440,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aRO-vI-lrk"/>
                     </view>
+                    <connections>
+                        <outlet property="nickTF" destination="tBM-Kt-G6w" id="zTW-EQ-eAe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4u-Jt-b22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

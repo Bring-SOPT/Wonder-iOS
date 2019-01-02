@@ -14,7 +14,6 @@ class LoginVC: UIViewController {
     @IBOutlet var PasswordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func signupAction(_ sender: Any) {
