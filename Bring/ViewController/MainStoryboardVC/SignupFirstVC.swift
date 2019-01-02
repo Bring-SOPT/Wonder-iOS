@@ -24,6 +24,10 @@ class SignupFirstVC: UIViewController {
 
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     
     @IBAction func idOkAction(_ sender: Any) {
         
