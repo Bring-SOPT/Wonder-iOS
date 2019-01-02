@@ -12,9 +12,11 @@ class SignupSecondVC: UIViewController {
 
     
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nickNameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nickNameField.returnKeyType = .done
          setupTap()
 
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate  {
     
     
     @IBOutlet var EmailField: UITextField!
@@ -16,6 +16,13 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        EmailField.returnKeyType = .done
+        PasswordField.returnKeyType = .done
+        
+        EmailField.delegate = self
+        EmailField.tag = 0;
+        PasswordField.delegate = self
+        PasswordField.tag = 1;
 
     }
     
@@ -26,7 +33,7 @@ class LoginVC: UIViewController {
     
     @IBAction func signupAction(_ sender: Any) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupFirstVC") as? SignupFirstVC else { return }
-        //
+        
        present(dvc,animated: true)
     }
     
@@ -45,5 +52,30 @@ class LoginVC: UIViewController {
         }
     }
     
-
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        
+//        let nextTag = textField.tag + 1
+//        
+//        if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+//            nextResponder.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//        
+//        return true
+//    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
+    }
 }
+

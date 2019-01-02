@@ -20,6 +20,9 @@ class SignupFirstVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        EmailField.returnKeyType = .done
+        PasswordField.returnKeyType = .done
+        PasswordConfirmField.returnKeyType = .done
 
 
     }
