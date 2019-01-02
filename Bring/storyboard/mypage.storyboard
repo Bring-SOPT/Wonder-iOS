@@ -94,23 +94,51 @@
                                     <action selector="logoutAction:" destination="ndY-yu-X5v" eventType="touchUpInside" id="LiX-FF-Waj"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1j-aI-TM4">
-                                <rect key="frame" x="75" y="175" width="240" height="278"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1j-aI-TM4">
+                                <rect key="frame" x="91.5" y="237.5" width="192" height="256"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-OU-Dmm">
-                                        <rect key="frame" x="101" y="192" width="39" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="로그인"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigPopupBackground" translatesAutoresizingMaskIntoConstraints="NO" id="TwM-1K-29v">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="256"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="256" id="d3c-I2-Mk0"/>
+                                            <constraint firstAttribute="width" constant="192" id="fQI-b9-fZL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-OU-Dmm">
+                                        <rect key="frame" x="33" y="195" width="126" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="126" id="6I2-9m-o1Y"/>
+                                            <constraint firstAttribute="height" constant="26" id="ZZK-Gr-BZo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="로그인하러가기" backgroundImage="bigPopupBtnCoral">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="goToLoginView:" destination="ndY-yu-X5v" eventType="touchUpInside" id="c0x-eJ-Omi"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigPopupLogoLogin" translatesAutoresizingMaskIntoConstraints="NO" id="4NT-pl-iT9">
+                                        <rect key="frame" x="57" y="29" width="78" height="91"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ODN-OU-Dmm" secondAttribute="bottom" constant="35" id="BuG-r0-Cfd"/>
+                                    <constraint firstItem="TwM-1K-29v" firstAttribute="top" secondItem="4NT-pl-iT9" secondAttribute="bottom" constant="-120" id="FHA-mQ-yzT"/>
+                                    <constraint firstAttribute="bottom" secondItem="TwM-1K-29v" secondAttribute="bottom" id="NQc-hs-wmd"/>
+                                    <constraint firstItem="ODN-OU-Dmm" firstAttribute="centerX" secondItem="p1j-aI-TM4" secondAttribute="centerX" id="gJo-nT-szE"/>
+                                    <constraint firstItem="TwM-1K-29v" firstAttribute="leading" secondItem="p1j-aI-TM4" secondAttribute="leading" id="qB4-pz-xtw"/>
+                                    <constraint firstItem="4NT-pl-iT9" firstAttribute="centerX" secondItem="TwM-1K-29v" secondAttribute="centerX" id="qgQ-mV-GGE"/>
+                                    <constraint firstAttribute="trailing" secondItem="TwM-1K-29v" secondAttribute="trailing" id="xb9-vu-X6d"/>
+                                    <constraint firstItem="TwM-1K-29v" firstAttribute="top" secondItem="p1j-aI-TM4" secondAttribute="top" id="z19-lS-43k"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p1j-aI-TM4" firstAttribute="centerY" secondItem="OsQ-HP-ata" secondAttribute="centerY" id="Gl2-tk-p9W"/>
+                            <constraint firstItem="p1j-aI-TM4" firstAttribute="centerX" secondItem="OsQ-HP-ata" secondAttribute="centerX" id="Tt8-2D-HtM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OsQ-HP-ata"/>
                     </view>
                     <navigationItem key="navigationItem" title="마이페이지" id="ifp-hD-Rcg"/>
@@ -150,7 +178,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="babylion" width="600" height="600"/>
+        <image name="babylion" width="450" height="450"/>
+        <image name="bigPopupBackground" width="192" height="256"/>
+        <image name="bigPopupBtnCoral" width="126" height="28"/>
+        <image name="bigPopupLogoLogin" width="78" height="91"/>
         <image name="logoutButton" width="131" height="41"/>
     </resources>
 </document>

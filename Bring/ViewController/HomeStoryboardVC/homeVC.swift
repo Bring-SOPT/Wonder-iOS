@@ -13,7 +13,7 @@ import AddressBookUI
 import GooglePlaces
 
 class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
-//검색때매 새로추가함
+
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
@@ -21,6 +21,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var infoView: UIView!
     @IBOutlet var mapView: GMSMapView!
+    
     var myMarker = GMSMarker()
     let locationManager = CLLocationManager()
     
@@ -43,7 +44,6 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
  
         self.view.addSubview(infoView)
         
-        //검색때매 새로추가함
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
         
@@ -57,8 +57,6 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         searchController?.searchBar.sizeToFit()
         searchController?.hidesNavigationBarDuringPresentation = false
         
-        // When UISearchController presents the results view, present it in
-        // this view controller, not one further up the chain.
         definesPresentationContext = true
         
     }
@@ -67,15 +65,9 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
-        
-        // 사용할때만 위치정보를 사용한다는 팝업이 발생
-        //        locationManager.requestWhenInUseAuthorization()
-        
-        // 항상 위치정보를 사용한다는 판업이 발생
         locationManager.requestAlwaysAuthorization()
-        
         locationManager.startUpdatingLocation()
-        
+        //현재 위치를 뷰에 보여줌
         move(at: locationManager.location?.coordinate)
     }
     
@@ -90,29 +82,12 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         guard let firstLocation = locations.first else {
             return
         }
-        
-//        move(at: firstLocation.coordinate)
     }
-    
-//    func cafeMarker() {
-//
-//        let marker = GMSMarker()
-//        marker.position = CLLocationCoordinate2D(latitude: 37.501852, longitude: 127.037243)
-//        let markerimg = UIImage(named: "homePinCafe")
-//        marker.icon = markerimg
-//        marker.title = "뿌잉뿌잉"
-//        marker.snippet = "뿡뿡"
-//        marker.map = mapView
-//
-//    }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
         print("마커클릭...")
-        print("설탕.....")
-//        if marker.title == "뿌잉뿌잉"{
-//            print("뿌잉뿌잉을 클릭함")
-//            infoView.isHidden = false
-//        }
+        
+        infoLabel.text = marker.title
         infoView.isHidden = false
         return false
     }
@@ -130,8 +105,10 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "menudetailVC") as? menudetailVC else { return }
         dvc.cafenameData = infoLabel.text
           self.performSegue(withIdentifier: "naviSegue", sender: self)
+        
+        
 //        navigationController?.pushViewController(dvc, animated: true)
-        print("왜안되는거지")
+//        print("왜안되는거지")
         
 //        메뉴상세뷰에서 네브바가 추가되면서 데이터전달이 안됨
 //        승수찡한테 질문할부분 ...
@@ -144,11 +121,9 @@ extension homeVC: GMSAutocompleteResultsViewControllerDelegate {
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
                            didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
-        // Do something with the selected place.
-        //        print("Place name: \(place.name)")
-        //        print("Place address: \(place.formattedAddress)")
-        //        print("Place attributions: \(place.attributions)")
+        
         print(place.coordinate)
+        //검색결과로 지도 이동
         move(at: place.coordinate)
     }
     
@@ -181,12 +156,19 @@ extension homeVC {
         
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 14.0)
         mapView.camera = camera
-//
-//        myMarker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//        myMarker.title = "My Position"
-//        myMarker.snippet = "Known"
-//        myMarker.map = mapView
     }
+    
+//    func cafeMarker() {
+//
+//        let cafemarker = GMSMarker()
+//        cafemarker.position = CLLocationCoordinate2D(latitude: 37.501852, longitude: 127.037243)
+//        let markerimg = UIImage(named: "homePinCafe")
+//        cafemarker.icon = markerimg
+//        cafemarker.title = "뿌잉뿌잉"
+//        cafemarker.snippet = "뿡뿡"
+//        cafemarker.map = mapView
+//
+//    }
     
     func cafeMarker() {
         
@@ -197,7 +179,7 @@ extension homeVC {
         cafemarker.title = "뿌잉뿌잉"
         cafemarker.snippet = "뿡뿡"
         cafemarker.map = mapView
-        infoLabel.text = cafemarker.title
+        
     }
     
     func setCafeData() {
@@ -216,7 +198,6 @@ extension homeVC {
         testmarker.title = "설탕공주"
         testmarker.snippet = "김하늘"
         testmarker.map = mapView
-        infoLabel.text = testmarker.title
         
     }
     

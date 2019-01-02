@@ -42,7 +42,6 @@
 		DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */; };
 		DCE1AB7421D76076000E3BE1 /* orderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AB7321D76076000E3BE1 /* orderVC.swift */; };
 		DCE6EB5821D8DDBE0003ADDB /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5721D8DDBE0003ADDB /* testVC.swift */; };
-		DCE6EB5A21D92D500003ADDB /* homeNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5921D92D500003ADDB /* homeNC.swift */; };
 		DCE6EB5C21D948F70003ADDB /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5B21D948F70003ADDB /* menu.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +85,6 @@
 		DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuSelectVC.swift; sourceTree = "<group>"; };
 		DCE1AB7321D76076000E3BE1 /* orderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderVC.swift; sourceTree = "<group>"; };
 		DCE6EB5721D8DDBE0003ADDB /* testVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
-		DCE6EB5921D92D500003ADDB /* homeNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeNC.swift; sourceTree = "<group>"; };
 		DCE6EB5B21D948F70003ADDB /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +137,6 @@
 				DCDFBF1921D4F67C002D72FE /* homeVC.swift */,
 				DCE1AB7121D756C2000E3BE1 /* menuSelectVC.swift */,
 				DCE1AB7321D76076000E3BE1 /* orderVC.swift */,
-				DCE6EB5921D92D500003ADDB /* homeNC.swift */,
 				DC74AB9721DBC73500CF7872 /* searchTestVC.swift */,
 			);
 			path = HomeStoryboardVC;
@@ -446,7 +443,6 @@
 				DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */,
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
 				DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */,
-				DCE6EB5A21D92D500003ADDB /* homeNC.swift in Sources */,
 				DCE6EB5C21D948F70003ADDB /* menu.swift in Sources */,
 				08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */,
 				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
