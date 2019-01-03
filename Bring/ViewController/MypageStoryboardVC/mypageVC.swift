@@ -13,6 +13,7 @@ class mypageVC: UIViewController {
     var loginOk:Int = 0
 //    로그인 된 상태면 1, 안된 상태면 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginCheck()

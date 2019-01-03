@@ -68,6 +68,8 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         //현재 위치를 뷰에 보여줌
         move(at: locationManager.location?.coordinate)
+        print(CLLocationCoordinate2D())
+        print("뷰시작할때 위치")
     }
     
     func mapSettings() {
@@ -81,6 +83,9 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         guard let firstLocation = locations.first else {
             return
         }
+//        let location: CLLocation = locations.last!
+//        print(CLLocationCoordinate2D())
+//        print("로케이션매니저 위치")
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
