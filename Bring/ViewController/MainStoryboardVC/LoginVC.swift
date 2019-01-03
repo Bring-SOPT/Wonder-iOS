@@ -28,7 +28,6 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
     
     @IBAction func signupAction(_ sender: Any) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupFirstVC") as? SignupFirstVC else { return }
-        
        present(dvc,animated: true)
     }
     
@@ -41,10 +40,9 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
             [weak self] (data) in
             guard let `self` = self else {return}
             
-            
             self.performSegue(withIdentifier: "naviSegue", sender: self)
-            
         }
+        
     }
 
     

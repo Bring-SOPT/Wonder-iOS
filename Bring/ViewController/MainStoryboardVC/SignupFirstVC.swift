@@ -13,7 +13,7 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
     @IBOutlet var EmailField: UITextField!
     @IBOutlet var PasswordField: UITextField!
     @IBOutlet var PasswordConfirmField: UITextField!
-    
+    @IBOutlet weak var idValidOkLabel: UILabel!
     @IBOutlet var passwordOkLabel: UILabel!
     
     
@@ -37,9 +37,22 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
     //중복확인 버튼
     @IBAction func idOkAction(_ sender: Any) {
         
+        guard let id = EmailField.text else {return}
+        
+        UserService.shared.validIDCheck(id: id) {
+            
+            [weak self] () in
+            guard let `self` = self else {return}
+            self.idValidOkLabel.isHidden = false
+            print("ㅡㅡ화난더")
+        }
+        
         
     }
-    
+ 
+        
+        
+        
     @IBAction func nextAction(_ sender: Any) {
         
         if PasswordField.text != PasswordConfirmField.text {
@@ -50,7 +63,7 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
             self.present(dvc,animated: true)
             print("ddddd")
                 }
-            }
+    }
 
     
     //화면 다른 곳 터치 시 keyboard 내리기
