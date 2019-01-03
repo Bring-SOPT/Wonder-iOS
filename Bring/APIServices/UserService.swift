@@ -20,7 +20,6 @@ struct UserService: APIManager, Requestable {
     
     //회원 가입 api
     func signUp(id: String, password: String, nick: String, profile: String, completion: @escaping () -> Void) {
-        //코드작성
         let body = [
             "id" : id,
             "password" : password,
@@ -36,6 +35,10 @@ struct UserService: APIManager, Requestable {
                 print(error)
             }
         }
+    }
+    
+    //아이디 중복 체크
+    func validIDCheck(id: String, completion: @escaping () -> Void){
         
     }
     

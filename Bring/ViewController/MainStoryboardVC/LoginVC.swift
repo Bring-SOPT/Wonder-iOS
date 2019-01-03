@@ -26,11 +26,6 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
 
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        self.view.endEditing(true)
-    }
-    
-    
     @IBAction func signupAction(_ sender: Any) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupFirstVC") as? SignupFirstVC else { return }
         
@@ -51,19 +46,11 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
             
         }
     }
+
     
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        
-//        let nextTag = textField.tag + 1
-//        
-//        if let nextResponder = textField.superview?.viewWithTag(nextTag) {
-//            nextResponder.becomeFirstResponder()
-//        } else {
-//            textField.resignFirstResponder()
-//        }
-//        
-//        return true
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {

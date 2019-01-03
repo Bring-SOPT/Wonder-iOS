@@ -25,12 +25,31 @@ class SignupSecondVC: UIViewController {
         self.view.endEditing(true)
     }
     
-    @IBAction func nextAction(_ sender: Any) {
-        
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupLastVC") as? SignupLastVC else { return }
-        
-        present(dvc,animated: true)
-    }
+//    @IBAction func nextAction(_ sender: Any) {
+//
+//        if PasswordField.text != PasswordConfirmField.text {
+//            passwordOkLabel.isHidden = false
+//        } else {
+//            guard EmailField.text?.isEmpty != true else {return}
+//            guard PasswordField.text?.isEmpty != true else {return}
+//
+//
+//
+//
+//            UserService.shared.signUp(id: gsno(EmailField.text), password: gsno(PasswordField.text), nick: "테스트용", profile: "ㅇㅇㅇ") {
+//                [weak self] in
+//                guard let `self` = self else {return}
+//
+//                guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupLastVC") as? SignupLastVC else { return }
+//
+//
+//                present(dvc,animated: true)
+//            }
+//
+//        }
+//
+//
+//    }
     
     func setupTap() {
         let viewTap = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
