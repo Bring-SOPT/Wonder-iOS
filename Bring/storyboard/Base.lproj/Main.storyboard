@@ -418,6 +418,7 @@
                         <outlet property="EmailField" destination="868-dT-kye" id="dwF-wG-OEJ"/>
                         <outlet property="PasswordConfirmField" destination="JRx-t3-D6m" id="ibv-4f-ziO"/>
                         <outlet property="PasswordField" destination="OQE-iH-pdG" id="esI-Ie-P5H"/>
+                        <outlet property="idValidOkLabel" destination="u0Z-To-BD1" id="E4b-jP-G7P"/>
                         <outlet property="passwordOkLabel" destination="bu4-Do-Ftk" id="Jh2-N6-s18"/>
                     </connections>
                 </viewController>
