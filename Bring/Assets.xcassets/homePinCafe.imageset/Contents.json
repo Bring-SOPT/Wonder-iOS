@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "homePinCafe.png",
       "scale" : "1x",
+      "filename" : "homePinCafe.png",
       "idiom" : "universal"
     },
     {
-      "filename" : "homePinCafe@2x.png",
       "scale" : "2x",
+      "filename" : "homePinCafe@2x.png",
       "idiom" : "universal"
     },
     {
-      "filename" : "homePinCafe@3x.png",
       "scale" : "3x",
+      "filename" : "homePinCafe@3x.png",
       "idiom" : "universal"
     }
   ],

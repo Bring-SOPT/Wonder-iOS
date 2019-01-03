@@ -11,8 +11,8 @@ import Alamofire
 
 struct MapService: APIManager, Requestable {
     
-    typealias NetworkData = ResponseObject<Token>
-    static let shared = LoginService()
+    typealias NetworkData = ResponseObject<CafeModel>
+    static let shared = MapService()
     let mapURL = url("/maps")
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json"
@@ -28,7 +28,7 @@ struct MapService: APIManager, Requestable {
             case .success(let value):
                 guard let cafeList = value.data else
                 {return}
-//                completion(cafeList)
+                completion([cafeList])
             case .error(let error):
                 print(error)
             }

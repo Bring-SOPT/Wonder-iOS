@@ -30,14 +30,14 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var infoImg2: UIImageView!
     @IBOutlet var infoImg3: UIImageView!
     
-    var cafeList: [Cafe] = []
+    var cafeList = [CafeModel]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapSettings()
         makeMarker()
-        setCafeData()
+//        setCafeData()
          mapView.delegate = self
         self.view.addSubview(mapView!)
  
@@ -70,6 +70,9 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         move(at: locationManager.location?.coordinate)
         print(CLLocationCoordinate2D())
         print("뷰시작할때 위치")
+        
+        
+        
     }
     
     func mapSettings() {
@@ -109,7 +112,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "menudetailVC") as? menudetailVC else { return }
         dvc.cafenameData = infoLabel.text
           self.performSegue(withIdentifier: "naviSegue", sender: self)
-        
+
         
 //        navigationController?.pushViewController(dvc, animated: true)
 //        print("왜안되는거지")
@@ -129,6 +132,17 @@ extension homeVC: GMSAutocompleteResultsViewControllerDelegate {
         print(place.coordinate)
         //검색결과로 지도 이동
         move(at: place.coordinate)
+        MapService.shared.mapList(lati: place.coordinate.latitude, long: place.coordinate.longitude) {
+            [weak self] (data) in
+            guard let `self` = self else {return}
+            self.cafeList = data
+            
+            //여기도 모르겠음 .,.,.,.,.,.,.,.,., 정보를 갖고와서 어디에 넣어야 하는지 질문하기
+            
+            
+        }
+        print(cafeList.count)
+        
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
@@ -183,13 +197,13 @@ extension homeVC {
         
     }
     
-    func setCafeData() {
-        
-        
-        let cafe0 = Cafe(name: "카페토니", latitude: 37.497718, longitude: 127.037186, Img: "tab_home")
-        let cafe1 = Cafe(name: "투썸플레이스 역삼역점", latitude: 37.502401, longitude: 127.038016, Img: "tab_home")
-        cafeList = [cafe0, cafe1]
-    }
-    
+//    func setCafeData() {
+//
+//
+//        let cafe0 = Cafe(name: "카페토니", latitude: 37.497718, longitude: 127.037186, Img: "tab_home")
+//        let cafe1 = Cafe(name: "투썸플레이스 역삼역점", latitude: 37.502401, longitude: 127.038016, Img: "tab_home")
+//        cafeList = [cafe0, cafe1]
+//    }
+//
     
 }

@@ -1,21 +1,22 @@
 //
-//  UserService.swift
+//  StoreService.swift
 //  Bring
 //
-//  Created by 박소현 on 02/01/2019.
+//  Created by 박소현 on 04/01/2019.
 //  Copyright © 2019 sohyeon. All rights reserved.
 //
 
+
 import Alamofire
 
-struct UserService: APIManager, Requestable {
+struct StoreService: APIManager, Requestable {
     
     typealias NetworkData = ResponseObject<User>
-    static let shared = UserService()
-    let userURL = url("/users")
+    static let shared = StoreService()
+    let userURL = url("/stores")
     let userDefaults = UserDefaults.standard
     let headers: HTTPHeaders = [
-        "Content-Type" : "multipart/form-data"
+        "Content-Type" : "application/json"
     ]
     
     //회원 가입 api
@@ -37,12 +38,8 @@ struct UserService: APIManager, Requestable {
         }
     }
     
-    func loadMypage() {
+    func loadStoreDetail(Idx: Int, completion: @escaping () -> Void) {
         
-    }
-    
-    //아이디 중복 체크
-    func validIDCheck(id: String, completion: @escaping () -> Void){
         
     }
     

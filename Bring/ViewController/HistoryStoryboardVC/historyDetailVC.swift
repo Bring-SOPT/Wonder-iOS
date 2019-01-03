@@ -10,21 +10,19 @@ import UIKit
 
 class historyDetailVC: UIViewController {
 
+    
+    @IBOutlet var orderListView: UIView!
+    
+    @IBOutlet var orderNumberLabel: UILabel!
+    @IBOutlet var orderDateLabel: UILabel!
+    @IBOutlet var orderCafeNameLabel: UILabel!
+    
+    @IBOutlet var allPriceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(orderListView)
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
