@@ -41,6 +41,10 @@ struct UserService: APIManager, Requestable {
         }
     }
     
+    func loadMypage() {
+        
+    }
+    
     //아이디 중복 체크
     func validIDCheck(id: String, completion: @escaping () -> Void){
         let queryURL = userURL + "/check?id=(id)"

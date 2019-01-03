@@ -25,6 +25,9 @@
 		DC74AB9821DBC73500CF7872 /* searchTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74AB9721DBC73500CF7872 /* searchTestVC.swift */; };
 		DCA5894621DBB65500D59A78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5894521DBB65500D59A78 /* User.swift */; };
 		DCA5894821DBBD9B00D59A78 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA5894721DBBD9B00D59A78 /* UserService.swift */; };
+		DCABEC7A21DE5BD200A9774F /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCABEC7921DE5BD200A9774F /* StoreService.swift */; };
+		DCABEC7C21DE5CDA00A9774F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCABEC7B21DE5CDA00A9774F /* Store.swift */; };
+		DCABEC7E21DE719F00A9774F /* orderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCABEC7D21DE719F00A9774F /* orderListTableViewCell.swift */; };
 		DCC3F0D521D7843400D16B18 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3F0D421D7843400D16B18 /* LoginService.swift */; };
 		DCCD9EA321DE2BBC00E6F087 /* MypageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD9EA221DE2BBC00E6F087 /* MypageService.swift */; };
 		DCCD9EA521DE384600E6F087 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD9EA421DE384600E6F087 /* MapService.swift */; };
@@ -74,6 +77,9 @@
 		DC74AB9721DBC73500CF7872 /* searchTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTestVC.swift; sourceTree = "<group>"; };
 		DCA5894521DBB65500D59A78 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DCA5894721DBBD9B00D59A78 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		DCABEC7921DE5BD200A9774F /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		DCABEC7B21DE5CDA00A9774F /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		DCABEC7D21DE719F00A9774F /* orderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderListTableViewCell.swift; sourceTree = "<group>"; };
 		DCC3F0D421D7843400D16B18 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		DCCD9EA221DE2BBC00E6F087 /* MypageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageService.swift; sourceTree = "<group>"; };
 		DCCD9EA421DE384600E6F087 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 				DC1F4ACF21D3B40800AD4F94 /* Requestable.swift */,
 				DCC3F0D421D7843400D16B18 /* LoginService.swift */,
 				DCA5894721DBBD9B00D59A78 /* UserService.swift */,
+				DCABEC7921DE5BD200A9774F /* StoreService.swift */,
 				DCCD9EA221DE2BBC00E6F087 /* MypageService.swift */,
 				DCCD9EA421DE384600E6F087 /* MapService.swift */,
 			);
@@ -225,6 +232,7 @@
 				DC1F4AD421D3B59C00AD4F94 /* ResponseArray.swift */,
 				DC1F4AD621D3B5A100AD4F94 /* Token.swift */,
 				DCCD9EA621DE465B00E6F087 /* CafeModel.swift */,
+				DCABEC7B21DE5CDA00A9774F /* Store.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				DCE1AB6F21D74AFD000E3BE1 /* menuTableViewCell.swift */,
 				DCE1AE2D21DCE301009B006B /* cartCollectionViewCell.swift */,
 				DCE1AE3121DCFD53009B006B /* historyCollectionViewCell.swift */,
+				DCABEC7D21DE719F00A9774F /* orderListTableViewCell.swift */,
 			);
 			name = Views;
 			path = ../Views;
@@ -469,6 +478,7 @@
 				DC1F4AD021D3B40800AD4F94 /* Requestable.swift in Sources */,
 				DC1F4AC921D3B35C00AD4F94 /* UIViewController+extensions.swift in Sources */,
 				DCE1AB7021D74AFD000E3BE1 /* menuTableViewCell.swift in Sources */,
+				DCABEC7E21DE719F00A9774F /* orderListTableViewCell.swift in Sources */,
 				DCCD9EA721DE465B00E6F087 /* CafeModel.swift in Sources */,
 				DC1F4ACC21D3B3E400AD4F94 /* NetworkResult.swift in Sources */,
 				DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */,
@@ -478,6 +488,7 @@
 				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
 				DC08720921D6BA9300508A7A /* Cafe.swift in Sources */,
 				DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */,
+				DCABEC7A21DE5BD200A9774F /* StoreService.swift in Sources */,
 				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
 				DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */,
 				DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */,
@@ -488,6 +499,7 @@
 				DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */,
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
+				DCABEC7C21DE5CDA00A9774F /* Store.swift in Sources */,
 				08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */,
 				DCE1AE3221DCFD53009B006B /* historyCollectionViewCell.swift in Sources */,
 			);
