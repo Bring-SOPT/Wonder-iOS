@@ -13,12 +13,12 @@ class SignupSecondVC: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nickNameField: UITextField!
+    @IBOutlet weak var nickNameOkLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nickNameField.returnKeyType = .done
          setupTap()
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -50,6 +50,19 @@ class SignupSecondVC: UIViewController {
 //
 //
 //    }
+    
+    @IBAction func nickOkAction(_ sender: Any) {
+        guard let nick = nickNameField.text else {return}
+        
+        UserService.shared.validNickCheck(nick: nick) {
+            
+            [weak self] () in
+            guard let `self` = self else {return}
+            self.nickNameOkLabel.isHidden = false
+            print("ㅡㅡ화난더")
+        }
+        
+    }
     
     func setupTap() {
         let viewTap = UITapGestureRecognizer(target: self, action: #selector(viewTapped))

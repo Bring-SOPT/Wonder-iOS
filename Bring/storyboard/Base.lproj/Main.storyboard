@@ -470,6 +470,9 @@
                                 <rect key="frame" x="258" y="213" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="confirmRepetitionButton"/>
+                                <connections>
+                                    <action selector="nickOkAction:" destination="I7c-Yr-vPR" eventType="touchUpInside" id="tCL-Ib-38m"/>
+                                </connections>
                             </button>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultProfileCamera" translatesAutoresizingMaskIntoConstraints="NO" id="Dj0-PA-dxp">
                                 <rect key="frame" x="140" y="60" width="94" height="94"/>
@@ -487,6 +490,7 @@
                     </view>
                     <connections>
                         <outlet property="nickNameField" destination="tBM-Kt-G6w" id="geK-GE-xZz"/>
+                        <outlet property="nickNameOkLabel" destination="E7k-w3-z8F" id="fef-r2-MaW"/>
                         <outlet property="profileImage" destination="Dj0-PA-dxp" id="YF1-TZ-Wr9"/>
                     </connections>
                 </viewController>
@@ -609,6 +613,7 @@
                     </view>
                     <connections>
                         <outlet property="allServiceCheckbtn" destination="sVj-uP-0gj" id="prP-Lz-l8Q"/>
+                        <outlet property="doneBtn" destination="sRS-po-8sY" id="RDT-5i-ejd"/>
                         <outlet property="privateCheckbtn" destination="c2m-It-l7e" id="eD5-N8-D12"/>
                         <outlet property="serviceCheckbtn" destination="5N8-Iy-2Ri" id="1IY-cz-phq"/>
                     </connections>

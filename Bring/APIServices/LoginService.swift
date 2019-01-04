@@ -33,7 +33,5 @@ struct LoginService: APIManager, Requestable {
                 print(error)
             }
         }
-        
     }
-    
 }

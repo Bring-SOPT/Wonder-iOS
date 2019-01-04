@@ -15,11 +15,9 @@ struct UserService: APIManager, Requestable {
     
     let userURL = url("/users")
     let userDefaults = UserDefaults.standard
+    
     let headers: HTTPHeaders = [
         "Content-Type" : "multipart/form-data"
-    ]
-    let headers2: HTTPHeaders = [
-        "Content-Type" : "application/json"
     ]
     
     //회원 가입 api
@@ -49,7 +47,11 @@ struct UserService: APIManager, Requestable {
     func validIDCheck(id: String, completion: @escaping () -> Void){
         let queryURL = userURL + "/check?id=(id)"
         
-        gettable(queryURL, body: nil, header: headers2) {
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json"
+        ]
+        
+        gettable(queryURL, body: nil, header: header) {
             (res) in
             switch res {
             case.success(let value):
@@ -65,7 +67,11 @@ struct UserService: APIManager, Requestable {
     func validNickCheck(nick: String, completion: @escaping () -> Void){
         let queryURL = userURL + "/check?nick=(nick)"
         
-        gettable(queryURL, body: nil, header: headers2) {
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json"
+        ]
+        
+        gettable(queryURL, body: nil, header: headers) {
             (res) in
             switch res {
             case.success(let value):

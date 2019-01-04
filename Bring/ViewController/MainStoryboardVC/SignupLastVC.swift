@@ -13,6 +13,7 @@ class SignupLastVC: UIViewController {
     @IBOutlet weak var allServiceCheckbtn: UIButton!
     @IBOutlet weak var serviceCheckbtn: UIButton!
     @IBOutlet weak var privateCheckbtn: UIButton!
+    @IBOutlet weak var doneBtn: UIButton!
     
     var allCheck:Bool = false
     var serCheck:Bool = false
@@ -52,8 +53,6 @@ class SignupLastVC: UIViewController {
             priCheck = false
             allCheck = false
         }
-        
-
     }
     
     @IBAction func serviceAction(_ sender: UIButton) {
@@ -206,6 +205,9 @@ class SignupLastVC: UIViewController {
         if(allCheck == true){
           self.performSegue(withIdentifier: "naviSegue", sender: self)
         }
-        
+//        else{
+//            doneBtn.backgroundColor = UIColor.lightGray
+//            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
+//        }
     }
 }
