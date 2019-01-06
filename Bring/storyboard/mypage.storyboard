@@ -143,6 +143,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="마이페이지" id="ifp-hD-Rcg"/>
                     <connections>
+                        <outlet property="loginCheckView" destination="p1j-aI-TM4" id="GnQ-K2-ctE"/>
                         <segue destination="OQF-wa-P85" kind="showDetail" identifier="naviSegue" id="tjm-U5-ht2"/>
                     </connections>
                 </viewController>

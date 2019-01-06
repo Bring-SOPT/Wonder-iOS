@@ -11,27 +11,26 @@ import Alamofire
 
 struct StoreService: APIManager, Requestable {
     
-    typealias NetworkData = ResponseObject<User>
+    typealias NetworkData = ResponseObject<Store>
     static let shared = StoreService()
-    let userURL = url("/stores")
+    let storeURL = url("/stores")
     let userDefaults = UserDefaults.standard
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json"
     ]
     
-    //회원 가입 api
-    func signUp(id: String, password: String, nick: String, profile: String, completion: @escaping () -> Void) {
-        let body = [
-            "id" : id,
-            "password" : password,
-            "nick": nick,
-            "profile": profile
-        ]
-        postable(userURL, body: body, header: headers) { res in
+
+    func getMenuList(storeIdx: Int, completion: @escaping (Store) -> Void) {
+       //여기서 왜 쿼리 URL 만들고 안쓰는지 ? 질문
+        // 그리고 서버위키에 메뉴리스트랑 배경사진 따로받아오는법 질문
+        let queryURL = storeURL + "/\(storeIdx)/menu"
+        //스토어인덱스 추가해야함
+        gettable(queryURL, body: nil, header: headers) { (res) in
             switch res {
             case .success(let value):
-                // guard let user = value.data else {return}
-                completion()
+                guard let store = value.data else
+                {return}
+                completion(store)
             case .error(let error):
                 print(error)
             }

@@ -26,24 +26,46 @@ class menudetailVC: UIViewController {
     @IBOutlet var numberLabel: UILabel!
     
     var cafenameData: String?
-    
-    var menuList: [menu] = []
+    var menuList = [Menu]()
+    var cafeIdxData: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(infoView)
         dataSetup()
         
-        menutableSet()
+//        menutableSet()
       
-
+        menuTable.dataSource = self
+        menuTable.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        StoreService.shared.getMenuList(storeIdx: cafeIdxData!) {
+            [weak self] (data) in
+            guard let `self` = self else {return}
+            guard let menus = data.menuList else { return }
+            self.backgroundImg.imageFromUrl(data.storePhoto, defaultImgPath: "")
+            self.menuList = menus
+            self.menuTable.reloadData()
+        }
+        
+        
     }
     
     func dataSetup() {
         if let transData = cafenameData {
             cafeNameLabel.text = transData
         }
+
     }
+    
+    @IBAction func dismiss(_ sender: Any) {
+        self.navigationController?.dismiss(animated: true)
+    }
+    
     
     @IBAction func menuAction(_ sender: UIButton) {
     
@@ -80,19 +102,40 @@ class menudetailVC: UIViewController {
         
     }
     
-    
+    //이거는 왜 오류나지 ;;
 
 }
 
 
 
-
-extension menudetailVC {
+extension menudetailVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuList.count
+    }
     
-    func menutableSet() {
-        let menu0 = menu(name: "아아", price: 5000, Img: "")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuTableViewCell", for: indexPath) as! menuTableViewCell
+        let menu = menuList[indexPath.item]
+    
+        cell.menuName.text = menu.menuName
+        cell.menuPrice.text = "\(gino(menu.menuPrice))원"
+        cell.menuImg.imageFromUrl(gsno(menu.menuPhoto), defaultImgPath: "")
         
-        menuList = [menu0]
+        return cell
     }
     
 }
+
+extension menudetailVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "menuSelectVC") as! menuSelectVC
+        let menu = menuList[indexPath.row]
+        nextVC.menuNameData = menu.menuName
+        nextVC.menuPriceData = menu.menuPrice!
+        
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+}
+
+

@@ -11,27 +11,35 @@ import UIKit
 class menuSelectVC: UIViewController {
 
     
+    var menuNameData: String?
+    var menuPriceData: Int = 0
+    
     @IBOutlet var menuImg: UIImageView!
     @IBOutlet var menuName: UILabel!
     @IBOutlet var menuPrice: UILabel!
     
     @IBOutlet var countLabel: UILabel!
-    var count:Int = 0
-    var Price: Int = 5000
-    var totalPrice: Int = 0
-    var name: String = ""
+    var count:Int = 1
+    var totalPrice: Int?
     @IBOutlet var totalPriceLabel: UILabel!
     @IBOutlet var sizeSelectView: UIView!
     
     @IBOutlet var sizeLabel: UILabel!
+    @IBOutlet var requestField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.requestField.layer.borderWidth = 1.0
+        self.requestField.layer.borderColor = UIColor.black.cgColor
+        
+        menuName.text = menuNameData
+        menuPrice.text = "\(gino(menuPriceData))원"
         countLabel.text = "\(gino(count))"
-        menuPrice.text = "\(gino(Price))"
+        totalPrice = menuPriceData
+//        menuPrice.text = "\(gino(Price))"
         totalPriceLabel.text = "\(gino(totalPrice))"
-        menuName.text = name
+//        menuName.text = name
         self.view.addSubview(sizeSelectView)
     }
     
@@ -65,21 +73,22 @@ class menuSelectVC: UIViewController {
         if count == 0 {
             
         } else {
-        
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "orderVC") as? orderVC else { return }
-        navigationController?.pushViewController(dvc, animated: true)
+            guard let dvc = storyboard?.instantiateViewController(withIdentifier: "orderVC") as? orderVC else { return }
+            dvc.orderPrice = totalPrice
+            navigationController?.pushViewController(dvc, animated: true)
         }
+        
         
     }
     
 
     @IBAction func countDownAction(_ sender: Any) {
         
-        if count > 0 {
+        if count > 1 {
         count = count - 1
         }
         countLabel.text = "\(gino(count))"
-        totalPrice = Price * count
+        totalPrice = menuPriceData * count
         totalPriceLabel.text = "\(gino(totalPrice))"
         
     }
@@ -90,23 +99,28 @@ class menuSelectVC: UIViewController {
             count = count + 1
         }
         countLabel.text = "\(gino(count))"
-        totalPrice = Price * count
+        totalPrice = menuPriceData * count
         totalPriceLabel.text = "\(gino(totalPrice))"
         
     }
     
     @IBAction func sizeTallAction(_ sender: Any) {
         sizeLabel.text = "tall"
+        sizeSelectView.isHidden = true
         
     }
     
     @IBAction func sizeGrandeAction(_ sender: Any) {
          sizeLabel.text = "grande"
+        sizeSelectView.isHidden = true
+
  
         
     }
     @IBAction func sizeVentiAction(_ sender: Any) {
          sizeLabel.text = "venti"
+        sizeSelectView.isHidden = true
+
         
         
     }
