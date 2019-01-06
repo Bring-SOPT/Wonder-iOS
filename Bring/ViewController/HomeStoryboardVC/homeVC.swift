@@ -6,6 +6,7 @@
 //  Copyright © 2018 sohyeon. All rights reserved.
 //
 
+
 import UIKit
 import GoogleMaps
 import CoreLocation
@@ -13,7 +14,7 @@ import AddressBookUI
 import GooglePlaces
 
 class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
-
+    
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
@@ -31,16 +32,15 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var infoImg3: UIImageView!
     
     var cafeList = [CafeModel]()
-    
+    var selectedIdx: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapSettings()
-        makeMarker()
-//        setCafeData()
-         mapView.delegate = self
+//        makeMarker()
+        mapView.delegate = self
         self.view.addSubview(mapView!)
- 
+        
         self.view.addSubview(infoView)
         
         resultsViewController = GMSAutocompleteResultsViewController()
@@ -71,8 +71,12 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         print(CLLocationCoordinate2D())
         print("뷰시작할때 위치")
         
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = (segue.destination as! UINavigationController).topViewController as! menudetailVC
+        dvc.cafenameData = infoLabel.text
+        dvc.cafeIdxData = selectedIdx
     }
     
     func mapSettings() {
@@ -80,19 +84,28 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         mapView.settings.myLocationButton = true;
     }
     
-
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let firstLocation = locations.first else {
             return
         }
-//        let location: CLLocation = locations.last!
-//        print(CLLocationCoordinate2D())
-//        print("로케이션매니저 위치")
+        //        let location: CLLocation = locations.last!
+        //        print(CLLocationCoordinate2D())
+        //        print("로케이션매니저 위치")
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
-        print("마커클릭...")
+        _ = cafeList.map {
+            if $0.cafeName == marker.title {
+                self.selectedIdx = $0.cafeIdx
+            }
+        }
+//        MapService2.shared.selectedStore(Idx: selectedIdx!) {
+//            [weak]
+//
+//
+//        }
         
         infoLabel.text = marker.title
         infoView.isHidden = false
@@ -106,22 +119,15 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         }
     }
     
-
+    
     @IBAction func menuDetailAction(_ sender: Any) {
         
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "menudetailVC") as? menudetailVC else { return }
-        dvc.cafenameData = infoLabel.text
-          self.performSegue(withIdentifier: "naviSegue", sender: self)
-
-        
-//        navigationController?.pushViewController(dvc, animated: true)
-//        print("왜안되는거지")
-        
-//        메뉴상세뷰에서 네브바가 추가되면서 데이터전달이 안됨
-//        승수찡한테 질문할부분 ...
-        }
+       
+        self.performSegue(withIdentifier: "naviSegue", sender: self)
         
     }
+    
+}
 
 //검색때매새로추가함
 extension homeVC: GMSAutocompleteResultsViewControllerDelegate {
@@ -136,10 +142,7 @@ extension homeVC: GMSAutocompleteResultsViewControllerDelegate {
             [weak self] (data) in
             guard let `self` = self else {return}
             self.cafeList = data
-            
-            //여기도 모르겠음 .,.,.,.,.,.,.,.,., 정보를 갖고와서 어디에 넣어야 하는지 질문하기
-            
-            
+            self.cafeMarker()
         }
         print(cafeList.count)
         
@@ -172,38 +175,29 @@ extension homeVC {
         let latitude = coordinate.latitude
         let longitude = coordinate.longitude
         
-        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 14.0)
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 16.0)
         mapView.camera = camera
     }
     
+    
+    
 
     
-    func makeMarker() {
-        
-        
-        cafeMarker(name: "카페토니", lat: 37.497718, long: 127.037186)
-        cafeMarker(name: "투썸역삼", lat: 37.502401, long: 127.038016)
-        cafeMarker(name: "설탕공주", lat: 37.784358, long: -122.406893)
+    func cafeMarker() {
+        _ = cafeList.map {
+            guard let lat = $0.cafeLati else { return }
+            guard let lng = $0.cafeLong else { return }
+            guard let name = $0.cafeName else { return }
+            guard let Idx = $0.cafeIdx else {return}
+            let cafemarker = GMSMarker()
+            cafemarker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+            let markerimg = UIImage(named: "homePinCafe")
+            cafemarker.icon = markerimg
+            cafemarker.title = name
+            cafemarker.map = mapView
+            
+        }
     }
     
-    func cafeMarker(name: String, lat: Double, long: Double) {
-        
-        let cafemarker = GMSMarker()
-        cafemarker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
-        let markerimg = UIImage(named: "homePinCafe")
-        cafemarker.icon = markerimg
-        cafemarker.title = name
-        cafemarker.map = mapView
-        
-    }
-    
-//    func setCafeData() {
-//
-//
-//        let cafe0 = Cafe(name: "카페토니", latitude: 37.497718, longitude: 127.037186, Img: "tab_home")
-//        let cafe1 = Cafe(name: "투썸플레이스 역삼역점", latitude: 37.502401, longitude: 127.038016, Img: "tab_home")
-//        cafeList = [cafe0, cafe1]
-//    }
-//
     
 }

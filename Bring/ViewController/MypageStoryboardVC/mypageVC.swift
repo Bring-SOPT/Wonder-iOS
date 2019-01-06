@@ -13,10 +13,12 @@ class mypageVC: UIViewController {
     var loginOk:Int = 0
 //    로그인 된 상태면 1, 안된 상태면 0
     
+    @IBOutlet var loginCheckView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginCheck()
+        self.view.addSubview(loginCheckView)
     }
     
     func loginCheck() {
@@ -30,6 +32,7 @@ class mypageVC: UIViewController {
     
     
     @IBAction func goToLoginView(_ sender: Any) {
+        //그리고 자동로그인을 어떻게 구현해야할지 질문
         
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

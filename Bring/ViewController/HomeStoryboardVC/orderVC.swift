@@ -10,21 +10,15 @@ import UIKit
 
 class orderVC: UIViewController {
 
+    var orderPrice: Int?
+    @IBOutlet var orderPriceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        orderPriceLabel.text = "주문금액 : \(gino(orderPrice))원"
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
