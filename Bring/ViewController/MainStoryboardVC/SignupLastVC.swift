@@ -28,7 +28,6 @@ class SignupLastVC: UIViewController {
         allCheck = !allCheck
         
         if(allCheck){
-            
             sender.setImage(UIImage(named:"allSelectedCheckbox.png"
             ), for: UIControl.State.normal)
             serviceCheckbtn.setImage(UIImage(named:"allSelectedCheckbox.png"
@@ -203,7 +202,9 @@ class SignupLastVC: UIViewController {
     @IBAction func signupFinishAction(_ sender: Any) {
         
         if allCheck == true {
+            doneBtn.backgroundColor = UIColor(red: 250, green: 114, blue: 110, alpha: 1)
           self.performSegue(withIdentifier: "naviSegue", sender: self)
+            
         }
 //        else{
 //            doneBtn.backgroundColor = UIColor.lightGray
