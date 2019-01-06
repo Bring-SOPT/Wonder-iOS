@@ -202,7 +202,7 @@ class SignupLastVC: UIViewController {
 
     @IBAction func signupFinishAction(_ sender: Any) {
         
-        if(allCheck == true){
+        if allCheck == true {
           self.performSegue(withIdentifier: "naviSegue", sender: self)
         }
 //        else{

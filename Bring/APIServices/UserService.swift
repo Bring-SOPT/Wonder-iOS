@@ -44,21 +44,20 @@ struct UserService: APIManager, Requestable {
     }
     
     //아이디 중복 체크
-    func validIDCheck(id: String, completion: @escaping () -> Void){
-        let queryURL = userURL + "/check?id=(id)"
+    func validIDCheck(id: String, completion: @escaping () -> Void, error: @escaping () -> Void){
+        
+        let queryURL = userURL + "/check?id=\(id)"
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json"
         ]
-        
-        gettable(queryURL, body: nil, header: header) {
+        gettable(queryURL, body: nil,  header: header) {
             (res) in
             switch res {
-            case.success(let value):
-//                guard let id = value.data else {return}
+            case.success:
                 completion()
-            case.error(let error):
-                print(error)
+            case.error:
+                error()
             }
         }
     }
@@ -71,7 +70,7 @@ struct UserService: APIManager, Requestable {
             "Content-Type" : "application/json"
         ]
         
-        gettable(queryURL, body: nil, header: headers) {
+        gettable(queryURL, body: nil, header: header) {
             (res) in
             switch res {
             case.success(let value):
