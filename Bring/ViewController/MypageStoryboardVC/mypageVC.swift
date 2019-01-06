@@ -38,6 +38,8 @@ class mypageVC: UIViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextView = storyboard.instantiateViewController(withIdentifier: "LoginVC")
         self.present(nextView, animated: true)
+        
+
     }
     
     
