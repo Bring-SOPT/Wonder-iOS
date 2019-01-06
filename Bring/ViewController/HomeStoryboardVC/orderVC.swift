@@ -13,10 +13,13 @@ class orderVC: UIViewController {
     var orderPrice: Int?
     @IBOutlet var orderPriceLabel: UILabel!
     
+    @IBOutlet var finalPrice: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        orderPriceLabel.text = "주문금액 : \(gino(orderPrice))원"
+        orderPriceLabel.text = "\(gino(orderPrice))원"
+        finalPrice.text = orderPriceLabel.text
     }
     
 
