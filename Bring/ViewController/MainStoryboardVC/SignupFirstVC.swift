@@ -37,14 +37,18 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
     //중복확인 버튼
     @IBAction func idOkAction(_ sender: Any) {
         
+        
+        
         guard let id = EmailField.text else {return}
         
-        UserService.shared.validIDCheck(id: id) {
-            
+        UserService.shared.validIDCheck(id: id, completion: {
             [weak self] () in
             guard let `self` = self else {return}
             self.idValidOkLabel.isHidden = false
-            print("ㅡㅡ화난더")
+        }) {
+            [weak self] () in
+            guard let `self` = self else {return}
+            self.idValidOkLabel.isHidden = true
         }
         
         
