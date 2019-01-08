@@ -31,7 +31,7 @@ class menuSelectVC: UIViewController {
         super.viewDidLoad()
         
         self.requestField.layer.borderWidth = 1.0
-        self.requestField.layer.borderColor = UIColor.black.cgColor
+        self.requestField.layer.borderColor = UIColor.darkGray.cgColor
         
         menuName.text = menuNameData
         menuPrice.text = "\(gino(menuPriceData))원"
