@@ -10,6 +10,10 @@ import UIKit
 
 class historyVC: UIViewController {
 
+    
+    @IBOutlet var historyCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

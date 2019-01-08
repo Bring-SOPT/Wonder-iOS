@@ -13,7 +13,7 @@ class menuSelectVC: UIViewController {
     
     var menuNameData: String?
     var menuPriceData: Int = 0
-    
+    var menuImgData: String?
     @IBOutlet var menuImg: UIImageView!
     @IBOutlet var menuName: UILabel!
     @IBOutlet var menuPrice: UILabel!
@@ -32,7 +32,7 @@ class menuSelectVC: UIViewController {
         
         self.requestField.layer.borderWidth = 1.0
         self.requestField.layer.borderColor = UIColor.darkGray.cgColor
-        
+        menuImg.imageFromUrl(gsno(menuImgData), defaultImgPath: "")
         menuName.text = menuNameData
         menuPrice.text = "\(gino(menuPriceData))원"
         countLabel.text = "\(gino(count))"
