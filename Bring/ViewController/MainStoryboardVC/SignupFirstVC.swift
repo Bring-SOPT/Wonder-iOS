@@ -14,6 +14,7 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
     @IBOutlet var PasswordField: UITextField!
     @IBOutlet var PasswordConfirmField: UITextField!
     @IBOutlet weak var idValidOkLabel: UILabel!
+    @IBOutlet weak var idValidNoLabel: UILabel!
     @IBOutlet var passwordOkLabel: UILabel!
     
     
@@ -42,9 +43,17 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
         guard let id = EmailField.text else {return}
         
         UserService.shared.validIDCheck(id: id, completion: {
-            [weak self] () in
+            [weak self] (data) in
             guard let `self` = self else {return}
-            self.idValidOkLabel.isHidden = false
+            switch data.status {
+            case 200:
+                self.idValidOkLabel.isHidden = false
+            case 400:
+                self.idValidOkLabel.isHidden = true
+            default:
+                self.idValidOkLabel.isHidden = true
+            }
+            
         }) {
             [weak self] () in
             guard let `self` = self else {return}

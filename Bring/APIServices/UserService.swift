@@ -21,20 +21,21 @@ struct UserService: APIManager, Requestable {
     ]
     
     //회원 가입 api
-    func signUp(id: String, password: String, nick: String, profile: UIImage, completion: @escaping () -> Void) {
+    func signUp(id: String, password: String, nick: String, profile: UIImage, completion: @escaping (ResponseObject<User>) -> Void) {
         
         Alamofire.upload(multipartFormData: { formdata in
             formdata.append(id.data(using: .utf8)!, withName: "id")
             formdata.append(password.data(using: .utf8)!, withName: "password")
             formdata.append(nick.data(using: .utf8)!, withName: "nick")
-            formdata.append(profile.jpegData(compressionQuality: 0.5)!, withName: "profile", fileName: "image.jpeg", mimeType: "image/jpeg")
+            formdata.append(profile.jpegData(compressionQuality: 0.5) ?? Data(), withName: "profile", fileName: "image.jpeg", mimeType: "image/jpeg")
         }, to: userURL) { encodingResult in
             switch encodingResult {
             case .success(let upload, _, _):
                 upload.responseObject { (res: DataResponse<NetworkData>) in
                     switch res.result {
                     case .success:
-                        completion()
+                        guard let value = res.result.value else { return }
+                        completion(value)
                     case .failure(let err):
                         print(err)
                     }
@@ -50,7 +51,7 @@ struct UserService: APIManager, Requestable {
     }
     
     //아이디 중복 체크
-    func validIDCheck(id: String, completion: @escaping () -> Void, error: @escaping () -> Void){
+    func validIDCheck(id: String, completion: @escaping (ResponseObject<User>) -> Void, error: @escaping () -> Void){
         
         let queryURL = userURL + "/check?id=\(id)"
         
@@ -60,8 +61,8 @@ struct UserService: APIManager, Requestable {
         gettable(queryURL, body: nil,  header: header) {
             (res) in
             switch res {
-            case.success:
-                completion()
+            case.success(let value):
+                completion(value)
             case.error:
                 error()
             }
@@ -69,8 +70,8 @@ struct UserService: APIManager, Requestable {
     }
     
     //닉네임 중복 체크
-    func validNickCheck(nick: String, completion: @escaping () -> Void){
-        let queryURL = userURL + "/check?nick=(nick)"
+    func validNickCheck(nick: String, completion: @escaping (ResponseObject<User>) -> Void, error: @escaping() -> Void){
+        let queryURL = userURL + "/check?nick=\(nick)"
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json"
@@ -80,10 +81,9 @@ struct UserService: APIManager, Requestable {
             (res) in
             switch res {
             case.success(let value):
-//                guard let nick = value.nick else {return}
-                completion()
-            case.error(let error):
-                print(error)
+                completion(value)
+            case.error:
+                error()
             }
         }
     }

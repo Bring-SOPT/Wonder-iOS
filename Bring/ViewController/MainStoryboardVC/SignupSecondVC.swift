@@ -18,6 +18,7 @@ class SignupSecondVC: UIViewController {
     var realIDData : String?
     var realPWData : String?
     
+    
     var idData : String?
     var pwData : String?
     
@@ -77,12 +78,15 @@ class SignupSecondVC: UIViewController {
     @IBAction func nickOkAction(_ sender: Any) {
         guard let nick = nickNameField.text else {return}
         
-        UserService.shared.validNickCheck(nick: nick) {
-            
-            [weak self] () in
+        UserService.shared.validNickCheck(nick: nick, completion: {[weak self] (data) in
             guard let `self` = self else {return}
-            self.nickNameOkLabel.isHidden = false
-            print("ㅡㅡ화난더")
+            switch data.status {
+            case 200: self.nickNameOkLabel.isHidden = false
+            case 400: self.nickNameOkLabel.isHidden = true
+            default: self.nickNameOkLabel.isHidden = true
+            }
+        }){
+            
         }
         
     }

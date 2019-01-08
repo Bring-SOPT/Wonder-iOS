@@ -23,10 +23,12 @@ class SignupLastVC: UIViewController {
     var finalIDData : String?
     var finalPWData : String?
     var finalNickData : String?
+    var finalProfileData : UIImage?
     
     var idData : String?
     var pwData : String?
     var nickData : String?
+    var profileData : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -220,6 +222,9 @@ class SignupLastVC: UIViewController {
         if let transData3 = finalNickData {
             nickData = transData3
         }
+        if let transData4 = finalProfileData {
+            profileData = transData4
+        }
     }
     
     @IBAction func signupFinishAction(_ sender: Any) {
@@ -231,14 +236,22 @@ class SignupLastVC: UIViewController {
             
             //          self.performSegue(withIdentifier: "naviSegue", sender: self)
             
-            UserService.shared.signUp(id: idData!, password: pwData!, nick: nickData!, profile: UIImage(), completion:{
-                [weak self] in
+            UserService.shared.signUp(id: idData!, password: pwData!, nick: nickData!, profile: UIImage()) {
+                [weak self] data in
                 guard let `self` = self else {return}
-                print("회원가입된거야?")
-                self.performSegue(withIdentifier: "naviSegue", sender: self)
-            })
+                guard let status = data.status else { return }
+                switch status {
+                case 201:
+                    print("회원가입 완료")
+                    self.performSegue(withIdentifier: "naviSegue", sender: self)
+                case 400:
+                    print("회원가입 실패")
+                default:
+                    print("회원가입 실패")
+                }
+            }
         }
-        else{
+        else{//회원가입은 안되는 건 맞는데 무작정 넘어감..... 첫 페이지로;
             print("동의버튼 체크 안함")
             //            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
         }
