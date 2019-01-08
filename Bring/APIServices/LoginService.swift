@@ -22,7 +22,7 @@ struct LoginService: APIManager, Requestable {
     func login(id: String, password: String, completion: @escaping (Token) -> Void) {
         let body = [
             "id" : id,
-            "password" : password,
+            "password" : password
             ]
         postable(loginURL, body: body, header: headers) { res in
             switch res {

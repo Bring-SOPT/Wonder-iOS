@@ -67,33 +67,6 @@ class SignupLastVC: UIViewController {
     }
     
     @IBAction func serviceAction(_ sender: UIButton) {
-//        serCheck = !serCheck
-        
-//        if(!serCheck){//serCheck가 false일 때
-//
-//
-//            if(allCheck){
-//
-//                allCheck = false
-//                serCheck = false
-//                allServiceCheckbtn.setImage(UIImage(named:"checkBox.png"), for: UIControl.State.normal)
-//                sender.setImage(UIImage(named:"checkBox.png"), for: UIControl.State.normal)
-//            }
-//            else{
-//                serCheck = false
-//                sender.setImage(UIImage(named:"checkBox.png"), for: UIControl.State.normal)
-//            }
-//        }
-//
-//        else {//serCheck가 true일 때
-//
-//            serCheck = true
-//            sender.setImage(UIImage(named:"allSelectedCheckbox.png"), for: UIControl.State.normal)
-//            if(priCheck){
-//                allCheck = true
-//                allServiceCheckbtn.setImage(UIImage(named:"allSelectedCheckbox.png"), for: UIControl.State.normal)
-//            }
-//        }
         
         serCheck = !serCheck
         
@@ -140,29 +113,6 @@ class SignupLastVC: UIViewController {
     }
     
     @IBAction func privateAction(_ sender: UIButton) {
-//        priCheck = !priCheck
-//
-//        if(!priCheck){
-//            if(allCheck){
-//                allCheck = false
-//                priCheck = false
-//                allServiceCheckbtn.setImage(UIImage(named:"checkBox.png"), for: UIControl.State.normal)
-//                sender.setImage(UIImage(named:"checkBox.png"), for: UIControl.State.normal)
-//            }
-//            else{
-//                priCheck = false
-//                sender.setImage(UIImage(named:"checkBox.png"), for: UIControl.State.normal)
-//            }
-//        }
-//
-//        else{
-//            priCheck = true
-//            sender.setImage(UIImage(named:"allSelectedCheckbox.png"), for: UIControl.State.normal)
-//            if(serCheck){
-//                allCheck = true
-//                allServiceCheckbtn.setImage(UIImage(named:"allSelectedCheckbox.png"), for: UIControl.State.normal)
-//            }
-//        }
 
         priCheck = !priCheck
         
@@ -251,30 +201,21 @@ class SignupLastVC: UIViewController {
                 }
             }
         }
-        else{//회원가입은 안되는 건 맞는데 무작정 넘어감..... 첫 페이지로;
+        //회원가입은 안되는 건 맞는데 무작정 넘어감..... 첫 페이지로;
+        else{
             print("동의버튼 체크 안함")
-            //            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
+            let alert = UIAlertView()
+            alert.title = "전체 동의를 하세요."
+            alert.message = "뿌잉."
+            alert.addButton(withTitle: "ㅇㅋ")
+            alert.show()
+//            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
         }
         
     }
     
     
-//        else{
-//            doneBtn.backgroundColor = UIColor.lightGray
-//            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
-//        }
-        
-        
-        //회원가입
-        //입           UserService.shared.signUp(id: gsno(EmailField.text), password: gsno(PasswordField.text), nick: "테스트용", profile: "ㅇㅇㅇ") {
-        //                [weak self] in
-        //                guard let `self` = self else {return}
-        //
-        //                guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupLastVC") as? SignupLastVC else { return }
-        //
-        //
-        //                present(dvc,animated: true)
-        //            }
+
     }
     
     

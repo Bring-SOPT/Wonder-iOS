@@ -146,14 +146,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="loginErrorPopup" translatesAutoresizingMaskIntoConstraints="NO" id="kcq-pd-xGd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginErrorPopup" translatesAutoresizingMaskIntoConstraints="NO" id="kcq-pd-xGd">
                                 <rect key="frame" x="43" y="495" width="287" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="287" id="DeZ-LR-eO2"/>
                                     <constraint firstAttribute="height" constant="54" id="HFg-fd-3VB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="아이디 또는 비밀번호가 잘못되었습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2L-SV-w68">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디 또는 비밀번호가 잘못되었습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2L-SV-w68">
                                 <rect key="frame" x="70" y="513" width="233" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="Kaq-CK-LpP"/>
@@ -167,7 +167,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hR2-mD-2bq" firstAttribute="centerY" secondItem="MgN-vQ-HKQ" secondAttribute="centerY" id="0L9-e1-7Gt"/>
+                            <constraint firstItem="say-7e-oXC" firstAttribute="top" secondItem="kcq-pd-xGd" secondAttribute="bottom" constant="60" id="1B9-Be-5R3"/>
                             <constraint firstItem="Oqf-DZ-R1M" firstAttribute="centerY" secondItem="K5d-uz-keW" secondAttribute="centerY" id="57P-Sm-UAZ"/>
+                            <constraint firstItem="D2L-SV-w68" firstAttribute="leading" secondItem="K5d-uz-keW" secondAttribute="leading" constant="70" id="9EY-bG-yjO"/>
                             <constraint firstItem="MgN-vQ-HKQ" firstAttribute="leading" secondItem="hR2-mD-2bq" secondAttribute="trailing" constant="12.5" id="HFb-zN-2PG"/>
                             <constraint firstItem="adg-LZ-zBT" firstAttribute="centerX" secondItem="K5d-uz-keW" secondAttribute="centerX" id="LiA-Nl-EzN"/>
                             <constraint firstItem="adg-LZ-zBT" firstAttribute="top" secondItem="KKo-Li-uhx" secondAttribute="bottom" constant="27" id="MSw-Lv-nCy"/>
@@ -176,8 +178,10 @@
                             <constraint firstItem="say-7e-oXC" firstAttribute="trailing" secondItem="K5d-uz-keW" secondAttribute="trailing" id="Qcw-eg-Xdh"/>
                             <constraint firstItem="MgN-vQ-HKQ" firstAttribute="trailing" secondItem="Oqf-DZ-R1M" secondAttribute="trailing" id="VgR-gC-4R5"/>
                             <constraint firstItem="say-7e-oXC" firstAttribute="leading" secondItem="K5d-uz-keW" secondAttribute="leading" id="Wte-eP-0ha"/>
+                            <constraint firstItem="D2L-SV-w68" firstAttribute="centerX" secondItem="kcq-pd-xGd" secondAttribute="centerX" id="XZF-Pb-R9p"/>
                             <constraint firstItem="KKo-Li-uhx" firstAttribute="centerX" secondItem="K5d-uz-keW" secondAttribute="centerX" id="cVr-Cn-pYw"/>
                             <constraint firstItem="KKo-Li-uhx" firstAttribute="top" secondItem="7K8-me-0H8" secondAttribute="bottom" constant="42" id="lFM-Nf-6Yp"/>
+                            <constraint firstItem="D2L-SV-w68" firstAttribute="centerY" secondItem="kcq-pd-xGd" secondAttribute="centerY" id="oYy-NL-tvz"/>
                             <constraint firstItem="7K8-me-0H8" firstAttribute="centerX" secondItem="K5d-uz-keW" secondAttribute="centerX" id="osD-36-lGd"/>
                             <constraint firstItem="Oqf-DZ-R1M" firstAttribute="centerX" secondItem="K5d-uz-keW" secondAttribute="centerX" id="rtS-I1-kg8"/>
                             <constraint firstItem="MgN-vQ-HKQ" firstAttribute="top" secondItem="Oqf-DZ-R1M" secondAttribute="bottom" constant="40" id="uAR-1t-E3J"/>
@@ -381,8 +385,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nLt-S3-NY4">
-                                <rect key="frame" x="80" y="103" width="214" height="18"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLt-S3-NY4">
+                                <rect key="frame" x="80.5" y="103" width="214" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="브링" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdL-IB-2r2">
                                         <rect key="frame" x="0.0" y="0.0" width="33" height="18"/>
@@ -453,7 +457,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="사용불가능한 아이디입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAW-xe-UEK">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용불가능한 아이디입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAW-xe-UEK">
                                 <rect key="frame" x="57" y="210" width="98.5" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98.5" id="61Q-yn-HTI"/>
@@ -472,17 +476,21 @@
                             <constraint firstAttribute="trailing" secondItem="0ed-wl-6eF" secondAttribute="trailing" id="Are-Y6-FB0"/>
                             <constraint firstItem="JRx-t3-D6m" firstAttribute="centerX" secondItem="pVg-IW-S3S" secondAttribute="centerX" id="CfT-R9-XjT"/>
                             <constraint firstItem="0ed-wl-6eF" firstAttribute="leading" secondItem="pVg-IW-S3S" secondAttribute="leading" id="DUB-hz-hL4"/>
+                            <constraint firstItem="cAW-xe-UEK" firstAttribute="baseline" secondItem="u0Z-To-BD1" secondAttribute="baseline" id="LzC-jW-cvT"/>
                             <constraint firstItem="868-dT-kye" firstAttribute="centerX" secondItem="pVg-IW-S3S" secondAttribute="centerX" id="Mqs-0f-CyU"/>
                             <constraint firstItem="0ed-wl-6eF" firstAttribute="width" secondItem="0ed-wl-6eF" secondAttribute="height" multiplier="375:58" id="Nn3-HI-xwE"/>
                             <constraint firstItem="38v-PH-caE" firstAttribute="centerY" secondItem="868-dT-kye" secondAttribute="centerY" id="P1a-r4-rIL"/>
                             <constraint firstItem="nLt-S3-NY4" firstAttribute="centerX" secondItem="pVg-IW-S3S" secondAttribute="centerX" id="XyV-vd-1AK"/>
                             <constraint firstItem="u0Z-To-BD1" firstAttribute="top" secondItem="868-dT-kye" secondAttribute="bottom" constant="8" id="YEa-tt-Xjf"/>
                             <constraint firstItem="38v-PH-caE" firstAttribute="trailing" secondItem="868-dT-kye" secondAttribute="trailing" constant="-3" id="afM-ws-coN"/>
+                            <constraint firstItem="cAW-xe-UEK" firstAttribute="leading" secondItem="pVg-IW-S3S" secondAttribute="leading" constant="57" id="cOv-e4-LyA"/>
+                            <constraint firstItem="cAW-xe-UEK" firstAttribute="width" secondItem="u0Z-To-BD1" secondAttribute="width" id="gym-Qf-C1L"/>
                             <constraint firstItem="bu4-Do-Ftk" firstAttribute="top" secondItem="JRx-t3-D6m" secondAttribute="bottom" constant="8" id="kWQ-Wd-j4O"/>
                             <constraint firstItem="u0Z-To-BD1" firstAttribute="leading" secondItem="868-dT-kye" secondAttribute="leading" constant="10" id="s1O-mY-hHr"/>
                             <constraint firstItem="0ed-wl-6eF" firstAttribute="bottom" secondItem="pVg-IW-S3S" secondAttribute="bottom" id="sEl-D2-KNz"/>
                             <constraint firstItem="JRx-t3-D6m" firstAttribute="top" secondItem="OQE-iH-pdG" secondAttribute="bottom" constant="8" id="tri-h1-B4D"/>
                             <constraint firstItem="JRx-t3-D6m" firstAttribute="centerY" secondItem="pVg-IW-S3S" secondAttribute="centerY" constant="-59.5" id="vBE-1c-lh5"/>
+                            <constraint firstItem="nLt-S3-NY4" firstAttribute="top" secondItem="pVg-IW-S3S" secondAttribute="top" constant="83" id="xIa-WH-GUU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pVg-IW-S3S"/>
                     </view>
@@ -730,6 +738,6 @@
         <image name="tab_oroderlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BSf-JO-KXE"/>
+        <segue reference="gdt-7B-iqt"/>
     </inferredMetricsTieBreakers>
 </document>
