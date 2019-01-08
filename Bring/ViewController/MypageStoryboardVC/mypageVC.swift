@@ -15,19 +15,27 @@ class mypageVC: UIViewController {
     
     @IBOutlet var loginCheckView: UIView!
     
+    //로그인 후 해당 아이디 token 받아오기
+    let token = UserDefaults.standard.string(forKey: "token")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginCheck()
         self.view.addSubview(loginCheckView)
+        
     }
     
     func loginCheck() {
 //        self.performSegue(withIdentifier: "naviSegue", sender: self)
+        
     }
 
     
     @IBAction func logoutAction(_ sender: Any) {
-                   self.performSegue(withIdentifier: "naviSegue", sender: self)
+        print("logout버튼 ***")
+        print(token)
+        self.performSegue(withIdentifier: "naviSegue", sender: self)
+        
     }
     
     

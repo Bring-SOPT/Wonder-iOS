@@ -17,6 +17,8 @@ struct MypageService: APIManager, Requestable {
     let headers: HTTPHeaders = [
         "Content-Type" : "application/json"
     ]
+    let token = UserDefaults.standard.string(forKey: "token")!
+    
     
     //로그인 api
     func login(id: String, password: String, completion: @escaping (Token) -> Void) {
@@ -33,7 +35,19 @@ struct MypageService: APIManager, Requestable {
                 print(error)
             }
         }
-        
     }
+    
+    //마이페이지 api
+    func myPage(token: String, completion: @escaping (User) -> Void,
+                error: @escaping () -> Void){
+        
+        let header: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization" : token
+        ]
+        
+//        gettable(loginURL, body: nil, header: header, completion: <#T##(NetworkResult<Mappable>) -> Void#>)
+//    }
+//
     
 }
