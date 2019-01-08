@@ -19,8 +19,19 @@ class SignupLastVC: UIViewController {
     var serCheck:Bool = false
     var priCheck:Bool = false
     
+    //SignupFirstVC와 SignupSecondVC에서 받아온 data를 서버 넘겨주기 위한 변수
+    var finalIDData : String?
+    var finalPWData : String?
+    var finalNickData : String?
+    
+    var idData : String?
+    var pwData : String?
+    var nickData : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setup()
     }
     
     @IBAction func allServiceAction(_ sender: UIButton) {
@@ -47,7 +58,6 @@ class SignupLastVC: UIViewController {
             ), for: UIControl.State.normal)
             privateCheckbtn.setImage(UIImage(named:"checkBox.png"
             ), for: UIControl.State.normal)
-            
             serCheck = false
             priCheck = false
             allCheck = false
@@ -199,16 +209,60 @@ class SignupLastVC: UIViewController {
         }
     }
 
+    //전달받은 data를 셋팅하기 위한 함수
+    func setup() {
+        if let transData = finalIDData {
+            idData = transData
+        }
+        if let transData2 = finalPWData {
+            pwData = transData2
+        }
+        if let transData3 = finalNickData {
+            nickData = transData3
+        }
+    }
+    
     @IBAction func signupFinishAction(_ sender: Any) {
         
-        if allCheck == true {
+        //전체 동의일 때 회원가입이 되어야함.
+        if allCheck == true
+        {
             doneBtn.backgroundColor = UIColor(red: 250, green: 114, blue: 110, alpha: 1)
-          self.performSegue(withIdentifier: "naviSegue", sender: self)
             
+            //          self.performSegue(withIdentifier: "naviSegue", sender: self)
+            
+            UserService.shared.signUp(id: idData!, password: pwData!, nick: nickData!, profile: UIImage(), completion:{
+                [weak self] in
+                guard let `self` = self else {return}
+                print("회원가입된거야?")
+                self.performSegue(withIdentifier: "naviSegue", sender: self)
+            })
         }
+        else{
+            print("동의버튼 체크 안함")
+            //            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
+        }
+        
+    }
+    
+    
 //        else{
 //            doneBtn.backgroundColor = UIColor.lightGray
 //            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
 //        }
+        
+        
+        //회원가입
+        //입           UserService.shared.signUp(id: gsno(EmailField.text), password: gsno(PasswordField.text), nick: "테스트용", profile: "ㅇㅇㅇ") {
+        //                [weak self] in
+        //                guard let `self` = self else {return}
+        //
+        //                guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupLastVC") as? SignupLastVC else { return }
+        //
+        //
+        //                present(dvc,animated: true)
+        //            }
     }
-}
+    
+    
+

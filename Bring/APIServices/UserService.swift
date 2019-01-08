@@ -21,20 +21,26 @@ struct UserService: APIManager, Requestable {
     ]
     
     //회원 가입 api
-    func signUp(id: String, password: String, nick: String, profile: String, completion: @escaping () -> Void) {
-        let body = [
-            "id" : id,
-            "password" : password,
-            "nick": nick,
-            "profile": profile
-        ]
-        postable(userURL, body: body, header: headers) { res in
-            switch res {
-            case .success(let value):
-                // guard let user = value.data else {return}
-                completion()
-            case .error(let error):
-                print(error)
+    func signUp(id: String, password: String, nick: String, profile: UIImage, completion: @escaping () -> Void) {
+        
+        Alamofire.upload(multipartFormData: { formdata in
+            formdata.append(id.data(using: .utf8)!, withName: "id")
+            formdata.append(password.data(using: .utf8)!, withName: "password")
+            formdata.append(nick.data(using: .utf8)!, withName: "nick")
+            formdata.append(profile.jpegData(compressionQuality: 0.5)!, withName: "profile", fileName: "image.jpeg", mimeType: "image/jpeg")
+        }, to: userURL) { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.responseObject { (res: DataResponse<NetworkData>) in
+                    switch res.result {
+                    case .success:
+                        completion()
+                    case .failure(let err):
+                        print(err)
+                    }
+                }
+            case .failure(let err):
+                print(err)
             }
         }
     }
@@ -78,7 +84,6 @@ struct UserService: APIManager, Requestable {
                 completion()
             case.error(let error):
                 print(error)
-                
             }
         }
     }

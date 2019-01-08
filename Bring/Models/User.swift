@@ -11,20 +11,20 @@ import ObjectMapper
 struct User: Mappable {
     
     var userId: String?
-    var userName: String?
     var userNick: String?
+    var password: String?
     var userProfile: String?
-    var auth: Bool?
+//    var auth: Bool?
     
     init?(map: Map) {
         
     }
     
     mutating func mapping(map: Map) {
-        userId <- map["u_id"]
-        userName <- map["u_name"]
-        userNick <- map["u_nick"]
-        userProfile <- map["u_profile"]
-        auth <- map["auth"]
+        userId <- map["id"]
+        userNick <- map["nick"]
+        userProfile <- map["profile"]
+        password <- map["password"]
+//        auth <- map["auth"]
     }
 }

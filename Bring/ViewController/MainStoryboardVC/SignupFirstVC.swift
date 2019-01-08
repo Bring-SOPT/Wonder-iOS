@@ -62,11 +62,25 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
         if PasswordField.text != PasswordConfirmField.text {
             passwordOkLabel.isHidden = false
         } else{
-            guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "SignupSecondVC") as? SignupSecondVC else { return }
-            
-            self.present(dvc,animated: true)
-            print("ddddd")
+//            guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "SignupSecondVC") as? SignupSecondVC else { return }
+//
+            if let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupSecondVC") as? SignupSecondVC {
+                let check = !(EmailField.text?.isEmpty ?? true)
+                let check2 = !(PasswordField.text?.isEmpty ?? true)
+                
+                if check {
+                    dvc.realIDData = EmailField.text
                 }
+                if check2 {
+                    dvc.realPWData = PasswordField.text
+                }
+                print("vc???ok!!")
+                self.present(dvc,animated: true)
+            }
+//            self.present(dvc2,animated: true)
+            print("ddddd")
+        }
+        
     }
 
     

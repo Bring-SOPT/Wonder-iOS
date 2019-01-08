@@ -15,41 +15,64 @@ class SignupSecondVC: UIViewController {
     @IBOutlet weak var nickNameField: UITextField!
     @IBOutlet weak var nickNameOkLabel: UILabel!
     
+    var realIDData : String?
+    var realPWData : String?
+    
+    var idData : String?
+    var pwData : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nickNameField.returnKeyType = .done
          setupTap()
+        setup()
     }
     
+    //keyboard 밖 touch하면 keyboard 숨기기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
     }
     
-//    @IBAction func nextAction(_ sender: Any) {
-//
-//        if PasswordField.text != PasswordConfirmField.text {
-//            passwordOkLabel.isHidden = false
-//        } else {
-//            guard EmailField.text?.isEmpty != true else {return}
-//            guard PasswordField.text?.isEmpty != true else {return}
-//
-//
-//
-//
-//            UserService.shared.signUp(id: gsno(EmailField.text), password: gsno(PasswordField.text), nick: "테스트용", profile: "ㅇㅇㅇ") {
-//                [weak self] in
-//                guard let `self` = self else {return}
-//
-//                guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupLastVC") as? SignupLastVC else { return }
-//
-//
-//                present(dvc,animated: true)
-//            }
-//
-//        }
+    //전달받은 data를 셋팅하기 위한 함수
+    func setup() {
+        if let transData = realIDData {
+            idData = transData
+        }
+        if let transData2 = realPWData {
+            pwData = transData2
+        }
+    }
+    
+    @IBAction func nextAction(_ sender: Any) {
+        
+        guard nickNameField.text?.isEmpty != true else {return}
+        
+//        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupLastVC") as? SignupLastVC else { return }
 //
 //
-//    }
+        if let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupLastVC") as? SignupLastVC {
+            
+            dvc.finalIDData = idData
+            dvc.finalPWData = pwData
+            
+            let check = !(nickNameField.text?.isEmpty ?? true)
+            if check {
+                dvc.finalNickData = nickNameField.text
+            }
+            present(dvc,animated: true)
+            print("vc???ok!!2222")
+        }
+
+        
+        
+        
+//        present(dvc,animated: true)
+
+
+
+        
+        }
+    
     
     @IBAction func nickOkAction(_ sender: Any) {
         guard let nick = nickNameField.text else {return}
