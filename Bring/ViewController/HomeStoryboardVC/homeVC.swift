@@ -37,7 +37,6 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapSettings()
-//        makeMarker()
         mapView.delegate = self
         self.view.addSubview(mapView!)
         
@@ -101,14 +100,10 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
                 self.selectedIdx = $0.cafeIdx
             }
         }
-//        MapService2.shared.selectedStore(Idx: selectedIdx!) {
-//            [weak]
-//
-//
-//        }
         
         infoLabel.text = marker.title
         infoView.isHidden = false
+//        infoImg1.imageFromUrl(<#T##urlString: String?##String?#>, defaultImgPath: "")
         return false
     }
     
