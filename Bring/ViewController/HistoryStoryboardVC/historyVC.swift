@@ -13,9 +13,11 @@ class historyVC: UIViewController {
     
     @IBOutlet var historyCollectionView: UICollectionView!
     var orderList1 = [orderList]()
+    @IBOutlet var nicknameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         historyCollectionView.dataSource = self
         historyCollectionView.delegate = self
     }
@@ -27,6 +29,8 @@ class historyVC: UIViewController {
             [weak self] (data) in
             guard let `self` = self else {return}
             guard let orders = data.orderList else {return}
+            guard let nickname = data.nick else {return}
+            self.nicknameLabel.text = nickname
             self.orderList1 = orders
             self.historyCollectionView.reloadData()
         }
@@ -44,7 +48,7 @@ extension historyVC: UICollectionViewDataSource {
         let order = orderList1[indexPath.item]
         cell.orderNumberLabel.text = "\(gino(order.orderIdx))"
         cell.orderCafeLabel.text = order.name
-//        cell.orderDateLabel.text = order.state
+        cell.orderDateLabel.text = order.time
         return cell
         
     }
@@ -52,11 +56,11 @@ extension historyVC: UICollectionViewDataSource {
 }
 
 extension historyVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = (view.frame.width - 30) / 2
-        let height: CGFloat = (view.frame.width - 30) / 2 + 88
-        return CGSize(width: width, height: height)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let width: CGFloat = (view.frame.width - 30) / 2
+//        let height: CGFloat = (view.frame.width - 30) / 2 + 88
+//        return CGSize(width: width, height: height)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
@@ -70,17 +74,16 @@ extension historyVC: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let nextVC = storyboard?.instantiateViewController(withIdentifier: "DetailBoardVC") as! DetailBoardVC
-//        let board = boardList[indexPath.row]
-//        nextVC.boardtitle = board.boardTitle
-//        nextVC.contents = board.boardContents
-//        nextVC.like = board.boardLike
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "MM/dd HH:mm"
-//        nextVC.time = formatter.string(from: board.boardDate!)
-//
-//        navigationController?.pushViewController(nextVC, animated: true)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "historyDetailVC") as! historyDetailVC
+        let order = orderList1[indexPath.item]
+
+//        nextVC.nickNameLabel.text = nicknameLabel.text
+//        nextVC.orderCafeNameLabel.text = order.name
+//        nextVC.orderDateLabel.text = order.time
+//        nextVC.orderNumberLabel.text = "\(gino(order.orderIdx))"
+
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
     
 }

@@ -11,6 +11,7 @@ import UIKit
 class historyDetailVC: UIViewController {
 
     
+    @IBOutlet var nickNameLabel: UILabel!
     @IBOutlet var orderListView: UIView!
     
     @IBOutlet var orderNumberLabel: UILabel!
