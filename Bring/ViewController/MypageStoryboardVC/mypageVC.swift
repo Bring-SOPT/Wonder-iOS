@@ -16,7 +16,9 @@ class mypageVC: UIViewController {
     @IBOutlet var loginCheckView: UIView!
     
     //로그인 후 해당 아이디 token 받아오기
-    let token = UserDefaults.standard.string(forKey: "token")!
+//    let token = UserDefaults.standard.string(forKey: "token")!
+    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJEb0lUU09QVCIsInVzZXJfaWR4IjoxfQ.xmbvRqaMuYnGvtPaV_Lw7HorI5blZHlpT7WQgo5ybvM"
+    var nick: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,18 @@ class mypageVC: UIViewController {
     
     @IBAction func logoutAction(_ sender: Any) {
         print("logout버튼 ***")
+//        token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJEb0lUU09QVCIsInVzZXJfaWR4IjoxfQ.xmbvRqaMuYnGvtPaV_Lw7HorI5blZHlpT7WQgo5ybvM"
+        var nick: String?
         print(token)
+        //하늘 :mypage에 token값 보내면 mypage data 제대로 들어오나 테스트
+        MypageService.shared.myPage(token: token, completion: {[weak self](res) in
+            guard let `self` = self else {return}
+            print("불러오기 성공")
+            nick = res.nick
+            
+        })
+        print("마이페이지 성공")
+        print(nick)
         self.performSegue(withIdentifier: "naviSegue", sender: self)
         
     }

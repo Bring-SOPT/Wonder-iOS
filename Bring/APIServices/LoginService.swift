@@ -34,4 +34,5 @@ struct LoginService: APIManager, Requestable {
             }
         }
     }
+    
 }

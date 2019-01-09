@@ -10,6 +10,7 @@
 		08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0175421D509C200CD5E1E /* menudetailVC.swift */; };
 		08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA521D3B11100D0FA51 /* LoginVC.swift */; };
 		08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */; };
+		08CE4EB921E50C1F006EEC26 /* MyPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE4EB821E50C1F006EEC26 /* MyPageData.swift */; };
 		AE8B8225FEE20F85CA995DD8 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C508EA446D859BB2940D88 /* Pods_Bring.framework */; };
 		DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */; };
 		DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08720021D6B18500508A7A /* SignupLastVC.swift */; };
@@ -65,6 +66,7 @@
 		08C0175421D509C200CD5E1E /* menudetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menudetailVC.swift; sourceTree = "<group>"; };
 		08CB0FA521D3B11100D0FA51 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFirstVC.swift; sourceTree = "<group>"; };
+		08CE4EB821E50C1F006EEC26 /* MyPageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageData.swift; sourceTree = "<group>"; };
 		0F66E97A6EA26D92B219FBD1 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 		13C508EA446D859BB2940D88 /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				DC4447C321E4C5680065B723 /* orderList.swift */,
 				DCD0F0FE21E1CFA50015E683 /* Menu.swift */,
 				DC4447C121E4C4AB0065B723 /* OrderData.swift */,
+				08CE4EB821E50C1F006EEC26 /* MyPageData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
 				DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */,
 				DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */,
+				08CE4EB921E50C1F006EEC26 /* MyPageData.swift in Sources */,
 				DCD0F10321E1D9580015E683 /* MapService2.swift in Sources */,
 				DCE1AE3421DCFF65009B006B /* historyVC.swift in Sources */,
 				DCE1AB7421D76076000E3BE1 /* orderVC.swift in Sources */,

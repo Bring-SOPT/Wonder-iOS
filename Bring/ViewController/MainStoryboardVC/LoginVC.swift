@@ -72,7 +72,8 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         guard let id = EmailField.text else {return}
         guard let password = PasswordField.text else {return}
         
-        LoginService.shared.login(id: id, password: password, completion: {[weak self] (res) in
+        LoginService.shared.login(id: id, password: password, completion: {
+            [weak self] (res) in
             guard let `self` = self else {return}
             
             if res.token != nil {

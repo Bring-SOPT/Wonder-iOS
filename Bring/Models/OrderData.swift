@@ -10,13 +10,9 @@ import ObjectMapper
 
 struct OrderData: Mappable {
     
-    
     var nick: String?
     var orderList: [orderList]?
-    
-    
-    
-    
+ 
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {

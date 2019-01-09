@@ -53,7 +53,6 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
             default:
                 self.idValidOkLabel.isHidden = true
             }
-            
         }) {
             [weak self] () in
             guard let `self` = self else {return}
@@ -63,9 +62,6 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
         
     }
  
-        
-        
-        
     @IBAction func nextAction(_ sender: Any) {
         
         if PasswordField.text != PasswordConfirmField.text {
