@@ -40,6 +40,7 @@ struct MypageService: APIManager, Requestable {
         }
 }
 }
+<<<<<<< HEAD
 
 
 //    //로그인 api
@@ -58,3 +59,6 @@ struct MypageService: APIManager, Requestable {
 //            }
 //        }
 //    }
+=======
+}
+>>>>>>> bfe7f50617836faa69f2eef80b52017e3fd1ab98

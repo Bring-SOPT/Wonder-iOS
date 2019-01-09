@@ -118,7 +118,7 @@ extension menudetailVC: UITableViewDataSource {
         let menu = menuList[indexPath.item]
     
         cell.menuName.text = menu.menuName
-        cell.menuPrice.text = "\(gino(menu.menuPrice))원"
+        cell.menuPrice.text = "∙\(gino(menu.menuPrice))원"
         cell.menuImg.imageFromUrl(gsno(menu.menuPhoto), defaultImgPath: "")
         
         return cell
