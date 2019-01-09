@@ -51,3 +51,4 @@ struct MypageService: APIManager, Requestable {
 //
     
 }
+}

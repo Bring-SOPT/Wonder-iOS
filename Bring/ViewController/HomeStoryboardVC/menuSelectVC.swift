@@ -30,6 +30,9 @@ class menuSelectVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        menuImg.layer.cornerRadius = 10
+        menuImg.clipsToBounds = true
+        
         self.requestField.layer.borderWidth = 1.0
         self.requestField.layer.borderColor = UIColor.darkGray.cgColor
         menuImg.imageFromUrl(gsno(menuImgData), defaultImgPath: "")
