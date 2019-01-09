@@ -6,7 +6,6 @@
 //  Copyright © 2019 sohyeon. All rights reserved.
 //
 
-
 import Alamofire
 
 struct MypageService: APIManager, Requestable {
@@ -17,6 +16,7 @@ struct MypageService: APIManager, Requestable {
     let token = UserDefaults.standard.string(forKey: "token")!
     
     let myPageURL = url("/users")
+    
     let header: HTTPHeaders = [
         "Content-Type" : "application/json"
     ]
@@ -30,7 +30,7 @@ struct MypageService: APIManager, Requestable {
         
         gettable(myPageURL, body: nil, header: header) { (res) in
             switch res{
-            case .success(let value) :
+            case .success(let value):
                 guard let mypagedata = value.data
                     else {return}
                 completion(mypagedata)
@@ -39,8 +39,8 @@ struct MypageService: APIManager, Requestable {
             }
         }
 }
+    
 }
-
 
 //    //로그인 api
 //    func login(id: String, password: String, completion: @escaping (Token) -> Void) {

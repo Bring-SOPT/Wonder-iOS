@@ -36,5 +36,4 @@ struct MapService2: APIManager, Requestable {
             }
         }
     }
-    
 }
