@@ -15,6 +15,7 @@ class mypageVC: UIViewController {
     
     @IBOutlet var loginCheckView: UIView!
     @IBOutlet weak var myPageNick: UILabel!
+    @IBOutlet weak var whiteImage: UIImageView!
     
     //로그인 후 해당 아이디 token 받아오기
 //    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJEb0lUU09QVCIsInVzZXJfaWR4IjoxfQ.xmbvRqaMuYnGvtPaV_Lw7HorI5blZHlpT7WQgo5ybvM"
@@ -33,9 +34,9 @@ class mypageVC: UIViewController {
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         MypageService.shared.myPage(token: token, completion:{[weak self] (res) in
             guard let `self` = self else {return}
+            self.whiteImage.isHidden = true
             self.myPageNick.text = res.nick
         })
-        
         if token != "" {
             print("isLogin")
             loginCheckView.isHidden = true

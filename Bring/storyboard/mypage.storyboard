@@ -25,6 +25,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="8Dy-K8-geu">
+                                <rect key="frame" x="55" y="58" width="101" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HW3-22-LjX">
                                 <rect key="frame" x="-3" y="188" width="380" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,6 +94,11 @@
                                     <action selector="logoutAction:" destination="ndY-yu-X5v" eventType="touchUpInside" id="LiX-FF-Waj"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-ym-dsN">
+                                <rect key="frame" x="0.0" y="64" width="377" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1j-aI-TM4">
                                 <rect key="frame" x="91.5" y="237.5" width="192" height="256"/>
                                 <subviews>
@@ -129,10 +138,6 @@
                                     <constraint firstItem="TwM-1K-29v" firstAttribute="top" secondItem="p1j-aI-TM4" secondAttribute="top" id="z19-lS-43k"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babylion" translatesAutoresizingMaskIntoConstraints="NO" id="8Dy-K8-geu">
-                                <rect key="frame" x="55" y="58" width="101" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -145,6 +150,7 @@
                     <connections>
                         <outlet property="loginCheckView" destination="p1j-aI-TM4" id="GnQ-K2-ctE"/>
                         <outlet property="myPageNick" destination="czh-lE-2ju" id="x9d-40-Pjz"/>
+                        <outlet property="whiteImage" destination="Pr6-ym-dsN" id="J9s-Pb-lS4"/>
                         <segue destination="OQF-wa-P85" kind="showDetail" identifier="naviSegue" id="tjm-U5-ht2"/>
                     </connections>
                 </viewController>
@@ -180,10 +186,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="babylion" width="600" height="600"/>
         <image name="bigPopupBackground" width="210" height="275"/>
         <image name="bigPopupBtnCoral" width="126" height="28"/>
         <image name="bigPopupLogoLogin" width="78" height="91"/>
+        <image name="defaultProfile" width="86" height="86"/>
         <image name="logoutButton" width="131" height="41"/>
     </resources>
 </document>
