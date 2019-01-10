@@ -10,17 +10,11 @@ import UIKit
 
 class mypageVC: UIViewController {
 
-    var loginOk:Int = 0
-//    로그인 된 상태면 1, 안된 상태면 0
-    
     @IBOutlet var loginCheckView: UIView!
     @IBOutlet weak var myPageNick: UILabel!
     @IBOutlet weak var whiteImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
     
-    //로그인 후 해당 아이디 token 받아오기
-//    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJEb0lUU09QVCIsInVzZXJfaWR4IjoxfQ.xmbvRqaMuYnGvtPaV_Lw7HorI5blZHlpT7WQgo5ybvM"
- 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(loginCheckView)
@@ -44,14 +38,17 @@ class mypageVC: UIViewController {
             loginCheckView.isHidden = true
         }
     }
-
-    
     
     @IBAction func logoutAction(_ sender: Any) {
+        print("로그아웃")
         UserDefaults.standard.removeObject(forKey: "token")
         UserDefaults.standard.synchronize()
-        loginCheck()
-        view.layoutIfNeeded()
+//        loginCheck()
+//        view.layoutIfNeeded()
+        viewDidLoad()
+        whiteImage.isHidden = false
+        myPageNick.text = " "
+        loginCheckView.isHidden = false
     }
     
     @IBAction func goToLoginView(_ sender: Any) {
