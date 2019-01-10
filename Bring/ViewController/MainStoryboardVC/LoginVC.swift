@@ -50,13 +50,8 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
             
         }
         
-        //        LoginService.shared.login(id: id, password: password, completion: {
-        //            [weak self] (data) in
-//            guard let `self` = self else {return}
-//            switch data.status
-//            () in
-//
-//        }
+        
+        
     }
 
     

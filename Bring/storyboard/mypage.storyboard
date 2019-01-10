@@ -144,6 +144,7 @@
                     <navigationItem key="navigationItem" title="마이페이지" id="ifp-hD-Rcg"/>
                     <connections>
                         <outlet property="loginCheckView" destination="p1j-aI-TM4" id="GnQ-K2-ctE"/>
+                        <outlet property="myPageNick" destination="czh-lE-2ju" id="x9d-40-Pjz"/>
                         <segue destination="OQF-wa-P85" kind="showDetail" identifier="naviSegue" id="tjm-U5-ht2"/>
                     </connections>
                 </viewController>
