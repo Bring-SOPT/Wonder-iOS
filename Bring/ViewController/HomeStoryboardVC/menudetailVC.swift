@@ -50,6 +50,19 @@ class menudetailVC: UIViewController {
             self.backgroundImg.imageFromUrl(data.storePhoto, defaultImgPath: "")
             self.menuList = menus
             self.menuTable.reloadData()
+            
+//            self.openTimeLabel.text = data.time
+//            self.closeDayLabel.text = data.breakDays
+//            self.numberLabel.text = data.number
+        }
+        
+        StoreService.shared.loadStoreDetail(storeIdx: cafeIdxData!) {
+            [weak self] (data) in
+            guard let `self` = self else {return}
+            
+            self.openTimeLabel.text = data.time
+            self.closeDayLabel.text = data.breakDays
+            self.numberLabel.text = data.number
         }
         
         

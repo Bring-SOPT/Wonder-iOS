@@ -37,9 +37,21 @@ struct StoreService: APIManager, Requestable {
         }
     }
     
-    func loadStoreDetail(Idx: Int, completion: @escaping () -> Void) {
-        
+    func loadStoreDetail(storeIdx: Int, completion: @escaping (Store) -> Void) {
+        let queryURL = storeURL + "/\(storeIdx)"
+        gettable(queryURL, body: nil, header: headers) {
+            (res) in
+            switch res {
+            case .success(let value):
+                guard let store = value.data else
+                {return}
+                completion(store)
+            case .error(let error):
+                print(error)
+        }
         
     }
     
+}
+
 }

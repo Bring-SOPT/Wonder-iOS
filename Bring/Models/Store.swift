@@ -16,6 +16,10 @@ struct Store: Mappable {
     var storePhoto: String?
     var menuList: [Menu]?
     
+    var time: String?
+    var breakDays: String?
+    var number: String?
+    
    
     
     
@@ -25,6 +29,10 @@ struct Store: Mappable {
         storeIdx <- map["storeIdx"]
         storePhoto <- map["bgPhotoUrl"]
         menuList <- map["menuList"]
+        
+        time <- map["time"]
+        breakDays <- map["breakDays"]
+        number <- map["number"]
  
         }
     }
