@@ -31,5 +31,4 @@ struct OrderService: APIManager, Requestable {
             }
         }
 }
-
 }

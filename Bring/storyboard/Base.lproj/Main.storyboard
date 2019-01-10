@@ -192,7 +192,6 @@
                         <outlet property="EmailField" destination="adg-LZ-zBT" id="awV-Eb-RzJ"/>
                         <outlet property="PasswordField" destination="Oqf-DZ-R1M" id="Dx1-6h-Ogi"/>
                         <outlet property="idpwNoPopUp" destination="kcq-pd-xGd" id="wwW-Z7-g8B"/>
-                        <segue destination="w2W-39-I1k" kind="showDetail" identifier="naviSegue" id="gdt-7B-iqt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RiJ-3U-fcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -618,7 +617,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signupFinishAction:" destination="Xky-o6-tdi" eventType="touchUpInside" id="Yc5-mj-rY0"/>
-                                    <segue destination="w2W-39-I1k" kind="showDetail" identifier="naviSegue" id="BSf-JO-KXE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이용약관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-Rc-xSo">
@@ -719,9 +717,11 @@
                         <outlet property="doneBtn" destination="sRS-po-8sY" id="RDT-5i-ejd"/>
                         <outlet property="privateCheckbtn" destination="c2m-It-l7e" id="eD5-N8-D12"/>
                         <outlet property="serviceCheckbtn" destination="5N8-Iy-2Ri" id="1IY-cz-phq"/>
+                        <segue destination="5ru-f9-inQ" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLogin:" id="sbc-DV-hIS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXd-Jk-nr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5ru-f9-inQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1167.2" y="-836.13193403298362"/>
         </scene>
@@ -738,7 +738,4 @@
         <image name="tab_mypage" width="25" height="25"/>
         <image name="tab_oroderlist" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gdt-7B-iqt"/>
-    </inferredMetricsTieBreakers>
 </document>
