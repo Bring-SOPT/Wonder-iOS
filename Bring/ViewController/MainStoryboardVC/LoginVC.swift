@@ -14,7 +14,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
     @IBOutlet var EmailField: UITextField!
     @IBOutlet var PasswordField: UITextField!
     var userDefault = UserDefaults.standard
-    
+    @IBOutlet weak var idpwNoPopUp: UIImageView!
     var id: String?
     var password: String?
     
@@ -27,6 +27,8 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         EmailField.tag = 0;
         PasswordField.delegate = self
         PasswordField.tag = 1;
+        
+        idpwNoPopUp.isHidden = true
 
     }
     
@@ -37,16 +39,30 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
     
     @IBAction func loginAction(_ sender: Any) {
         
-//        guard let id = EmailField.text else {return}
-//        guard let password = PasswordField.text else {return}
-//
-//        LoginService.shared.login(id: id, password: password) {
+//        network()
+        guard let id = EmailField.text else {return}
+        guard let password = PasswordField.text else {return}
+        
+        LoginService.shared.login(id: id, password: password, completion: {
+                        [weak self] (res) in
+
+                        guard let `self` = self else {return}
+
+                        if res.token != nil {
+                            self.userDefault.set(res.token!, forKey: "token")
+                            print("token 이 nil이 아님")
+                            print(res.token)
+                            self.performSegue(withIdentifier: "naviSegue", sender: self)
+                        }
+                        })
+
+//        LoginService.shared.login(id: id, password: password, completion: {
 //            [weak self] (data) in
 //            guard let `self` = self else {return}
-//
-//            self.performSegue(withIdentifier: "naviSegue", sender: self)
+//            switch data.status
+//            () in
+//            <#code#>
 //        }
-        network()
     }
 
     
@@ -74,16 +90,16 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         
         LoginService.shared.login(id: id, password: password, completion: {
             [weak self] (res) in
+
             guard let `self` = self else {return}
-            
+
             if res.token != nil {
                 self.userDefault.set(res.token!, forKey: "token")
                 print("token 이 nil이 아님")
                 print(res.token)
                 self.performSegue(withIdentifier: "naviSegue", sender: self)
-                
             }
-        })
+            })
+        }
     }
-}
 

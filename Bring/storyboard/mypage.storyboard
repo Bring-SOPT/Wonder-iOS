@@ -18,10 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babylion" translatesAutoresizingMaskIntoConstraints="NO" id="8Dy-K8-geu">
-                                <rect key="frame" x="55" y="58" width="101" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="쁘링라이언" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czh-lE-2ju">
                                 <rect key="frame" x="188" y="92" width="122" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,6 +129,10 @@
                                     <constraint firstItem="TwM-1K-29v" firstAttribute="top" secondItem="p1j-aI-TM4" secondAttribute="top" id="z19-lS-43k"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babylion" translatesAutoresizingMaskIntoConstraints="NO" id="8Dy-K8-geu">
+                                <rect key="frame" x="55" y="58" width="101" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -179,8 +179,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="babylion" width="450" height="450"/>
-        <image name="bigPopupBackground" width="192" height="256"/>
+        <image name="babylion" width="600" height="600"/>
+        <image name="bigPopupBackground" width="210" height="275"/>
         <image name="bigPopupBtnCoral" width="126" height="28"/>
         <image name="bigPopupLogoLogin" width="78" height="91"/>
         <image name="logoutButton" width="131" height="41"/>
