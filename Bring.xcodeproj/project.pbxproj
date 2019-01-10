@@ -11,6 +11,7 @@
 		08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA521D3B11100D0FA51 /* LoginVC.swift */; };
 		08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */; };
 		08CE4EB921E50C1F006EEC26 /* MyPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CE4EB821E50C1F006EEC26 /* MyPageData.swift */; };
+		08FD725C21E7627F004D18B1 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD725B21E7627F004D18B1 /* Status.swift */; };
 		AE8B8225FEE20F85CA995DD8 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C508EA446D859BB2940D88 /* Pods_Bring.framework */; };
 		DC0871FF21D6B06600508A7A /* SignupSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */; };
 		DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC08720021D6B18500508A7A /* SignupLastVC.swift */; };
@@ -67,6 +68,7 @@
 		08CB0FA521D3B11100D0FA51 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFirstVC.swift; sourceTree = "<group>"; };
 		08CE4EB821E50C1F006EEC26 /* MyPageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageData.swift; sourceTree = "<group>"; };
+		08FD725B21E7627F004D18B1 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		0F66E97A6EA26D92B219FBD1 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 		13C508EA446D859BB2940D88 /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1F4ACB21D3B3E400AD4F94 /* NetworkResult.swift */,
+				08FD725B21E7627F004D18B1 /* Status.swift */,
 				DC1F4ACD21D3B3FB00AD4F94 /* APIManager.swift */,
 				DC1F4ACF21D3B40800AD4F94 /* Requestable.swift */,
 				DCC3F0D421D7843400D16B18 /* LoginService.swift */,
@@ -523,6 +526,7 @@
 				DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */,
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
+				08FD725C21E7627F004D18B1 /* Status.swift in Sources */,
 				DCABEC7C21DE5CDA00A9774F /* Store.swift in Sources */,
 				08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */,
 				DCE1AE3221DCFD53009B006B /* historyCollectionViewCell.swift in Sources */,

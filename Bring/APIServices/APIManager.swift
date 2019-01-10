@@ -5,7 +5,7 @@
 //  Created by 박소현 on 26/12/2018.
 //  Copyright © 2018 sohyeon. All rights reserved.
 //
-
+import Foundation
 
 protocol APIManager {}
 

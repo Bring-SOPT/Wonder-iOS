@@ -14,7 +14,7 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
     @IBOutlet var EmailField: UITextField!
     @IBOutlet var PasswordField: UITextField!
     var userDefault = UserDefaults.standard
-    
+    @IBOutlet weak var idpwNoPopUp: UIImageView!
     var id: String?
     var password: String?
     
@@ -27,26 +27,36 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         EmailField.tag = 0;
         PasswordField.delegate = self
         PasswordField.tag = 1;
+        
+        idpwNoPopUp.isHidden = true
 
     }
     
     @IBAction func signupAction(_ sender: Any) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SignupFirstVC") as? SignupFirstVC else { return }
-       present(dvc,animated: true)
+       present(dvc, animated: true)
     }
     
     @IBAction func loginAction(_ sender: Any) {
         
-//        guard let id = EmailField.text else {return}
-//        guard let password = PasswordField.text else {return}
-//
-//        LoginService.shared.login(id: id, password: password) {
-//            [weak self] (data) in
+//        network()
+        guard let id = EmailField.text else {return}
+        guard let password = PasswordField.text else {return}
+        
+        LoginService.shared.login(id: id, password: password) {
+            [weak self] in
+            guard let `self` = self else {return}
+            self.dismiss(animated: true)
+            
+        }
+        
+        //        LoginService.shared.login(id: id, password: password, completion: {
+        //            [weak self] (data) in
 //            guard let `self` = self else {return}
+//            switch data.status
+//            () in
 //
-//            self.performSegue(withIdentifier: "naviSegue", sender: self)
 //        }
-        network()
     }
 
     
@@ -67,23 +77,6 @@ class LoginVC: UIViewController, UITextFieldDelegate  {
         return false
     }
     
-    //로그인해서 토큰 값이 nil이 아니면 naviSegue로 이동.
-    func network(){
-        guard let id = EmailField.text else {return}
-        guard let password = PasswordField.text else {return}
-        
-        LoginService.shared.login(id: id, password: password, completion: {
-            [weak self] (res) in
-            guard let `self` = self else {return}
-            
-            if res.token != nil {
-                self.userDefault.set(res.token!, forKey: "token")
-                print("token 이 nil이 아님")
-                print(res.token)
-                self.performSegue(withIdentifier: "naviSegue", sender: self)
-                
-            }
-        })
-    }
+    @IBAction func unwindToLogin(_ segue: UIStoryboardSegue) {}
 }
 

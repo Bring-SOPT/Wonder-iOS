@@ -13,13 +13,7 @@ struct MypageService: APIManager, Requestable {
     typealias NetworkData = ResponseObject<MyPageData>
     static let shared = MypageService()
     
-    let token = UserDefaults.standard.string(forKey: "token")!
-    
     let myPageURL = url("/users")
-    
-    let header: HTTPHeaders = [
-        "Content-Type" : "application/json"
-    ]
     
     //마이페이지 api
     func myPage(token: String, completion: @escaping (MyPageData) -> Void){
@@ -27,34 +21,17 @@ struct MypageService: APIManager, Requestable {
             "Content-Type" : "application/json",
             "Authorization" : token
         ]
-        
         gettable(myPageURL, body: nil, header: header) { (res) in
-            switch res{
+            switch res {
             case .success(let value):
-                guard let mypagedata = value.data
-                    else {return}
-                completion(mypagedata)
+                guard let status = value.status else { return }
+                if status == 200 {
+                    guard let mypagedata = value.data else {return}
+                    completion(mypagedata)
+                }
             case .error(let error):
                 print(error)
             }
         }
 }
-    
 }
-
-//    //로그인 api
-//    func login(id: String, password: String, completion: @escaping (Token) -> Void) {
-//        let body = [
-//            "id" : id,
-//            "password" : password,
-//            ]
-//        postable(loginURL, body: body, header: headers) { res in
-//            switch res {
-//            case .success(let value):
-//                guard let token = value.data else {return}
-//                completion(token)
-//            case .error(let error):
-//                print(error)
-//            }
-//        }
-//    }

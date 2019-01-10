@@ -193,7 +193,7 @@ class SignupLastVC: UIViewController {
                 switch status {
                 case 201:
                     print("회원가입 완료")
-                    self.performSegue(withIdentifier: "naviSegue", sender: self)
+                    self.performSegue(withIdentifier: "unwindToLogin", sender: self)
                 case 400:
                     print("회원가입 실패")
                 default:

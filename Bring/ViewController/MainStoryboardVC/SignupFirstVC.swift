@@ -38,8 +38,6 @@ class SignupFirstVC: UIViewController, UITextFieldDelegate{
     //중복확인 버튼
     @IBAction func idOkAction(_ sender: Any) {
         
-        
-        
         guard let id = EmailField.text else {return}
         
         UserService.shared.validIDCheck(id: id, completion: {

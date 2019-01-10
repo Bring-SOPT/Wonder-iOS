@@ -125,8 +125,6 @@ class SignupSecondVC: UIViewController {
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         self.present(actionSheet, animated: true)
     }
-
-    
 }
 
 extension SignupSecondVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

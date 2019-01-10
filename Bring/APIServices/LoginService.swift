@@ -19,16 +19,21 @@ struct LoginService: APIManager, Requestable {
     ]
     
     //로그인 api
-    func login(id: String, password: String, completion: @escaping (Token) -> Void) {
+    func login(id: String, password: String, completion: @escaping () -> Void) {
         let body = [
             "id" : id,
             "password" : password
-            ]
+        ]
         postable(loginURL, body: body, header: headers) { res in
             switch res {
             case .success(let value):
-                guard let token = value.data else {return}
-                completion(token)
+                guard let status = value.status else { return }
+                if status == 200 {
+                    guard let token = value.data?.token else { return }
+                    UserDefaults.standard.set(token, forKey: "token")
+                    UserDefaults.standard.synchronize()
+                    completion()
+                }
             case .error(let error):
                 print(error)
             }
