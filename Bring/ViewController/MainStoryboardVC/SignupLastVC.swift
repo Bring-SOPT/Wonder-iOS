@@ -186,7 +186,7 @@ class SignupLastVC: UIViewController {
             
             //          self.performSegue(withIdentifier: "naviSegue", sender: self)
             
-            UserService.shared.signUp(id: idData!, password: pwData!, nick: nickData!, profile: UIImage()) {
+            UserService.shared.signUp(id: idData!, password: pwData!, nick: nickData!, profile: profileData!) {
                 [weak self] data in
                 guard let `self` = self else {return}
                 guard let status = data.status else { return }

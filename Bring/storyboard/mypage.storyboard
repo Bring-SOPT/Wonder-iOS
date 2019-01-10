@@ -95,7 +95,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-ym-dsN">
-                                <rect key="frame" x="0.0" y="64" width="377" height="603"/>
+                                <rect key="frame" x="0.0" y="49" width="377" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -150,6 +150,7 @@
                     <connections>
                         <outlet property="loginCheckView" destination="p1j-aI-TM4" id="GnQ-K2-ctE"/>
                         <outlet property="myPageNick" destination="czh-lE-2ju" id="x9d-40-Pjz"/>
+                        <outlet property="profileImage" destination="8Dy-K8-geu" id="zj4-aw-7g5"/>
                         <outlet property="whiteImage" destination="Pr6-ym-dsN" id="J9s-Pb-lS4"/>
                         <segue destination="OQF-wa-P85" kind="showDetail" identifier="naviSegue" id="tjm-U5-ht2"/>
                     </connections>
