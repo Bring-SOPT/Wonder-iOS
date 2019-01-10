@@ -124,6 +124,12 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         infoImg1.imageFromUrl(_images[0], defaultImgPath: "")
         infoImg2.imageFromUrl(_images[1], defaultImgPath: "")
         infoImg3.imageFromUrl(_images[2], defaultImgPath: "")
+        infoImg1.layer.cornerRadius = 10
+        infoImg1.clipsToBounds = true
+        infoImg2.layer.cornerRadius = 10
+        infoImg2.clipsToBounds = true
+        infoImg3.layer.cornerRadius = 10
+        infoImg3.clipsToBounds = true
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
