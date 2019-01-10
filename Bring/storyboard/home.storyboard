@@ -146,12 +146,14 @@
                         <viewLayoutGuide key="safeArea" id="l6V-Dg-ibm"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="3Bw-nj-WuM" id="lf4-DX-lyM"/>
                         <outlet property="infoImg1" destination="8Bo-oy-3E9" id="wmR-CM-x1n"/>
                         <outlet property="infoImg2" destination="Jku-qC-KDW" id="qcZ-wX-PLz"/>
                         <outlet property="infoImg3" destination="zpJ-20-BqA" id="ayr-Ja-kge"/>
                         <outlet property="infoLabel" destination="vlp-mq-o6o" id="n42-cx-dyU"/>
                         <outlet property="infoView" destination="NOR-Nv-4xF" id="FnG-sk-qO4"/>
                         <outlet property="mapView" destination="LR4-2B-3bS" id="51d-40-p0B"/>
+                        <outlet property="numberLabel" destination="Hfe-0D-7a1" id="QIq-1l-mNy"/>
                         <segue destination="pPE-UY-AKq" kind="presentation" identifier="naviSegue" id="KKv-6q-9xa"/>
                     </connections>
                 </viewController>
