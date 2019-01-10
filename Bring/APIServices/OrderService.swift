@@ -23,8 +23,10 @@ struct OrderService: APIManager, Requestable {
         gettable(queryURL, body: nil, header: header) { (res) in
             switch res {
             case .success(let value):
+                print(value.status)
                 guard let OrderData = value.data else
                 {return}
+                
                 completion(OrderData)
             case .error(let error):
                 print(error)
