@@ -20,10 +20,18 @@ class historyDetailVC: UIViewController {
     
     @IBOutlet var allPriceLabel: UILabel!
     
+    var orderIdx: Int?
+    var time: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(orderListView)
-
+        setLabel()
     }
     
+    func setLabel() {
+        orderNumberLabel.text = "\(gino(orderIdx))"
+        orderDateLabel.text = time
+        
+    }
 }

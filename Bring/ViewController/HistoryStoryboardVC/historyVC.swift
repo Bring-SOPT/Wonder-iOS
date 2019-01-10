@@ -77,7 +77,8 @@ extension historyVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "historyDetailVC") as! historyDetailVC
         let order = orderList1[indexPath.item]
-
+        nextVC.orderIdx = order.orderIdx
+        nextVC.time = order.time
 //        nextVC.nickNameLabel.text = nicknameLabel.text
 //        nextVC.orderCafeNameLabel.text = order.name
 //        nextVC.orderDateLabel.text = order.time

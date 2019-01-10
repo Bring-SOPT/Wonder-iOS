@@ -15,7 +15,7 @@ struct OrderService: APIManager, Requestable {
     let orderURL = url("/orders")
     let header: HTTPHeaders = [
         "Content-Type": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJEb0lUU09QVCIsInVzZXJfaWR4IjoxfQ.xmbvRqaMuYnGvtPaV_Lw7HorI5blZHlpT7WQgo5ybvM"
+        "Authorization": UserDefaults.standard.string(forKey: "token") ?? ""
     ]
     
     func getOrderList(completion: @escaping (OrderData) -> Void) {
