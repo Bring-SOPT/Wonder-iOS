@@ -37,6 +37,10 @@
 		DCCD9EA321DE2BBC00E6F087 /* MypageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD9EA221DE2BBC00E6F087 /* MypageService.swift */; };
 		DCCD9EA521DE384600E6F087 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD9EA421DE384600E6F087 /* MapService.swift */; };
 		DCCD9EA721DE465B00E6F087 /* CafeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD9EA621DE465B00E6F087 /* CafeModel.swift */; };
+		DCD000FE21E7AF6F00720BBB /* orderMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD000FD21E7AF6F00720BBB /* orderMenuList.swift */; };
+		DCD0010021E7B4C000720BBB /* orderDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD000FF21E7B4C000720BBB /* orderDetailData.swift */; };
+		DCD0010221E7B4FB00720BBB /* orderDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0010121E7B4FB00720BBB /* orderDetailList.swift */; };
+		DCD0010421E7B77B00720BBB /* OrderService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0010321E7B77B00720BBB /* OrderService2.swift */; };
 		DCD0F0FF21E1CFA50015E683 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F0FE21E1CFA50015E683 /* Menu.swift */; };
 		DCD0F10121E1D7850015E683 /* SelectedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F10021E1D7850015E683 /* SelectedStore.swift */; };
 		DCD0F10321E1D9580015E683 /* MapService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F10221E1D9580015E683 /* MapService2.swift */; };
@@ -96,6 +100,10 @@
 		DCCD9EA221DE2BBC00E6F087 /* MypageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageService.swift; sourceTree = "<group>"; };
 		DCCD9EA421DE384600E6F087 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		DCCD9EA621DE465B00E6F087 /* CafeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeModel.swift; sourceTree = "<group>"; };
+		DCD000FD21E7AF6F00720BBB /* orderMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderMenuList.swift; sourceTree = "<group>"; };
+		DCD000FF21E7B4C000720BBB /* orderDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderDetailData.swift; sourceTree = "<group>"; };
+		DCD0010121E7B4FB00720BBB /* orderDetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderDetailList.swift; sourceTree = "<group>"; };
+		DCD0010321E7B77B00720BBB /* OrderService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService2.swift; sourceTree = "<group>"; };
 		DCD0F0FE21E1CFA50015E683 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DCD0F10021E1D7850015E683 /* SelectedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStore.swift; sourceTree = "<group>"; };
 		DCD0F10221E1D9580015E683 /* MapService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService2.swift; sourceTree = "<group>"; };
@@ -236,6 +244,7 @@
 				DCCD9EA421DE384600E6F087 /* MapService.swift */,
 				DCD0F10221E1D9580015E683 /* MapService2.swift */,
 				DC4447BF21E4C40F0065B723 /* OrderService.swift */,
+				DCD0010321E7B77B00720BBB /* OrderService2.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -247,12 +256,15 @@
 				DCA5894521DBB65500D59A78 /* User.swift */,
 				DC1F4AD421D3B59C00AD4F94 /* ResponseArray.swift */,
 				DC1F4AD621D3B5A100AD4F94 /* Token.swift */,
+				DCD000FD21E7AF6F00720BBB /* orderMenuList.swift */,
 				DCCD9EA621DE465B00E6F087 /* CafeModel.swift */,
 				DCABEC7B21DE5CDA00A9774F /* Store.swift */,
 				DCD0F10021E1D7850015E683 /* SelectedStore.swift */,
 				DC4447C321E4C5680065B723 /* orderList.swift */,
 				DCD0F0FE21E1CFA50015E683 /* Menu.swift */,
 				DC4447C121E4C4AB0065B723 /* OrderData.swift */,
+				DCD000FF21E7B4C000720BBB /* orderDetailData.swift */,
+				DCD0010121E7B4FB00720BBB /* orderDetailList.swift */,
 				08CE4EB821E50C1F006EEC26 /* MyPageData.swift */,
 			);
 			path = Models;
@@ -510,9 +522,11 @@
 				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
 				DC4447C421E4C5680065B723 /* orderList.swift in Sources */,
 				DCD0F10121E1D7850015E683 /* SelectedStore.swift in Sources */,
+				DCD0010421E7B77B00720BBB /* OrderService2.swift in Sources */,
 				DC08720921D6BA9300508A7A /* Cafe.swift in Sources */,
 				DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */,
 				DCABEC7A21DE5BD200A9774F /* StoreService.swift in Sources */,
+				DCD0010021E7B4C000720BBB /* orderDetailData.swift in Sources */,
 				DC4447C021E4C40F0065B723 /* OrderService.swift in Sources */,
 				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
 				DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */,
@@ -527,9 +541,11 @@
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
 				08FD725C21E7627F004D18B1 /* Status.swift in Sources */,
+				DCD0010221E7B4FB00720BBB /* orderDetailList.swift in Sources */,
 				DCABEC7C21DE5CDA00A9774F /* Store.swift in Sources */,
 				08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */,
 				DCE1AE3221DCFD53009B006B /* historyCollectionViewCell.swift in Sources */,
+				DCD000FE21E7AF6F00720BBB /* orderMenuList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,9 +692,10 @@
 			baseConfigurationReference = 0F66E97A6EA26D92B219FBD1 /* Pods-Bring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356TMGTX7W;
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -697,9 +714,10 @@
 			baseConfigurationReference = A711385AF500D628BDC50C18 /* Pods-Bring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356TMGTX7W;
 				INFOPLIST_FILE = Bring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

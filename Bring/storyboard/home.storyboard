@@ -94,14 +94,19 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카페이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlp-mq-o6o">
-                                                <rect key="frame" x="12" y="16" width="298" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="카페이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlp-mq-o6o">
+                                                <rect key="frame" x="15" y="16" width="225" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="J9v-A5-00g"/>
-                                                    <constraint firstAttribute="width" constant="298" id="M6L-OP-dAf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgC-M1-OaD">
+                                                <rect key="frame" x="254" y="20" width="38" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -109,9 +114,12 @@
                                             <constraint firstItem="hvE-HK-slJ" firstAttribute="leading" secondItem="EDS-qm-JB6" secondAttribute="trailing" constant="-28" id="0Eg-86-uEx"/>
                                             <constraint firstItem="Jku-qC-KDW" firstAttribute="centerY" secondItem="zpJ-20-BqA" secondAttribute="centerY" id="2Mq-jX-t10"/>
                                             <constraint firstItem="hvE-HK-slJ" firstAttribute="leading" secondItem="OKg-em-9ib" secondAttribute="trailing" constant="-28" id="8Hb-V5-VTV"/>
+                                            <constraint firstItem="lgC-M1-OaD" firstAttribute="leading" secondItem="vlp-mq-o6o" secondAttribute="trailing" constant="14" id="BRS-NB-NYD"/>
+                                            <constraint firstItem="vlp-mq-o6o" firstAttribute="leading" secondItem="NOR-Nv-4xF" secondAttribute="leading" constant="15" id="DQ3-Rr-GSy"/>
                                             <constraint firstItem="8Bo-oy-3E9" firstAttribute="leading" secondItem="NOR-Nv-4xF" secondAttribute="leading" constant="12" id="KP3-qN-8Bt"/>
                                             <constraint firstItem="zpJ-20-BqA" firstAttribute="leading" secondItem="Jku-qC-KDW" secondAttribute="trailing" constant="14" id="KUL-RX-ieX"/>
                                             <constraint firstAttribute="bottom" secondItem="hvE-HK-slJ" secondAttribute="bottom" id="KXw-xb-j9W"/>
+                                            <constraint firstItem="lgC-M1-OaD" firstAttribute="bottom" secondItem="vlp-mq-o6o" secondAttribute="bottom" constant="1" id="MBr-Hs-pTp"/>
                                             <constraint firstItem="EDS-qm-JB6" firstAttribute="top" secondItem="OKg-em-9ib" secondAttribute="bottom" constant="6" id="Mnt-hx-yqb"/>
                                             <constraint firstItem="8Bo-oy-3E9" firstAttribute="top" secondItem="EDS-qm-JB6" secondAttribute="bottom" constant="9" id="UrG-mg-8kv"/>
                                             <constraint firstAttribute="height" constant="215" id="Zzd-1u-6wU"/>
@@ -124,7 +132,6 @@
                                             <constraint firstItem="OKg-em-9ib" firstAttribute="top" secondItem="vlp-mq-o6o" secondAttribute="bottom" constant="7" id="pkA-7c-ceP"/>
                                             <constraint firstItem="3Bw-nj-WuM" firstAttribute="leading" secondItem="OKg-em-9ib" secondAttribute="trailing" constant="7" id="rRI-Pm-YGk"/>
                                             <constraint firstAttribute="width" constant="375" id="raz-t9-gev"/>
-                                            <constraint firstItem="hvE-HK-slJ" firstAttribute="leading" secondItem="vlp-mq-o6o" secondAttribute="trailing" constant="-310" id="t6D-la-9EC"/>
                                             <constraint firstItem="Hfe-0D-7a1" firstAttribute="centerY" secondItem="EDS-qm-JB6" secondAttribute="centerY" id="uXg-O4-REc"/>
                                             <constraint firstAttribute="bottom" secondItem="8Bo-oy-3E9" secondAttribute="bottom" constant="16" id="wzU-7E-Uzp"/>
                                         </constraints>
@@ -147,6 +154,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="3Bw-nj-WuM" id="lf4-DX-lyM"/>
+                        <outlet property="cafeTypeLabel" destination="lgC-M1-OaD" id="qEu-21-NbF"/>
                         <outlet property="infoImg1" destination="8Bo-oy-3E9" id="wmR-CM-x1n"/>
                         <outlet property="infoImg2" destination="Jku-qC-KDW" id="qcZ-wX-PLz"/>
                         <outlet property="infoImg3" destination="zpJ-20-BqA" id="ayr-Ja-kge"/>

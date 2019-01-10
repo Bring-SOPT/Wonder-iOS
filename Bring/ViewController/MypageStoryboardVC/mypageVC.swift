@@ -38,6 +38,8 @@ class mypageVC: UIViewController {
             self.whiteImage.isHidden = true
             self.myPageNick.text = res.nick
             self.profileImage.imageFromUrl(res.profileUrl, defaultImgPath: "")
+            self.profileImage.layer.cornerRadius = 10
+            self.profileImage.clipsToBounds = true
         })
         if token != "" {
             print("isLogin")

@@ -79,6 +79,7 @@ extension historyVC: UICollectionViewDelegateFlowLayout {
         let order = orderList1[indexPath.item]
         nextVC.orderIdx = order.orderIdx
         nextVC.time = order.time
+        nextVC.name = nicknameLabel.text
 //        nextVC.nickNameLabel.text = nicknameLabel.text
 //        nextVC.orderCafeNameLabel.text = order.name
 //        nextVC.orderDateLabel.text = order.time

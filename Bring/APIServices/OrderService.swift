@@ -23,7 +23,6 @@ struct OrderService: APIManager, Requestable {
         gettable(queryURL, body: nil, header: header) { (res) in
             switch res {
             case .success(let value):
-                print(value.status)
                 guard let OrderData = value.data else
                 {return}
                 
@@ -33,4 +32,9 @@ struct OrderService: APIManager, Requestable {
             }
         }
 }
+
+    
+//    func Order(Idx: Int, orderMenuList: [String], completion: @escaping)
+    
 }
+

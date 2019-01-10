@@ -27,6 +27,8 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     @IBOutlet var infoLabel: UILabel!
+    @IBOutlet var cafeTypeLabel: UILabel!
+    
     
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var numberLabel: UILabel!
@@ -105,12 +107,12 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         
         infoLabel.text = marker.title
         infoView.isHidden = false
-//        infoImg1.imageFromUrl(<#T##urlString: String?##String?#>, defaultImgPath: "")
-        //이 부분 사진 어케 저장하는지 모르게뜸 ㅇㅅㅇ
+  
         
         MapService2.shared.selectedStore(Idx: selectedIdx!) {
             [weak self] (data) in
             guard let `self` = self else {return}
+            self.cafeTypeLabel.text = data.storeType
             self.addressLabel.text = data.storeAddress
             self.numberLabel.text = data.storeNumber
             self.images = data.storePhoto
