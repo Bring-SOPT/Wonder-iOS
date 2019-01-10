@@ -17,10 +17,12 @@ class SignupSecondVC: UIViewController {
     
     var realIDData : String?
     var realPWData : String?
+    var realImageData : UIImage?
     
     
     var idData : String?
     var pwData : String?
+    var ImageData : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class SignupSecondVC: UIViewController {
         if let transData2 = realPWData {
             pwData = transData2
         }
+       
     }
     
     @IBAction func nextAction(_ sender: Any) {
@@ -55,11 +58,13 @@ class SignupSecondVC: UIViewController {
             
             dvc.finalIDData = idData
             dvc.finalPWData = pwData
+            dvc.finalProfileData = ImageData
             
             let check = !(nickNameField.text?.isEmpty ?? true)
             if check {
                 dvc.finalNickData = nickNameField.text
             }
+            dvc.finalProfileData = profileImage.image
             present(dvc,animated: true)
             print("vc???ok!!2222")
         }
@@ -86,9 +91,7 @@ class SignupSecondVC: UIViewController {
             default: self.nickNameOkLabel.isHidden = true
             }
         }){
-            
         }
-        
     }
     
     func setupTap() {
