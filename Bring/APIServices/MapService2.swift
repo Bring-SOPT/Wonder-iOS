@@ -23,7 +23,7 @@ struct MapService2: APIManager, Requestable {
     func selectedStore(Idx: Int, completion: @escaping
         (SelectedStore) -> Void) {
         
-        let queryURL = mapURL + "/\(Idx)"
+        let queryURL = mapURL + "/stores/\(Idx)"
         gettable(queryURL, body: nil, header: headers) {
             (res) in
             switch res {

@@ -27,10 +27,15 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     @IBOutlet var infoLabel: UILabel!
+    
+    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var numberLabel: UILabel!
+    
     @IBOutlet var infoImg1: UIImageView!
     @IBOutlet var infoImg2: UIImageView!
     @IBOutlet var infoImg3: UIImageView!
     
+    var images: [String]?
     var cafeList = [CafeModel]()
     var selectedIdx: Int?
     
@@ -89,9 +94,6 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         guard let firstLocation = locations.first else {
             return
         }
-        //        let location: CLLocation = locations.last!
-        //        print(CLLocationCoordinate2D())
-        //        print("로케이션매니저 위치")
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool  {
@@ -104,14 +106,31 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         infoLabel.text = marker.title
         infoView.isHidden = false
 //        infoImg1.imageFromUrl(<#T##urlString: String?##String?#>, defaultImgPath: "")
+        //이 부분 사진 어케 저장하는지 모르게뜸 ㅇㅅㅇ
+        
+        MapService2.shared.selectedStore(Idx: selectedIdx!) {
+            [weak self] (data) in
+            guard let `self` = self else {return}
+            self.addressLabel.text = data.storeAddress
+            self.numberLabel.text = data.storeNumber
+            self.images = data.storePhoto
+            self.setImage()
+        }
         return false
+    }
+    
+    func setImage() {
+        guard let _images = self.images else { return }
+        infoImg1.imageFromUrl(_images[0], defaultImgPath: "")
+        infoImg2.imageFromUrl(_images[1], defaultImgPath: "")
+        infoImg3.imageFromUrl(_images[2], defaultImgPath: "")
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         
         if infoView.isHidden == false {
             infoView.isHidden = true
-        }
+            }
     }
     
     
