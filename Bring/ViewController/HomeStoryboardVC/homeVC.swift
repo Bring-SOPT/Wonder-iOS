@@ -35,6 +35,7 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var infoImg2: UIImageView!
     @IBOutlet var infoImg3: UIImageView!
     
+    var images: [String]?
     var cafeList = [CafeModel]()
     var selectedIdx: Int?
     
@@ -112,10 +113,17 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
             guard let `self` = self else {return}
             self.addressLabel.text = data.storeAddress
             self.numberLabel.text = data.storeNumber
-            //            self.cafeMarker()
-            
+            self.images = data.storePhoto
+            self.setImage()
         }
         return false
+    }
+    
+    func setImage() {
+        guard let _images = self.images else { return }
+        infoImg1.imageFromUrl(_images[0], defaultImgPath: "")
+        infoImg2.imageFromUrl(_images[1], defaultImgPath: "")
+        infoImg3.imageFromUrl(_images[2], defaultImgPath: "")
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
