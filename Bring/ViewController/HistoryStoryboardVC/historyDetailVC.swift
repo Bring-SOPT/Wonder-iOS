@@ -21,6 +21,7 @@ class historyDetailVC: UIViewController {
     
     @IBOutlet var allPriceLabel: UILabel!
     
+    var allPrice: Int = 0
     var orderIdx: Int?
     var time: String?
     var name: String?
@@ -31,8 +32,10 @@ class historyDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(orderListView)
-        setLabel()
         orderListTableView.dataSource = self
+        setLabel()
+        allPriceLabel.text = String(allPrice)
+
         
     }
     
@@ -52,6 +55,7 @@ class historyDetailVC: UIViewController {
         orderNumberLabel.text = "\(gino(orderIdx))"
         orderDateLabel.text = time
         nickNameLabel.text = name
+//        allPriceLabel.text = "\(gino(allPrice))"
     }
 }
 
@@ -80,6 +84,8 @@ extension historyDetailVC: UITableViewDataSource {
         cell.menuSizeAndNumberLabel.text = "("+size!+" / \(gino(Detail.orderCount))개)"
         cell.requestLabel.text = Detail.memo
         cell.priceLabel.text = "\(gino(Detail.totalPrice))"
+        allPrice = allPrice + Detail.totalPrice!
+        print(allPrice)
         return cell
 
     }

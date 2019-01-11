@@ -45,6 +45,7 @@
 		DCD0F0FF21E1CFA50015E683 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F0FE21E1CFA50015E683 /* Menu.swift */; };
 		DCD0F10121E1D7850015E683 /* SelectedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F10021E1D7850015E683 /* SelectedStore.swift */; };
 		DCD0F10321E1D9580015E683 /* MapService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F10221E1D9580015E683 /* MapService2.swift */; };
+		DCD37E7D21E8D7FC00915BAC /* UICollectionViewCellextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD37E7C21E8D7FC00915BAC /* UICollectionViewCellextension.swift */; };
 		DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4279621D1292B003F2D48 /* AppDelegate.swift */; };
 		DCD4279C21D1292B003F2D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD4279A21D1292B003F2D48 /* Main.storyboard */; };
 		DCD4279E21D1292B003F2D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD4279D21D1292B003F2D48 /* Assets.xcassets */; };
@@ -110,6 +111,7 @@
 		DCD0F0FE21E1CFA50015E683 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DCD0F10021E1D7850015E683 /* SelectedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStore.swift; sourceTree = "<group>"; };
 		DCD0F10221E1D9580015E683 /* MapService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService2.swift; sourceTree = "<group>"; };
+		DCD37E7C21E8D7FC00915BAC /* UICollectionViewCellextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellextension.swift; sourceTree = "<group>"; };
 		DCD4279321D1292B003F2D48 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD4279621D1292B003F2D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCD4279B21D1292B003F2D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				DC1F4AC621D3B33A00AD4F94 /* UIImage+imageFromURL.swift */,
 				DC1F4AC821D3B35C00AD4F94 /* UIViewController+extensions.swift */,
+				DCD37E7C21E8D7FC00915BAC /* UICollectionViewCellextension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				DCDFBF1A21D4F67C002D72FE /* homeVC.swift in Sources */,
 				DCABEC7A21DE5BD200A9774F /* StoreService.swift in Sources */,
 				DCD0010021E7B4C000720BBB /* orderDetailData.swift in Sources */,
+				DCD37E7D21E8D7FC00915BAC /* UICollectionViewCellextension.swift in Sources */,
 				DC4447C021E4C40F0065B723 /* OrderService.swift in Sources */,
 				DCDFBF1821D4EEA3002D72FE /* cartVC.swift in Sources */,
 				DC08720121D6B18500508A7A /* SignupLastVC.swift in Sources */,
