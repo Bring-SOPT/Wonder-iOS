@@ -66,7 +66,6 @@
 		DCE1AE3221DCFD53009B006B /* historyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AE3121DCFD53009B006B /* historyCollectionViewCell.swift */; };
 		DCE1AE3421DCFF65009B006B /* historyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AE3321DCFF65009B006B /* historyVC.swift */; };
 		DCE1AE3621DCFF73009B006B /* historyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1AE3521DCFF73009B006B /* historyDetailVC.swift */; };
-		DCE6EB5821D8DDBE0003ADDB /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6EB5721D8DDBE0003ADDB /* testVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,7 +133,6 @@
 		DCE1AE3121DCFD53009B006B /* historyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyCollectionViewCell.swift; sourceTree = "<group>"; };
 		DCE1AE3321DCFF65009B006B /* historyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyVC.swift; sourceTree = "<group>"; };
 		DCE1AE3521DCFF73009B006B /* historyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyDetailVC.swift; sourceTree = "<group>"; };
-		DCE6EB5721D8DDBE0003ADDB /* testVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				DCDEC0E121D6037600310B35 /* mypageVC.swift */,
-				DCE6EB5721D8DDBE0003ADDB /* testVC.swift */,
 			);
 			path = MypageStoryboardVC;
 			sourceTree = "<group>";
@@ -516,7 +513,6 @@
 				DC1F4ACE21D3B3FB00AD4F94 /* APIManager.swift in Sources */,
 				DCCD9EA521DE384600E6F087 /* MapService.swift in Sources */,
 				DCA5894821DBBD9B00D59A78 /* UserService.swift in Sources */,
-				DCE6EB5821D8DDBE0003ADDB /* testVC.swift in Sources */,
 				DCD0F0FF21E1CFA50015E683 /* Menu.swift in Sources */,
 				DC4447C221E4C4AB0065B723 /* OrderData.swift in Sources */,
 				DC1F4AD721D3B5A100AD4F94 /* Token.swift in Sources */,

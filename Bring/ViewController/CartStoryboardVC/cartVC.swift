@@ -15,14 +15,7 @@ class cartVC: UIViewController {
 
     
     @IBOutlet var cartCollectionView: UICollectionView!
-<<<<<<< HEAD
 
-    @IBOutlet weak var whiteImageView: UIImageView!
-    
-    
-=======
->>>>>>> a2a589a49b3a43eadac936e6d33fdef2cf055dbf
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

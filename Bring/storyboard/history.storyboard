@@ -19,11 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-9P-lmE">
-<<<<<<< HEAD
-                                <rect key="frame" x="16" y="107" width="343" height="369"/>
-=======
+
                                 <rect key="frame" x="16" y="107" width="343" height="560"/>
->>>>>>> a2a589a49b3a43eadac936e6d33fdef2cf055dbf
+
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oCF-l9-Ppy">
