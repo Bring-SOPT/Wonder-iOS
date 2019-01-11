@@ -77,6 +77,13 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         print(CLLocationCoordinate2D())
         print("뷰시작할때 위치")
         
+        MapService.shared.mapList(lati: (locationManager.location?.coordinate.latitude)!, long: (locationManager.location?.coordinate.longitude)!) {
+            [weak self] (data) in
+            guard let `self` = self else {return}
+            self.cafeList = data
+            self.cafeMarker()
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -93,7 +100,12 @@ class homeVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let firstLocation = locations.first else {
+        guard let firstLocation = locations.first
+            
+            
+            
+            
+            else {
             return
         }
     }
