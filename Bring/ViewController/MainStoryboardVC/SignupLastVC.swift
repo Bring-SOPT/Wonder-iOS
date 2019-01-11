@@ -203,11 +203,11 @@ class SignupLastVC: UIViewController {
         }
         //회원가입은 안되는 건 맞는데 무작정 넘어감..... 첫 페이지로;
         else{
-            print("동의버튼 체크 안함")
+//            print("동의버튼 체크 안함")
             let alert = UIAlertView()
-            alert.title = "전체 동의를 하세요."
-            alert.message = "뿌잉."
-            alert.addButton(withTitle: "ㅇㅋ")
+            alert.title = "알림"
+            alert.message = "이용약관에 모두 동의하셔야 합니다"
+            alert.addButton(withTitle: "확인")
             alert.show()
 //            self.performSegue(withIdentifier: "SignupLastVC", sender: self)
         }
