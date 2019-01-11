@@ -29,7 +29,7 @@ struct PaymentService: APIManager, Requestable {
             (res) in
             switch res {
             case .success(let value):
-                guard let store = value.data else
+                guard let Menus = value.data else
                 {return}
                 completion()
             case .error(let error):
