@@ -369,12 +369,6 @@
                                 <action selector="dismiss:" destination="tEM-Tn-iIg" id="aPM-Ct-tf5"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="tab_cart" id="htN-CP-a3w">
-                            <color key="tintColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="cartAction:" destination="tEM-Tn-iIg" id="urt-eK-h8l"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImg" destination="e0y-Nh-z8W" id="KTE-tl-AI3"/>
@@ -612,11 +606,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cA8-8q-Zis">
                                 <rect key="frame" x="75.5" y="630.5" width="224" height="24"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaopay" translatesAutoresizingMaskIntoConstraints="NO" id="TFf-Zl-cGI">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="24"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로 결제하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UV-KJ-pVW">
-                                        <rect key="frame" x="133" y="0.0" width="91" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UV-KJ-pVW">
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -777,7 +768,6 @@
         <image name="defaultMenu" width="69" height="69"/>
         <image name="dropDown" width="150" height="30"/>
         <image name="infoButton" width="42" height="30"/>
-        <image name="kakaopay" width="130" height="23"/>
         <image name="marketPin" width="17" height="17"/>
         <image name="marketTelephone" width="16" height="16"/>
         <image name="menuButtonClick" width="42" height="30"/>
@@ -786,7 +776,6 @@
         <image name="menuSizebox" width="85" height="30"/>
         <image name="orderCouponTriangle" width="13" height="10"/>
         <image name="orderPointCircle" width="24" height="24"/>
-        <image name="tab_cart" width="25" height="25"/>
         <image name="whiteBar" width="375" height="223"/>
     </resources>
 </document>

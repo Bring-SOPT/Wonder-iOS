@@ -64,9 +64,9 @@ class menuSelectVC: UIViewController {
         if count != 0 {
             
             let alert = UIAlertView()
-            alert.title = "장바구니에 저장되었습니다."
-            alert.message = "뿌잉."
-            alert.addButton(withTitle: "ㅇㅋ")
+            alert.title = "장바구니에 상품이 담겼습니다"
+//            alert.message = "뿌잉."
+            alert.addButton(withTitle: "확인")
             alert.show()
             
         
@@ -85,8 +85,15 @@ class menuSelectVC: UIViewController {
             dvc.orderPrice = totalPrice
             dvc.menuIdx = menuIdx
             dvc.cnt = count
-            
-            dvc.size = 2
+            if sizeLabel.text == "Small" {
+                dvc.size = 1
+            } else if sizeLabel.text == "Regular" {
+                dvc.size = 2
+            } else if sizeLabel.text == "Large"
+            {
+                dvc.size = 3
+            }
+//            dvc.size = 2
             dvc.memo = requestField.text
             
             
@@ -122,19 +129,24 @@ class menuSelectVC: UIViewController {
     @IBAction func sizeTallAction(_ sender: Any) {
         sizeLabel.text = "Small"
         sizeSelectView.isHidden = true
+        totalPrice = (menuPriceData - 500) * count
+        totalPriceLabel.text = "\(gino(totalPrice))"
         
     }
     
     @IBAction func sizeGrandeAction(_ sender: Any) {
          sizeLabel.text = "Regular"
         sizeSelectView.isHidden = true
-
+        totalPrice = (menuPriceData) * count
+        totalPriceLabel.text = "\(gino(totalPrice))"
  
         
     }
     @IBAction func sizeVentiAction(_ sender: Any) {
          sizeLabel.text = "Large"
         sizeSelectView.isHidden = true
+        totalPrice = (menuPriceData + 500) * count
+        totalPriceLabel.text = "\(gino(totalPrice))"
     }
     
     //화면 다른 곳 터치 시 keyboard 내리기

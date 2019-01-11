@@ -102,21 +102,6 @@ class menudetailVC: UIViewController {
     }
     
     
-    
-    @IBAction func cartAction(_ sender: Any) {
-        
-//        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "cartVC") as? cartVC else { return }
-//
-//                navigationController?.pushViewController(dvc, animated: true)
-        
-//        let storyboard: UIStoryboard = UIStoryboard(name: "cart", bundle: nil)
-//        let nextView = storyboard.instantiateViewController(withIdentifier: "cartVC")
-//        present(nextView, animated: true)
-//
-    }
-    
-    //이거는 왜 오류나지 ;;
-
 }
 
 

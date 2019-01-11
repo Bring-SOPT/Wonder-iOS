@@ -49,18 +49,6 @@ class orderVC: UIViewController {
         print(paymenu)
 
         PaymentService.shared.payment(storeIdx: storeIdx!, orderMenuList: paymenu) {
-//            [weak self] data in
-//            guard let `self` = self else {return}
-//            guard let status = data.status else { return }
-//            switch status {
-//            case 201:
-//                print("회원가입 완료")
-//                self.performSegue(withIdentifier: "unwindToLogin", sender: self)
-//            case 400:
-//                print("회원가입 실패")
-//            default:
-//                print("회원가입 실패")
-//            }
             print("과연....")
 
 
@@ -71,7 +59,12 @@ class orderVC: UIViewController {
                     alert.message = "주문이 완료되었습니다."
                     alert.addButton(withTitle: "확인")
                     alert.show()
+        
+      self.dismiss(animated: true)
+        
 
+        
+    
       
         
     }

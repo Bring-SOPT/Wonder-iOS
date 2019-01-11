@@ -28,33 +28,13 @@ class cartVC: UIViewController {
     }
  
     @IBAction func orderAction(_ sender: Any) {
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "home", bundle: nil)
 
-        
-        let dvc = storyboard.instantiateViewController(withIdentifier: "orderVC") as? orderVC
-                self.present(dvc!,animated: true)
+        let alert = UIAlertView()
+        alert.title = "준비중"
+        alert.message = "서비스 준비중입니다."
+        alert.addButton(withTitle: "확인")
+        alert.show()
         
         }
 }
-//
-//extension cartVC: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return cartList1.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartCollectionViewCell", for: indexPath) as! cartCollectionViewCell
-//        let Detail = cartList1[indexPath.item]
-//        cell.cafeNameLabel.text = "뿌링카페"
-//        cell.countLabel.text = "\(gino(Detail.orderCount))개)"
-//        cell.maneNameLabel.text = Detail.name
-//
-//        return cell
-//
-//    }
-//
-//}
-//
-//
-//
+
