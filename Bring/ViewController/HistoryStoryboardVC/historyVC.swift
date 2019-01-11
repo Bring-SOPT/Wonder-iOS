@@ -14,6 +14,7 @@ class historyVC: UIViewController {
     @IBOutlet var historyCollectionView: UICollectionView!
     var orderList1 = [orderList]()
     @IBOutlet var nicknameLabel: UILabel!
+    @IBOutlet weak var whiteImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class historyVC: UIViewController {
             self.nicknameLabel.text = nickname
             self.orderList1 = orders
             self.historyCollectionView.reloadData()
+            self.whiteImageView.isHidden = true
         }
         
     }
