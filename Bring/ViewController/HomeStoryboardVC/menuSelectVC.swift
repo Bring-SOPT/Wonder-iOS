@@ -84,8 +84,9 @@ class menuSelectVC: UIViewController {
             dvc.storeIdx = storeIdx
             dvc.orderPrice = totalPrice
             dvc.menuIdx = menuIdx
-            dvc.orderCount = countLabel.text
-            dvc.size = 1
+            dvc.cnt = count
+            
+            dvc.size = 2
             dvc.memo = requestField.text
             
             
