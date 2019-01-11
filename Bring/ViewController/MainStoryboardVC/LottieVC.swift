@@ -16,7 +16,7 @@ class LottieVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animate()
-    
+
         
     
     }
