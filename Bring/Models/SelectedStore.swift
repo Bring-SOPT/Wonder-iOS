@@ -29,8 +29,6 @@ struct SelectedStore: Mappable {
         storeAddress <- map["address"]
         storeNumber <- map["number"]
         storePhoto <- map["photoUrl"]
-        
-        
     }
 }
 

@@ -68,16 +68,7 @@ class SignupSecondVC: UIViewController {
             present(dvc,animated: true)
             print("vc???ok!!2222")
         }
-
-        
-        
-        
-//        present(dvc,animated: true)
-
-
-
-        
-        }
+}
     
     
     @IBAction func nickOkAction(_ sender: Any) {

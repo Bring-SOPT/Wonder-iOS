@@ -55,6 +55,7 @@ class menuSelectVC: UIViewController {
         
     }
     
+    //장바구니에 담기
     @IBAction func addCartAction(_ sender: Any) {
         
         if count != 0 {
@@ -123,8 +124,10 @@ class menuSelectVC: UIViewController {
     @IBAction func sizeVentiAction(_ sender: Any) {
          sizeLabel.text = "venti"
         sizeSelectView.isHidden = true
-
-        
-        
+    }
+    
+    //화면 다른 곳 터치 시 keyboard 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
     }
 }
