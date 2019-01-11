@@ -32,6 +32,9 @@ class orderVC: UIViewController {
         
 
 //        var cnt = gsno(orderCount)
+        if memo == "요청사항을 입력하세요" {
+            memo = ""
+        }
         
         paymenu.append(Menus(menuIdx: menuIdx!, size: size!, orderCount: cnt!, memo: memo!, menuTotalPrice: orderPrice!))
         

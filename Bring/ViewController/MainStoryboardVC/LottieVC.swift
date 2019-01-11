@@ -11,21 +11,26 @@ import Lottie
 
 class LottieVC: UIViewController {
 
-    var animationView = LOTAnimationView(name: "BringLottie")
+    
+
+    
+   var animationView = LOTAnimationView(name: "BringLottie")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animate()
+
+        self.view.addSubview(animationView)
+                animate()
 
 //        tabBar()
-//
-//        performSegue(withIdentifier: "mainTabBar", sender: self)
-//
+
+     
+
     
     }
     
     func animate(){
-        animationView.frame.size = CGSize(width: 500, height: 800)
+        animationView.frame.size = CGSize(width: 250, height: 400)
         animationView.center = self.view.center
         self.view.addSubview(animationView)
         animationView.play()
@@ -33,8 +38,9 @@ class LottieVC: UIViewController {
     }
 
 
-//    func tabBar(){
-//        print("탭바세그")
-//        performSegue(withIdentifier: "mainTabBar", sender: self)
-//    }
+
+    @IBAction func startAction(_ sender: Any) {
+        print("ddddd")
+           performSegue(withIdentifier: "startSegue", sender: self)
+    }
 }

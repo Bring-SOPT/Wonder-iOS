@@ -196,7 +196,6 @@
                     <navigationItem key="navigationItem" title="장바구니" id="MI8-uu-oUt"/>
                     <connections>
                         <outlet property="cartCollectionView" destination="Qtf-6A-1sY" id="ZLI-WS-f47"/>
-                        <outlet property="whiteImageView" destination="8md-pp-Hgm" id="XYe-Fy-EUi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzB-pW-Ogw" userLabel="First Responder" sceneMemberID="firstResponder"/>
