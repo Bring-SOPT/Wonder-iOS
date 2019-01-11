@@ -768,31 +768,6 @@
             </objects>
             <point key="canvasLocation" x="558" y="-672"/>
         </scene>
-        <!--Search TestVC-->
-        <scene sceneID="1kW-0W-uC8">
-            <objects>
-                <viewController id="Kd3-ZK-OKo" customClass="searchTestVC" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bFv-MT-aJ6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2X-cr-VCm" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="218" width="375" height="303"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="lEL-5c-C6a"/>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="Q2X-cr-VCm" id="JEe-hI-Tbg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nGO-Dv-IuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="16.800000000000001" y="70.614692653673174"/>
-        </scene>
     </scenes>
     <resources>
         <image name="barRight" width="22" height="22"/>

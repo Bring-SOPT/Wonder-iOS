@@ -17,17 +17,24 @@ class LottieVC: UIViewController {
         super.viewDidLoad()
         animate()
 
-        
+//        tabBar()
+//
+//        performSegue(withIdentifier: "mainTabBar", sender: self)
+//
     
     }
     
     func animate(){
-        animationView.frame.size = CGSize(width: 550, height: 650)
+        animationView.frame.size = CGSize(width: 500, height: 800)
         animationView.center = self.view.center
         self.view.addSubview(animationView)
         animationView.play()
-        
+        print("에니메이션")
     }
 
 
+//    func tabBar(){
+//        print("탭바세그")
+//        performSegue(withIdentifier: "mainTabBar", sender: self)
+//    }
 }

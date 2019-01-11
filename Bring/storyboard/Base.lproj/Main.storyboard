@@ -28,7 +28,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="DrX-Es-X8Q">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="w2W-39-I1k" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBar" automaticallyAdjustsScrollViewInsets="NO" id="w2W-39-I1k" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="eF9-hz-4fW"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" restorationIdentifier="mainTBC" insetsLayoutMarginsFromSafeArea="NO" id="Wgx-1Z-z19" customClass="mainTabBar" customModule="Bring" customModuleProvider="target">
