@@ -73,7 +73,7 @@ extension historyDetailVC: UITableViewDataSource {
         } else if Detail.size == 4 {
             size = "Dessert"
         } else {
-            size = "휘핑 추가"
+            size = "옵션 추가"
         }
         //사이즈 0,1,2 스몰 레귤러 라지 4 디저트 5가 휘핑
         cell.menuNameLabel.text = Detail.name
