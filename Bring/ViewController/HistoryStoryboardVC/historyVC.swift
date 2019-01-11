@@ -35,6 +35,7 @@ class historyVC: UIViewController {
             self.nicknameLabel.text = nickname
             self.orderList1 = orders
             self.historyCollectionView.reloadData()
+            self.whiteImageView.isHidden = true
         }
         
     }

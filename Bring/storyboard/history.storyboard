@@ -150,10 +150,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1j7-L8-QT5">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3h-IA-Rzi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+>>>>>>> 41a38ab256fa8dc182d8c05030fa4889c8d175bd
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,7 +169,11 @@
                     <connections>
                         <outlet property="historyCollectionView" destination="eXF-9P-lmE" id="ynb-MN-8r5"/>
                         <outlet property="nicknameLabel" destination="c9m-Rv-L9I" id="fdQ-6T-ohZ"/>
+<<<<<<< HEAD
                         <outlet property="whiteImageView" destination="1j7-L8-QT5" id="1bd-Vp-7VC"/>
+=======
+                        <outlet property="whiteImageView" destination="m3h-IA-Rzi" id="oPD-NL-hMF"/>
+>>>>>>> 41a38ab256fa8dc182d8c05030fa4889c8d175bd
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7z-h0-5cp" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -23,4 +23,3 @@ struct ResponseArray<T: Mappable>: Mappable {
         data <- map["data"]
     }
 }
-

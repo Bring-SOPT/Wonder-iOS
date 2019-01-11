@@ -15,7 +15,6 @@ struct cart {
     var menuPrice: Int
     var request: String
     
-    
     init(name: String, price: Int, request: String, Img: String){
         
         self.menuImg = UIImage(named: Img)
