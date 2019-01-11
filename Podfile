@@ -11,6 +11,7 @@ pod 'Alamofire'
 pod 'AlamofireObjectMapper'
 pod 'ObjectMapper'
 pod 'Kingfisher'
+pod 'lottie-ios'
 
   # Pods for Bring
 

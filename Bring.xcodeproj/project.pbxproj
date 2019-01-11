@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0856167821E8EDBC006D004F /* LottieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856167721E8EDBC006D004F /* LottieVC.swift */; };
 		08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0175421D509C200CD5E1E /* menudetailVC.swift */; };
 		08CB0FA621D3B11100D0FA51 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA521D3B11100D0FA51 /* LoginVC.swift */; };
 		08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */; };
@@ -68,6 +69,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0856167721E8EDBC006D004F /* LottieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieVC.swift; sourceTree = "<group>"; };
+		0856167B21E8EF68006D004F /* BringLottie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BringLottie.json; sourceTree = "<group>"; };
 		08C0175421D509C200CD5E1E /* menudetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menudetailVC.swift; sourceTree = "<group>"; };
 		08CB0FA521D3B11100D0FA51 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFirstVC.swift; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 				08CB0FA721D3B13A00D0FA51 /* SignupFirstVC.swift */,
 				DC0871FE21D6B06600508A7A /* SignupSecondVC.swift */,
 				DC08720021D6B18500508A7A /* SignupLastVC.swift */,
+				0856167721E8EDBC006D004F /* LottieVC.swift */,
 			);
 			path = MainStoryboardVC;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 		DCD4279521D1292B003F2D48 /* Bring */ = {
 			isa = PBXGroup;
 			children = (
+				0856167B21E8EF68006D004F /* BringLottie.json */,
 				DC08720721D6BA8100508A7A /* setData */,
 				DCD4279621D1292B003F2D48 /* AppDelegate.swift */,
 				DC1F4AD821D3B5DB00AD4F94 /* Views */,
@@ -429,6 +434,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -438,6 +444,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -500,6 +507,7 @@
 				DCE1AE2E21DCE301009B006B /* cartCollectionViewCell.swift in Sources */,
 				DCCD9EA321DE2BBC00E6F087 /* MypageService.swift in Sources */,
 				DC74AB9821DBC73500CF7872 /* searchTestVC.swift in Sources */,
+				0856167821E8EDBC006D004F /* LottieVC.swift in Sources */,
 				DCE1AE3021DCE8C3009B006B /* cart.swift in Sources */,
 				DCA5894621DBB65500D59A78 /* User.swift in Sources */,
 				DC1F4ACE21D3B3FB00AD4F94 /* APIManager.swift in Sources */,

@@ -13,8 +13,13 @@ import AddressBookUI
 
 class cartVC: UIViewController {
 
+    
     @IBOutlet var cartCollectionView: UICollectionView!
 
+    @IBOutlet weak var whiteImageView: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
