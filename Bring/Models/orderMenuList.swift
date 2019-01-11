@@ -26,6 +26,7 @@ struct orderMenuList: Mappable {
         size <- map["size"]
         orderCount <- map["memo"]
         menuTotalPrice <- map["menuTotalPrice"]
+        memo <- map["memo"]
         
     }
 }

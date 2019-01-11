@@ -21,6 +21,9 @@ class menuSelectVC: UIViewController {
     @IBOutlet var countLabel: UILabel!
     var count:Int = 1
     var totalPrice: Int?
+    var menuIdx: Int?
+    var storeIdx: Int?
+    
     @IBOutlet var totalPriceLabel: UILabel!
     @IBOutlet var sizeSelectView: UIView!
     
@@ -78,7 +81,14 @@ class menuSelectVC: UIViewController {
             
         } else {
             guard let dvc = storyboard?.instantiateViewController(withIdentifier: "orderVC") as? orderVC else { return }
+            dvc.storeIdx = storeIdx
             dvc.orderPrice = totalPrice
+            dvc.menuIdx = menuIdx
+            dvc.orderCount = countLabel.text
+            dvc.size = 1
+            dvc.memo = requestField.text
+            
+            
             navigationController?.pushViewController(dvc, animated: true)
         }
         

@@ -10,7 +10,14 @@ import UIKit
 
 class orderVC: UIViewController {
 
+    var storeIdx: Int?
+    
     var orderPrice: Int?
+    var menuIdx: Int?
+    var size: Int?
+    var orderCount: String?
+    var memo: String?
+    
     @IBOutlet var orderPriceLabel: UILabel!
     
     @IBOutlet var finalPrice: UILabel!
@@ -22,6 +29,10 @@ class orderVC: UIViewController {
         finalPrice.text = orderPriceLabel.text
     }
     
-
+    @IBAction func paymentAction(_ sender: Any) {
+        
+        
+    }
+    
 
 }

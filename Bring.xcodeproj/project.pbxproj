@@ -45,6 +45,8 @@
 		DCD0F10121E1D7850015E683 /* SelectedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F10021E1D7850015E683 /* SelectedStore.swift */; };
 		DCD0F10321E1D9580015E683 /* MapService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0F10221E1D9580015E683 /* MapService2.swift */; };
 		DCD37E7D21E8D7FC00915BAC /* UICollectionViewCellextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD37E7C21E8D7FC00915BAC /* UICollectionViewCellextension.swift */; };
+		DCD37E7F21E8E68500915BAC /* orderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD37E7E21E8E68500915BAC /* orderData.swift */; };
+		DCD37E8121E8EE7F00915BAC /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD37E8021E8EE7F00915BAC /* PaymentService.swift */; };
 		DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4279621D1292B003F2D48 /* AppDelegate.swift */; };
 		DCD4279C21D1292B003F2D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD4279A21D1292B003F2D48 /* Main.storyboard */; };
 		DCD4279E21D1292B003F2D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD4279D21D1292B003F2D48 /* Assets.xcassets */; };
@@ -109,6 +111,8 @@
 		DCD0F10021E1D7850015E683 /* SelectedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStore.swift; sourceTree = "<group>"; };
 		DCD0F10221E1D9580015E683 /* MapService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService2.swift; sourceTree = "<group>"; };
 		DCD37E7C21E8D7FC00915BAC /* UICollectionViewCellextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellextension.swift; sourceTree = "<group>"; };
+		DCD37E7E21E8E68500915BAC /* orderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderData.swift; sourceTree = "<group>"; };
+		DCD37E8021E8EE7F00915BAC /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
 		DCD4279321D1292B003F2D48 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD4279621D1292B003F2D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCD4279B21D1292B003F2D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 			children = (
 				DC08720821D6BA9300508A7A /* Cafe.swift */,
 				DCE1AE2F21DCE8C3009B006B /* cart.swift */,
+				DCD37E7E21E8E68500915BAC /* orderData.swift */,
 			);
 			path = setData;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				DCCD9EA221DE2BBC00E6F087 /* MypageService.swift */,
 				DCCD9EA421DE384600E6F087 /* MapService.swift */,
 				DCD0F10221E1D9580015E683 /* MapService2.swift */,
+				DCD37E8021E8EE7F00915BAC /* PaymentService.swift */,
 				DC4447BF21E4C40F0065B723 /* OrderService.swift */,
 				DCD0010321E7B77B00720BBB /* OrderService2.swift */,
 			);
@@ -522,6 +528,7 @@
 				DCE1AB7221D756C2000E3BE1 /* menuSelectVC.swift in Sources */,
 				DCE1AE3621DCFF73009B006B /* historyDetailVC.swift in Sources */,
 				08C0175521D509C200CD5E1E /* menudetailVC.swift in Sources */,
+				DCD37E8121E8EE7F00915BAC /* PaymentService.swift in Sources */,
 				08CB0FA821D3B13A00D0FA51 /* SignupFirstVC.swift in Sources */,
 				DC4447C421E4C5680065B723 /* orderList.swift in Sources */,
 				DCD0F10121E1D7850015E683 /* SelectedStore.swift in Sources */,
@@ -544,6 +551,7 @@
 				DC1F4AD321D3B58600AD4F94 /* ResponseObject.swift in Sources */,
 				DC1F4AC721D3B33A00AD4F94 /* UIImage+imageFromURL.swift in Sources */,
 				DCD4279721D1292B003F2D48 /* AppDelegate.swift in Sources */,
+				DCD37E7F21E8E68500915BAC /* orderData.swift in Sources */,
 				08FD725C21E7627F004D18B1 /* Status.swift in Sources */,
 				DCD0010221E7B4FB00720BBB /* orderDetailList.swift in Sources */,
 				DCABEC7C21DE5CDA00A9774F /* Store.swift in Sources */,

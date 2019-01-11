@@ -146,7 +146,8 @@ extension menudetailVC: UITableViewDelegate {
         nextVC.menuNameData = menu.menuName
         nextVC.menuPriceData = menu.menuPrice!
         nextVC.menuImgData = menu.menuPhoto
-        
+        nextVC.menuIdx = menu.menuIdx
+        nextVC.storeIdx = cafeIdxData
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
