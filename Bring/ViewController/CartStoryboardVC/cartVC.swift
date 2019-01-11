@@ -13,8 +13,9 @@ import AddressBookUI
 
 class cartVC: UIViewController {
 
-    @IBOutlet var cartCollectionView: UICollectionView!
     
+    @IBOutlet var cartCollectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
